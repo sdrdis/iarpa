@@ -196,6 +196,11 @@ It will create 3 files, with self-explanatory names:
 * `color_map.png`
 * `confidence.png`
 
+TODO: Images
+
+As you can see, there are a lot of undefined areas (depicted in gray). These areas are low confidence values that
+are by default removed.
+
 In-depth Documentation
 ----------------------
 
