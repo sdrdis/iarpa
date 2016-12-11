@@ -37,6 +37,11 @@ This code relies heavily on the [NASA Ames Stereo Pipeline](https://ti.arc.nasa.
 
 It also rely on the sample code provided during the contest that can be found in the `installation/installation_scripts` folder.
 
+Requirements
+------------
+
+This code has been tested on Ubuntu 14.04 LTS. It probably works on Linux and Unix operating system. It *might* work on Windows, with some changes: replacing the StereoPipeline folder, changing the installation script...
+
 How to install
 --------------
 
@@ -48,3 +53,6 @@ Example tutorial
 
 In-depth Documentation
 ----------------------
+
+Possible improvements
+---------------------
