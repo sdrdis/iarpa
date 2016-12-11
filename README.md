@@ -65,13 +65,42 @@ unzip master.zip
 Then go inside the main folder and launch:
 
 ```
-./install.sh
+sudo ./install.sh
 ```
 
 It will install OpenCV and GDAL notably, so it might take some time...
 
 How to use
 ----------
+
+We kept the same convention than during the contest, the software runs like this:
+
+```
+python chain.py [Input KML file] [Path to NITF image folder] [Output file]
+```
+
+The first argument is the location of the KML file indicating which area to reconstruct in 3D. The second argument is
+the location of the folder containing all NITF images (with a NTF extension). The third argument is the output file
+(extension can either be *.txt or *.npz).
+
+The utility can be broken into two smaller utilities:
+
+The first utility proceeds each pair and generates a 3d map for each of them:
+
+```
+python chain_pairwise_pc.py [Input KML file] [Path to NITF image folder]
+```
+
+The second utility merge all the 3d maps into a single one:
+
+```
+python chain_merge_pcs.py [Input KML file] [Output file]
+```
+
+That means that you can customize the stereo algorithm for each pair, and then still merge them using our software
+with the `chain_merge_pcs.py`.
+
+Parameters can be customized in the `params.py` file. Each parameter has been commented so take a look at the file.
 
 Example tutorial
 ----------------
