@@ -56,14 +56,14 @@ How to install
 First, get this software by cloning it from github:
 
 ```
-sudo apt-get install git
+sudo apt-get --assume-yes install git
 git clone https://github.com/sdrdis/iarpa_contest_submission.git
 ```
 
 *Or* downloading the zip file and unzipping it:
 
 ```
-sudo apt-get install unzip
+sudo apt-get --assume-yes install unzip
 wget https://github.com/sdrdis/iarpa_contest_submission/archive/master.zip
 unzip master.zip
 ```
