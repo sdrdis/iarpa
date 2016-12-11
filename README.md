@@ -41,12 +41,14 @@ Third party softwares
 
 This code relies heavily on the [NASA Ames Stereo Pipeline](https://ti.arc.nasa.gov/tech/asr/intelligent-robotics/ngt/stereo/). It has been directly included in this repository (in the `lib_exec/StereoPipeline` folder) for ease of installation.
 
-It also rely on the sample code provided during the contest that can be found in the `installation/installation_scripts` folder.
+It also relies on the sample code provided during the contest that can be found in the `installation/installation_scripts` folder.
 
 Requirements
 ------------
 
 This code has been tested on Ubuntu 14.04 LTS. It probably works on Linux and Unix operating system. It *might* work on Windows, with some changes: replacing the StereoPipeline folder, changing the installation script...
+
+With the images and KML files provided in the [IARPA Challenge](https://www.iarpa.gov/challenges/3dchallenge.html), maximum memory usage is about 2-3GB.
 
 How to install
 --------------
