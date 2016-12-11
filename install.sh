@@ -1,3 +1,3 @@
-cv installation
+cd installation
 ./install_src.sh
 ./install.sh
