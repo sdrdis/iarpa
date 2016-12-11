@@ -198,7 +198,7 @@ It will create 3 image files, with self-explanatory names:
 * `color_map.png`
 * `confidence.png`
 
-TODO: Images
+![Images generated](https://github.com/sdrdis/iarpa_contest_submission/raw/master/doc_images/height_maps_1.png)
 
 As you can see, there are a lot of undefined areas (depicted in gray). These areas are low confidence values that
 are by default removed. You can change this behavior by changing the `relative_consensus` parameter in the `params.py` file. You can also
@@ -210,6 +210,10 @@ the way pair-wise stereo reconstruction was done.
 ```
 python chain_merge_pcs.py kml/Challenge1.kml out/test_2.npz
 ```
+
+Here are the images generated with `relative_consensus = 0`:
+
+![Images generated with relative consensus = 0](https://github.com/sdrdis/iarpa_contest_submission/raw/master/doc_images/height_maps_2.png)
 
 In-depth Description
 --------------------
