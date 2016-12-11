@@ -54,7 +54,7 @@ sudo apt-get install git
 git clone https://github.com/sdrdis/iarpa_contest_submission.git
 ```
 
-Or downloading the zip file and unzipping it:
+*Or* downloading the zip file and unzipping it:
 
 ```
 sudo apt-get install unzip

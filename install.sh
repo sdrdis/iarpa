@@ -1,2 +1,3 @@
-installation/install_src.sh
-installation/install.sh
+cv installation
+./install_src.sh
+./install.sh
