@@ -55,3 +55,4 @@ sudo apt-get --assume-yes install libopenexr-dev
 sudo pip install openexr
 sudo pip install pyproj
 sudo pip install fastkml
+sudo pip install numpy --upgrade
