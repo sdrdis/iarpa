@@ -1,0 +1,729 @@
+--2016-08-02 19:00:53--  https://github.com/LASzip/LASzip/releases/download/v2.2.0/laszip-src-2.2.0.tar.gz
+Resolving github.com (github.com)... 192.30.253.113
+Connecting to github.com (github.com)|192.30.253.113|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-cloud.s3.amazonaws.com/releases/2236116/2e9b8762-fdfb-11e2-8922-3fb60476d4c1.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISTNZFOVBIJMK3TQ%2F20160802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20160802T170053Z&X-Amz-Expires=300&X-Amz-Signature=86a86c16f18b7efaa1b474a54f8e9d33ec5d7cff2a0fc6ab5f5adb572bb468f1&X-Amz-SignedHeaders=host&actor_id=0&response-content-disposition=attachment%3B%20filename%3Dlaszip-src-2.2.0.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2016-08-02 19:00:54--  https://github-cloud.s3.amazonaws.com/releases/2236116/2e9b8762-fdfb-11e2-8922-3fb60476d4c1.gz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISTNZFOVBIJMK3TQ%2F20160802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20160802T170053Z&X-Amz-Expires=300&X-Amz-Signature=86a86c16f18b7efaa1b474a54f8e9d33ec5d7cff2a0fc6ab5f5adb572bb468f1&X-Amz-SignedHeaders=host&actor_id=0&response-content-disposition=attachment%3B%20filename%3Dlaszip-src-2.2.0.tar.gz&response-content-type=application%2Foctet-stream
+Resolving github-cloud.s3.amazonaws.com (github-cloud.s3.amazonaws.com)... 54.231.17.105
+Connecting to github-cloud.s3.amazonaws.com (github-cloud.s3.amazonaws.com)|54.231.17.105|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 407457 (398K) [application/octet-stream]
+Saving to: ‘laszip-src-2.2.0.tar.gz’
+
+     0K .......... .......... .......... .......... .......... 12%  184K 2s
+    50K .......... .......... .......... .......... .......... 25%  514K 1s
+   100K .......... .......... .......... .......... .......... 37%  529K 1s
+   150K .......... .......... .......... .......... .......... 50%  543K 1s
+   200K .......... .......... .......... .......... .......... 62%  529K 0s
+   250K .......... .......... .......... .......... .......... 75%  527K 0s
+   300K .......... .......... .......... .......... .......... 87% 2,96M 0s
+   350K .......... .......... .......... .......... .......   100%  538K=0,9s
+
+2016-08-02 19:00:55 (468 KB/s) - ‘laszip-src-2.2.0.tar.gz’ saved [407457/407457]
+
+--2016-08-02 19:00:55--  https://github.com/LASzip/LASzip/releases/download/v2.2.0/laszip-src-2.2.0.tar.gz.md5
+Resolving github.com (github.com)... 192.30.253.113
+Connecting to github.com (github.com)|192.30.253.113|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-cloud.s3.amazonaws.com/releases/2236116/abe291fc-fdfb-11e2-9f2e-fd7340198413.md5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISTNZFOVBIJMK3TQ%2F20160802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20160802T170055Z&X-Amz-Expires=300&X-Amz-Signature=1d18fcb308115c6703faad8afbc5720ec82f626a402b8dae1a92e60bd022e088&X-Amz-SignedHeaders=host&actor_id=0&response-content-disposition=attachment%3B%20filename%3Dlaszip-src-2.2.0.tar.gz.md5&response-content-type=application%2Foctet-stream [following]
+--2016-08-02 19:00:56--  https://github-cloud.s3.amazonaws.com/releases/2236116/abe291fc-fdfb-11e2-9f2e-fd7340198413.md5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISTNZFOVBIJMK3TQ%2F20160802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20160802T170055Z&X-Amz-Expires=300&X-Amz-Signature=1d18fcb308115c6703faad8afbc5720ec82f626a402b8dae1a92e60bd022e088&X-Amz-SignedHeaders=host&actor_id=0&response-content-disposition=attachment%3B%20filename%3Dlaszip-src-2.2.0.tar.gz.md5&response-content-type=application%2Foctet-stream
+Resolving github-cloud.s3.amazonaws.com (github-cloud.s3.amazonaws.com)... 54.231.17.105
+Connecting to github-cloud.s3.amazonaws.com (github-cloud.s3.amazonaws.com)|54.231.17.105|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 65 [application/octet-stream]
+Saving to: ‘laszip-src-2.2.0.tar.gz.md5’
+
+     0K                                                       100%  466K=0s
+
+2016-08-02 19:00:56 (466 KB/s) - ‘laszip-src-2.2.0.tar.gz.md5’ saved [65/65]
+
+laszip-src-2.2.0.tar.gz: OK
+laszip-src-2.2.0/
+laszip-src-2.2.0/aclocal.m4
+laszip-src-2.2.0/AUTHORS
+laszip-src-2.2.0/ChangeLog
+laszip-src-2.2.0/compile
+laszip-src-2.2.0/config.guess
+laszip-src-2.2.0/config.sub
+laszip-src-2.2.0/configure
+laszip-src-2.2.0/._configure.ac
+laszip-src-2.2.0/configure.ac
+laszip-src-2.2.0/COPYING
+laszip-src-2.2.0/depcomp
+laszip-src-2.2.0/include/
+laszip-src-2.2.0/INSTALL
+laszip-src-2.2.0/install-sh
+laszip-src-2.2.0/ltmain.sh
+laszip-src-2.2.0/._Makefile.am
+laszip-src-2.2.0/Makefile.am
+laszip-src-2.2.0/Makefile.in
+laszip-src-2.2.0/missing
+laszip-src-2.2.0/NEWS
+laszip-src-2.2.0/._README
+laszip-src-2.2.0/README
+laszip-src-2.2.0/src/
+laszip-src-2.2.0/tools/
+laszip-src-2.2.0/tools/laszip-config.in
+laszip-src-2.2.0/tools/laszippertest.cpp
+laszip-src-2.2.0/tools/._Makefile.am
+laszip-src-2.2.0/tools/Makefile.am
+laszip-src-2.2.0/tools/Makefile.in
+laszip-src-2.2.0/src/arithmeticdecoder.cpp
+laszip-src-2.2.0/src/arithmeticdecoder.hpp
+laszip-src-2.2.0/src/arithmeticencoder.cpp
+laszip-src-2.2.0/src/arithmeticencoder.hpp
+laszip-src-2.2.0/src/arithmeticmodel.cpp
+laszip-src-2.2.0/src/arithmeticmodel.hpp
+laszip-src-2.2.0/src/bytestreamin.hpp
+laszip-src-2.2.0/src/bytestreamin_file.hpp
+laszip-src-2.2.0/src/bytestreamin_istream.hpp
+laszip-src-2.2.0/src/bytestreamout.hpp
+laszip-src-2.2.0/src/bytestreamout_file.hpp
+laszip-src-2.2.0/src/bytestreamout_ostream.hpp
+laszip-src-2.2.0/src/entropydecoder.hpp
+laszip-src-2.2.0/src/entropyencoder.hpp
+laszip-src-2.2.0/src/integercompressor.cpp
+laszip-src-2.2.0/src/integercompressor.hpp
+laszip-src-2.2.0/src/._lasreaditem.hpp
+laszip-src-2.2.0/src/lasreaditem.hpp
+laszip-src-2.2.0/src/lasreaditemcompressed_v1.cpp
+laszip-src-2.2.0/src/lasreaditemcompressed_v1.hpp
+laszip-src-2.2.0/src/lasreaditemcompressed_v2.cpp
+laszip-src-2.2.0/src/lasreaditemcompressed_v2.hpp
+laszip-src-2.2.0/src/._lasreaditemraw.hpp
+laszip-src-2.2.0/src/lasreaditemraw.hpp
+laszip-src-2.2.0/src/lasreadpoint.cpp
+laszip-src-2.2.0/src/lasreadpoint.hpp
+laszip-src-2.2.0/src/lasunzipper.cpp
+laszip-src-2.2.0/src/laswriteitem.hpp
+laszip-src-2.2.0/src/laswriteitemcompressed_v1.cpp
+laszip-src-2.2.0/src/laswriteitemcompressed_v1.hpp
+laszip-src-2.2.0/src/laswriteitemcompressed_v2.cpp
+laszip-src-2.2.0/src/laswriteitemcompressed_v2.hpp
+laszip-src-2.2.0/src/laswriteitemraw.hpp
+laszip-src-2.2.0/src/laswritepoint.cpp
+laszip-src-2.2.0/src/laswritepoint.hpp
+laszip-src-2.2.0/src/laszip.cpp
+laszip-src-2.2.0/src/laszip_common_v2.hpp
+laszip-src-2.2.0/src/laszipper.cpp
+laszip-src-2.2.0/src/._Makefile.am
+laszip-src-2.2.0/src/Makefile.am
+laszip-src-2.2.0/src/Makefile.in
+laszip-src-2.2.0/src/mydefs.hpp
+laszip-src-2.2.0/include/laszip/
+laszip-src-2.2.0/include/laszip/lasunzipper.hpp
+laszip-src-2.2.0/include/laszip/._laszip.hpp
+laszip-src-2.2.0/include/laszip/laszip.hpp
+laszip-src-2.2.0/include/laszip/laszipexport.hpp
+laszip-src-2.2.0/include/laszip/laszipper.hpp
+laszip-src-2.2.0/include/laszip/Makefile.am
+laszip-src-2.2.0/include/laszip/Makefile.in
+checking build system type... x86_64-unknown-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for g++... g++
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for style of include used by make... GNU
+checking dependency style of g++... gcc3
+checking how to run the C++ preprocessor... g++ -E
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking host system type... x86_64-unknown-linux-gnu
+checking how to print strings... printf
+checking for gcc... gcc
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether byte ordering is bigendian... no
+checking for string.h... (cached) yes
+checking stdio.h usability... yes
+checking stdio.h presence... yes
+checking for stdio.h... yes
+checking for stdlib.h... (cached) yes
+checking for debug enabled... no
+checking for 64bit integer type... long long
+checking for gettimeofday... yes
+checking for bzero... yes
+checking for memset... yes
+checking for memcpy... yes
+checking for bcopy... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating include/laszip/Makefile
+config.status: creating src/Makefile
+config.status: creating tools/Makefile
+config.status: creating tools/laszip-config
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+laszip configuration summary:
+
+  Version..................: 2.2.0
+  Installation directory...: /usr/local
+  C compiler...............: gcc -Wall -Wno-long-long -pedantic  -O3 -DNDEBUG
+  C++ compiler.............: g++ -Wall -Wno-long-long -pedantic -std=c++98  -O3 -DNDEBUG
+  Debugging support........: 
+
+  LIBS.....................: 
+
+
+Making all in src
+make[1]: Entering directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/src'
+Making all in .
+make[2]: Entering directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/src'
+/bin/bash ../libtool  --tag=CXX   --mode=compile g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" -DPACKAGE_STRING=\"laszip\ 2.2.0\" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I.  -I. -I../include -I../include/laszip   -Wall -Wno-long-long -pedantic -std=c++98  -O3 -DNDEBUG -MT arithmeticmodel.lo -MD -MP -MF .deps/arithmeticmodel.Tpo -c -o arithmeticmodel.lo arithmeticmodel.cpp
+/bin/bash ../libtool  --tag=CXX   --mode=compile g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" -DPACKAGE_STRING=\"laszip\ 2.2.0\" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I.  -I. -I../include -I../include/laszip   -Wall -Wno-long-long -pedantic -std=c++98  -O3 -DNDEBUG -MT arithmeticdecoder.lo -MD -MP -MF .deps/arithmeticdecoder.Tpo -c -o arithmeticdecoder.lo arithmeticdecoder.cpp
+/bin/bash ../libtool  --tag=CXX   --mode=compile g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" -DPACKAGE_STRING=\"laszip\ 2.2.0\" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I.  -I. -I../include -I../include/laszip   -Wall -Wno-long-long -pedantic -std=c++98  -O3 -DNDEBUG -MT arithmeticencoder.lo -MD -MP -MF .deps/arithmeticencoder.Tpo -c -o arithmeticencoder.lo arithmeticencoder.cpp
+/bin/bash ../libtool  --tag=CXX   --mode=compile g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" -DPACKAGE_STRING=\"laszip\ 2.2.0\" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I.  -I. -I../include -I../include/laszip   -Wall -Wno-long-long -pedantic -std=c++98  -O3 -DNDEBUG -MT integercompressor.lo -MD -MP -MF .deps/integercompressor.Tpo -c -o integercompressor.lo integercompressor.cpp
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT arithmeticencoder.lo -MD -MP -MF .deps/arithmeticencoder.Tpo -c arithmeticencoder.cpp  -fPIC -DPIC -o .libs/arithmeticencoder.o
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT integercompressor.lo -MD -MP -MF .deps/integercompressor.Tpo -c integercompressor.cpp  -fPIC -DPIC -o .libs/integercompressor.o
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT arithmeticmodel.lo -MD -MP -MF .deps/arithmeticmodel.Tpo -c arithmeticmodel.cpp  -fPIC -DPIC -o .libs/arithmeticmodel.o
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT arithmeticdecoder.lo -MD -MP -MF .deps/arithmeticdecoder.Tpo -c arithmeticdecoder.cpp  -fPIC -DPIC -o .libs/arithmeticdecoder.o
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT integercompressor.lo -MD -MP -MF .deps/integercompressor.Tpo -c integercompressor.cpp -o integercompressor.o >/dev/null 2>&1
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT arithmeticdecoder.lo -MD -MP -MF .deps/arithmeticdecoder.Tpo -c arithmeticdecoder.cpp -o arithmeticdecoder.o >/dev/null 2>&1
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT arithmeticmodel.lo -MD -MP -MF .deps/arithmeticmodel.Tpo -c arithmeticmodel.cpp -o arithmeticmodel.o >/dev/null 2>&1
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT arithmeticencoder.lo -MD -MP -MF .deps/arithmeticencoder.Tpo -c arithmeticencoder.cpp -o arithmeticencoder.o >/dev/null 2>&1
+mv -f .deps/arithmeticmodel.Tpo .deps/arithmeticmodel.Plo
+/bin/bash ../libtool  --tag=CXX   --mode=compile g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" -DPACKAGE_STRING=\"laszip\ 2.2.0\" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I.  -I. -I../include -I../include/laszip   -Wall -Wno-long-long -pedantic -std=c++98  -O3 -DNDEBUG -MT laswriteitemcompressed_v1.lo -MD -MP -MF .deps/laswriteitemcompressed_v1.Tpo -c -o laswriteitemcompressed_v1.lo laswriteitemcompressed_v1.cpp
+mv -f .deps/integercompressor.Tpo .deps/integercompressor.Plo
+/bin/bash ../libtool  --tag=CXX   --mode=compile g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" -DPACKAGE_STRING=\"laszip\ 2.2.0\" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I.  -I. -I../include -I../include/laszip   -Wall -Wno-long-long -pedantic -std=c++98  -O3 -DNDEBUG -MT lasreaditemcompressed_v1.lo -MD -MP -MF .deps/lasreaditemcompressed_v1.Tpo -c -o lasreaditemcompressed_v1.lo lasreaditemcompressed_v1.cpp
+mv -f .deps/arithmeticdecoder.Tpo .deps/arithmeticdecoder.Plo
+/bin/bash ../libtool  --tag=CXX   --mode=compile g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" -DPACKAGE_STRING=\"laszip\ 2.2.0\" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I.  -I. -I../include -I../include/laszip   -Wall -Wno-long-long -pedantic -std=c++98  -O3 -DNDEBUG -MT laswriteitemcompressed_v2.lo -MD -MP -MF .deps/laswriteitemcompressed_v2.Tpo -c -o laswriteitemcompressed_v2.lo laswriteitemcompressed_v2.cpp
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT lasreaditemcompressed_v1.lo -MD -MP -MF .deps/lasreaditemcompressed_v1.Tpo -c lasreaditemcompressed_v1.cpp  -fPIC -DPIC -o .libs/lasreaditemcompressed_v1.o
+lasreaditemcompressed_v1.cpp: In member function 'virtual void LASreadItemCompressed_POINT10_v1::read(U8*)':
+lasreaditemcompressed_v1.cpp:177:27: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ((LASpoint10*)last_item)->x += x_diff;
+                           ^
+lasreaditemcompressed_v1.cpp:181:27: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ((LASpoint10*)last_item)->y += y_diff;
+                           ^
+lasreaditemcompressed_v1.cpp:183:27: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ((LASpoint10*)last_item)->z = ic_z->decompress(((LASpoint10*)last_item)->z, (k_bits < 19 ? k_bits : 19));
+                           ^
+lasreaditemcompressed_v1.cpp:183:74: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ((LASpoint10*)last_item)->z = ic_z->decompress(((LASpoint10*)last_item)->z, (k_bits < 19 ? k_bits : 19));
+                                                                          ^
+lasreaditemcompressed_v1.cpp:193:31: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       ((LASpoint10*)last_item)->intensity = (U16)ic_intensity->decompress(((LASpoint10*)last_item)->intensity);
+                               ^
+lasreaditemcompressed_v1.cpp:193:99: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       ((LASpoint10*)last_item)->intensity = (U16)ic_intensity->decompress(((LASpoint10*)last_item)->intensity);
+                                                                                                   ^
+lasreaditemcompressed_v1.cpp:238:31: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       ((LASpoint10*)last_item)->point_source_ID = (U16)ic_point_source_ID->decompress(((LASpoint10*)last_item)->point_source_ID);
+                               ^
+lasreaditemcompressed_v1.cpp:238:111: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       ((LASpoint10*)last_item)->point_source_ID = (U16)ic_point_source_ID->decompress(((LASpoint10*)last_item)->point_source_ID);
+                                                                                                               ^
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT laswriteitemcompressed_v1.lo -MD -MP -MF .deps/laswriteitemcompressed_v1.Tpo -c laswriteitemcompressed_v1.cpp  -fPIC -DPIC -o .libs/laswriteitemcompressed_v1.o
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT laswriteitemcompressed_v2.lo -MD -MP -MF .deps/laswriteitemcompressed_v2.Tpo -c laswriteitemcompressed_v2.cpp  -fPIC -DPIC -o .libs/laswriteitemcompressed_v2.o
+laswriteitemcompressed_v1.cpp: In member function 'virtual BOOL LASwriteItemCompressed_POINT10_v1::write(const U8*)':
+laswriteitemcompressed_v1.cpp:175:65: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   I32 x_diff = ((LASpoint10*)item)->x - ((LASpoint10*)last_item)->x;
+                                                                 ^
+laswriteitemcompressed_v1.cpp:176:65: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   I32 y_diff = ((LASpoint10*)item)->y - ((LASpoint10*)last_item)->y;
+                                                                 ^
+laswriteitemcompressed_v1.cpp:183:42: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ic_z->compress(((LASpoint10*)last_item)->z, ((LASpoint10*)item)->z, (k_bits < 19 ? k_bits : 19));
+                                          ^
+laswriteitemcompressed_v1.cpp:186:50: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   I32 changed_values = ((((LASpoint10*)last_item)->intensity != ((LASpoint10*)item)->intensity) << 5) |
+                                                  ^
+laswriteitemcompressed_v1.cpp:191:50: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+                        ((((LASpoint10*)last_item)->point_source_ID != ((LASpoint10*)item)->point_source_ID));
+                                                  ^
+laswriteitemcompressed_v1.cpp:198:52: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ic_intensity->compress(((LASpoint10*)last_item)->intensity, ((LASpoint10*)item)->intensity);
+                                                    ^
+laswriteitemcompressed_v1.cpp:243:58: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ic_point_source_ID->compress(((LASpoint10*)last_item)->point_source_ID, ((LASpoint10*)item)->point_source_ID);
+                                                          ^
+laswriteitemcompressed_v2.cpp: In member function 'virtual BOOL LASwriteItemCompressed_POINT10_v2::write(const U8*)':
+laswriteitemcompressed_v2.cpp:154:50: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+                         (((LASpoint10*)last_item)->point_source_ID != ((LASpoint10*)item)->point_source_ID));
+                                                  ^
+laswriteitemcompressed_v2.cpp:207:58: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ic_point_source_ID->compress(((LASpoint10*)last_item)->point_source_ID, ((LASpoint10*)item)->point_source_ID);
+                                                          ^
+laswriteitemcompressed_v2.cpp:212:59: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   diff = ((LASpoint10*)item)->x - ((LASpoint10*)last_item)->x;
+                                                           ^
+laswriteitemcompressed_v2.cpp:219:59: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   diff = ((LASpoint10*)item)->y - ((LASpoint10*)last_item)->y;
+                                                           ^
+mv -f .deps/arithmeticencoder.Tpo .deps/arithmeticencoder.Plo
+/bin/bash ../libtool  --tag=CXX   --mode=compile g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" -DPACKAGE_STRING=\"laszip\ 2.2.0\" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I.  -I. -I../include -I../include/laszip   -Wall -Wno-long-long -pedantic -std=c++98  -O3 -DNDEBUG -MT lasreaditemcompressed_v2.lo -MD -MP -MF .deps/lasreaditemcompressed_v2.Tpo -c -o lasreaditemcompressed_v2.lo lasreaditemcompressed_v2.cpp
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT lasreaditemcompressed_v1.lo -MD -MP -MF .deps/lasreaditemcompressed_v1.Tpo -c lasreaditemcompressed_v1.cpp -o lasreaditemcompressed_v1.o >/dev/null 2>&1
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT lasreaditemcompressed_v2.lo -MD -MP -MF .deps/lasreaditemcompressed_v2.Tpo -c lasreaditemcompressed_v2.cpp  -fPIC -DPIC -o .libs/lasreaditemcompressed_v2.o
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT laswriteitemcompressed_v1.lo -MD -MP -MF .deps/laswriteitemcompressed_v1.Tpo -c laswriteitemcompressed_v1.cpp -o laswriteitemcompressed_v1.o >/dev/null 2>&1
+lasreaditemcompressed_v2.cpp: In member function 'virtual void LASreadItemCompressed_POINT10_v2::read(U8*)':
+lasreaditemcompressed_v2.cpp:159:33: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     r = ((LASpoint10*)last_item)->return_number;
+                                 ^
+lasreaditemcompressed_v2.cpp:160:33: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     n = ((LASpoint10*)last_item)->number_of_returns_of_given_pulse;
+                                 ^
+lasreaditemcompressed_v2.cpp:167:31: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       ((LASpoint10*)last_item)->intensity = (U16)ic_intensity->decompress(last_intensity[m], (m < 3 ? m : 3));
+                               ^
+lasreaditemcompressed_v2.cpp:168:51: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       last_intensity[m] = ((LASpoint10*)last_item)->intensity;
+                                                   ^
+lasreaditemcompressed_v2.cpp:172:31: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       ((LASpoint10*)last_item)->intensity = last_intensity[m];
+                               ^
+lasreaditemcompressed_v2.cpp:189:77: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       I32 val = dec->decodeSymbol(m_scan_angle_rank[((LASpoint10*)last_item)->scan_direction_flag]);
+                                                                             ^
+lasreaditemcompressed_v2.cpp:207:31: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       ((LASpoint10*)last_item)->point_source_ID = (U16)ic_point_source_ID->decompress(((LASpoint10*)last_item)->point_source_ID);
+                               ^
+lasreaditemcompressed_v2.cpp:207:111: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       ((LASpoint10*)last_item)->point_source_ID = (U16)ic_point_source_ID->decompress(((LASpoint10*)last_item)->point_source_ID);
+                                                                                                               ^
+lasreaditemcompressed_v2.cpp:212:33: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     r = ((LASpoint10*)last_item)->return_number;
+                                 ^
+lasreaditemcompressed_v2.cpp:213:33: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     n = ((LASpoint10*)last_item)->number_of_returns_of_given_pulse;
+                                 ^
+lasreaditemcompressed_v2.cpp:221:27: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ((LASpoint10*)last_item)->x += diff;
+                           ^
+lasreaditemcompressed_v2.cpp:228:27: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ((LASpoint10*)last_item)->y += diff;
+                           ^
+lasreaditemcompressed_v2.cpp:233:27: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   ((LASpoint10*)last_item)->z = ic_z->decompress(last_height[l], (n==1) + (k_bits < 18 ? U32_ZERO_BIT_0(k_bits) : 18));
+                           ^
+lasreaditemcompressed_v2.cpp:234:44: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   last_height[l] = ((LASpoint10*)last_item)->z;
+                                            ^
+mv -f .deps/lasreaditemcompressed_v1.Tpo .deps/lasreaditemcompressed_v1.Plo
+/bin/bash ../libtool  --tag=CXX   --mode=compile g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" -DPACKAGE_STRING=\"laszip\ 2.2.0\" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I.  -I. -I../include -I../include/laszip   -Wall -Wno-long-long -pedantic -std=c++98  -O3 -DNDEBUG -MT laswritepoint.lo -MD -MP -MF .deps/laswritepoint.Tpo -c -o laswritepoint.lo laswritepoint.cpp
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT laswriteitemcompressed_v2.lo -MD -MP -MF .deps/laswriteitemcompressed_v2.Tpo -c laswriteitemcompressed_v2.cpp -o laswriteitemcompressed_v2.o >/dev/null 2>&1
+mv -f .deps/laswriteitemcompressed_v1.Tpo .deps/laswriteitemcompressed_v1.Plo
+/bin/bash ../libtool  --tag=CXX   --mode=compile g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" -DPACKAGE_STRING=\"laszip\ 2.2.0\" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I.  -I. -I../include -I../include/laszip   -Wall -Wno-long-long -pedantic -std=c++98  -O3 -DNDEBUG -MT lasreadpoint.lo -MD -MP -MF .deps/lasreadpoint.Tpo -c -o lasreadpoint.lo lasreadpoint.cpp
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT laswritepoint.lo -MD -MP -MF .deps/laswritepoint.Tpo -c laswritepoint.cpp  -fPIC -DPIC -o .libs/laswritepoint.o
+In file included from laswritepoint.cpp:35:0:
+laswriteitemraw.hpp: In member function 'virtual BOOL LASwriteItemRaw_POINT10_BE::write(const U8*)':
+laswriteitemraw.hpp:60:25: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *((U32*)&swapped[14]) = *((U32*)&item[14]); // bitfield, classification, scan_angle_rank, user_data
+                         ^
+laswriteitemraw.hpp: In member function 'virtual BOOL LASwriteItemRaw_POINT14_LE::write(const U8*)':
+laswriteitemraw.hpp:210:35: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempWritePoint14*)buffer)->x = ((LAStempWritePoint10*)item)->x;
+                                   ^
+laswriteitemraw.hpp:211:35: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempWritePoint14*)buffer)->y = ((LAStempWritePoint10*)item)->y;
+                                   ^
+laswriteitemraw.hpp:212:35: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempWritePoint14*)buffer)->z = ((LAStempWritePoint10*)item)->z;
+                                   ^
+laswriteitemraw.hpp:213:35: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempWritePoint14*)buffer)->intensity = ((LAStempWritePoint10*)item)->intensity;
+                                   ^
+laswriteitemraw.hpp:214:35: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempWritePoint14*)buffer)->scan_direction_flag = ((LAStempWritePoint10*)item)->scan_direction_flag;
+                                   ^
+laswriteitemraw.hpp:215:35: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempWritePoint14*)buffer)->edge_of_flight_line = ((LAStempWritePoint10*)item)->edge_of_flight_line;
+                                   ^
+laswriteitemraw.hpp:216:35: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempWritePoint14*)buffer)->classification = ((LAStempWritePoint10*)item)->classification & 31;
+                                   ^
+laswriteitemraw.hpp:217:35: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempWritePoint14*)buffer)->user_data = ((LAStempWritePoint10*)item)->user_data;
+                                   ^
+laswriteitemraw.hpp:218:35: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempWritePoint14*)buffer)->point_source_ID = ((LAStempWritePoint10*)item)->point_source_ID;
+                                   ^
+laswriteitemraw.hpp:222:37: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       ((LAStempWritePoint14*)buffer)->classification_flags = ((LAStempWritePoint10*)item)->extended_classification_flags | (((LAStempWritePoint10*)item)->classification >> 5);
+                                     ^
+In file included from laswritepoint.cpp:35:0:
+laswriteitemraw.hpp:223:101: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       if (((LAStempWritePoint10*)item)->extended_classification > 31) ((LAStempWritePoint14*)buffer)->classification = ((LAStempWritePoint10*)item)->extended_classification;
+                                                                                                     ^
+laswriteitemraw.hpp:224:37: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       ((LAStempWritePoint14*)buffer)->scanner_channel = ((LAStempWritePoint10*)item)->extended_scanner_channel;
+                                     ^
+laswriteitemraw.hpp:225:37: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       ((LAStempWritePoint14*)buffer)->return_number = ((LAStempWritePoint10*)item)->extended_return_number;
+                                     ^
+laswriteitemraw.hpp:226:37: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       ((LAStempWritePoint14*)buffer)->number_of_returns_of_given_pulse = ((LAStempWritePoint10*)item)->extended_number_of_returns_of_given_pulse;
+                                     ^
+laswriteitemraw.hpp:227:37: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       ((LAStempWritePoint14*)buffer)->scan_angle = ((LAStempWritePoint10*)item)->extended_scan_angle;
+                                     ^
+laswriteitemraw.hpp:231:37: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       ((LAStempWritePoint14*)buffer)->classification_flags = (((LAStempWritePoint10*)item)->classification >> 5);
+                                     ^
+laswriteitemraw.hpp:232:37: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       ((LAStempWritePoint14*)buffer)->scanner_channel = 0;
+                                     ^
+laswriteitemraw.hpp:233:37: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       ((LAStempWritePoint14*)buffer)->return_number = ((LAStempWritePoint10*)item)->return_number;
+                                     ^
+laswriteitemraw.hpp:234:37: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       ((LAStempWritePoint14*)buffer)->number_of_returns_of_given_pulse = ((LAStempWritePoint10*)item)->number_of_returns_of_given_pulse;
+                                     ^
+laswriteitemraw.hpp:235:37: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       ((LAStempWritePoint14*)buffer)->scan_angle = I16_QUANTIZE(((LAStempWritePoint10*)item)->scan_angle_rank/0.006f);
+                                     ^
+laswriteitemraw.hpp:238:24: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *((F64*)&buffer[22]) = *((F64*)&item[24]);
+                        ^
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT lasreadpoint.lo -MD -MP -MF .deps/lasreadpoint.Tpo -c lasreadpoint.cpp  -fPIC -DPIC -o .libs/lasreadpoint.o
+In file included from lasreadpoint.cpp:35:0:
+lasreaditemraw.hpp: In member function 'virtual void LASreadItemRaw_POINT10_BE::read(U8*)':
+lasreaditemraw.hpp:60:46: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     *((U32*)&item[14]) = *((U32*)&swapped[14]); // bitfield, classification, scan_angle_rank, user_data
+                                              ^
+lasreaditemraw.hpp: In member function 'virtual void LASreadItemRaw_POINT14_LE::read(U8*)':
+lasreaditemraw.hpp:211:67: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->x = ((LAStempReadPoint14*)buffer)->x;
+                                                                   ^
+lasreaditemraw.hpp:212:67: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->y = ((LAStempReadPoint14*)buffer)->y;
+                                                                   ^
+lasreaditemraw.hpp:213:67: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->z = ((LAStempReadPoint14*)buffer)->z;
+                                                                   ^
+lasreaditemraw.hpp:214:75: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->intensity = ((LAStempReadPoint14*)buffer)->intensity;
+                                                                           ^
+lasreaditemraw.hpp:215:38: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     if (((LAStempReadPoint14*)buffer)->number_of_returns_of_given_pulse > 7)
+                                      ^
+lasreaditemraw.hpp:217:40: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       if (((LAStempReadPoint14*)buffer)->return_number > 6)
+                                        ^
+lasreaditemraw.hpp:219:42: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+         if (((LAStempReadPoint14*)buffer)->return_number >= ((LAStempReadPoint14*)buffer)->number_of_returns_of_given_pulse)
+                                          ^
+lasreaditemraw.hpp:219:90: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+         if (((LAStempReadPoint14*)buffer)->return_number >= ((LAStempReadPoint14*)buffer)->number_of_returns_of_given_pulse)
+                                                                                          ^
+lasreaditemraw.hpp:230:83: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+         ((LAStempReadPoint10*)item)->return_number = ((LAStempReadPoint14*)buffer)->return_number;
+                                                                                   ^
+lasreaditemraw.hpp:236:81: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       ((LAStempReadPoint10*)item)->return_number = ((LAStempReadPoint14*)buffer)->return_number;
+                                                                                 ^
+lasreaditemraw.hpp:237:100: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+       ((LAStempReadPoint10*)item)->number_of_returns_of_given_pulse = ((LAStempReadPoint14*)buffer)->number_of_returns_of_given_pulse;
+                                                                                                    ^
+In file included from lasreadpoint.cpp:35:0:
+lasreaditemraw.hpp:239:85: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->scan_direction_flag = ((LAStempReadPoint14*)buffer)->scan_direction_flag;
+                                                                                     ^
+lasreaditemraw.hpp:240:85: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->edge_of_flight_line = ((LAStempReadPoint14*)buffer)->edge_of_flight_line;
+                                                                                     ^
+lasreaditemraw.hpp:241:81: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->classification = (((LAStempReadPoint14*)buffer)->classification_flags << 5) | (((LAStempReadPoint14*)buffer)->classification & 31);
+                                                                                 ^
+lasreaditemraw.hpp:241:142: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->classification = (((LAStempReadPoint14*)buffer)->classification_flags << 5) | (((LAStempReadPoint14*)buffer)->classification & 31);
+                                                                                                                                              ^
+In file included from lasreadpoint.hpp:41:0,
+                 from lasreadpoint.cpp:32:
+lasreaditemraw.hpp:242:103: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->scan_angle_rank = I8_CLAMP(I16_QUANTIZE(((LAStempReadPoint14*)buffer)->scan_angle*0.006f));
+                                                                                                       ^
+mydefs.hpp:101:28: note: in definition of macro 'I8_CLAMP'
+ #define I8_CLAMP(n)     (((n) <= I8_MIN) ? I8_MIN : (((n) >= I8_MAX) ? I8_MAX : ((I8)(n))))
+                            ^
+lasreaditemraw.hpp:242:61: note: in expansion of macro 'I16_QUANTIZE'
+     ((LAStempReadPoint10*)item)->scan_angle_rank = I8_CLAMP(I16_QUANTIZE(((LAStempReadPoint14*)buffer)->scan_angle*0.006f));
+                                                             ^
+lasreaditemraw.hpp:242:103: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->scan_angle_rank = I8_CLAMP(I16_QUANTIZE(((LAStempReadPoint14*)buffer)->scan_angle*0.006f));
+                                                                                                       ^
+mydefs.hpp:101:28: note: in definition of macro 'I8_CLAMP'
+ #define I8_CLAMP(n)     (((n) <= I8_MIN) ? I8_MIN : (((n) >= I8_MAX) ? I8_MAX : ((I8)(n))))
+                            ^
+lasreaditemraw.hpp:242:61: note: in expansion of macro 'I16_QUANTIZE'
+     ((LAStempReadPoint10*)item)->scan_angle_rank = I8_CLAMP(I16_QUANTIZE(((LAStempReadPoint14*)buffer)->scan_angle*0.006f));
+                                                             ^
+lasreaditemraw.hpp:242:103: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->scan_angle_rank = I8_CLAMP(I16_QUANTIZE(((LAStempReadPoint14*)buffer)->scan_angle*0.006f));
+                                                                                                       ^
+mydefs.hpp:101:28: note: in definition of macro 'I8_CLAMP'
+ #define I8_CLAMP(n)     (((n) <= I8_MIN) ? I8_MIN : (((n) >= I8_MAX) ? I8_MAX : ((I8)(n))))
+                            ^
+lasreaditemraw.hpp:242:61: note: in expansion of macro 'I16_QUANTIZE'
+     ((LAStempReadPoint10*)item)->scan_angle_rank = I8_CLAMP(I16_QUANTIZE(((LAStempReadPoint14*)buffer)->scan_angle*0.006f));
+                                                             ^
+lasreaditemraw.hpp:242:103: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->scan_angle_rank = I8_CLAMP(I16_QUANTIZE(((LAStempReadPoint14*)buffer)->scan_angle*0.006f));
+                                                                                                       ^
+mydefs.hpp:101:56: note: in definition of macro 'I8_CLAMP'
+ #define I8_CLAMP(n)     (((n) <= I8_MIN) ? I8_MIN : (((n) >= I8_MAX) ? I8_MAX : ((I8)(n))))
+                                                        ^
+lasreaditemraw.hpp:242:61: note: in expansion of macro 'I16_QUANTIZE'
+     ((LAStempReadPoint10*)item)->scan_angle_rank = I8_CLAMP(I16_QUANTIZE(((LAStempReadPoint14*)buffer)->scan_angle*0.006f));
+                                                             ^
+lasreaditemraw.hpp:242:103: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->scan_angle_rank = I8_CLAMP(I16_QUANTIZE(((LAStempReadPoint14*)buffer)->scan_angle*0.006f));
+                                                                                                       ^
+mydefs.hpp:101:56: note: in definition of macro 'I8_CLAMP'
+ #define I8_CLAMP(n)     (((n) <= I8_MIN) ? I8_MIN : (((n) >= I8_MAX) ? I8_MAX : ((I8)(n))))
+                                                        ^
+lasreaditemraw.hpp:242:61: note: in expansion of macro 'I16_QUANTIZE'
+     ((LAStempReadPoint10*)item)->scan_angle_rank = I8_CLAMP(I16_QUANTIZE(((LAStempReadPoint14*)buffer)->scan_angle*0.006f));
+                                                             ^
+lasreaditemraw.hpp:242:103: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->scan_angle_rank = I8_CLAMP(I16_QUANTIZE(((LAStempReadPoint14*)buffer)->scan_angle*0.006f));
+                                                                                                       ^
+mydefs.hpp:101:56: note: in definition of macro 'I8_CLAMP'
+ #define I8_CLAMP(n)     (((n) <= I8_MIN) ? I8_MIN : (((n) >= I8_MAX) ? I8_MAX : ((I8)(n))))
+                                                        ^
+lasreaditemraw.hpp:242:61: note: in expansion of macro 'I16_QUANTIZE'
+     ((LAStempReadPoint10*)item)->scan_angle_rank = I8_CLAMP(I16_QUANTIZE(((LAStempReadPoint14*)buffer)->scan_angle*0.006f));
+                                                             ^
+lasreaditemraw.hpp:242:103: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->scan_angle_rank = I8_CLAMP(I16_QUANTIZE(((LAStempReadPoint14*)buffer)->scan_angle*0.006f));
+                                                                                                       ^
+mydefs.hpp:101:87: note: in definition of macro 'I8_CLAMP'
+ #define I8_CLAMP(n)     (((n) <= I8_MIN) ? I8_MIN : (((n) >= I8_MAX) ? I8_MAX : ((I8)(n))))
+                                                                                       ^
+lasreaditemraw.hpp:242:61: note: in expansion of macro 'I16_QUANTIZE'
+     ((LAStempReadPoint10*)item)->scan_angle_rank = I8_CLAMP(I16_QUANTIZE(((LAStempReadPoint14*)buffer)->scan_angle*0.006f));
+                                                             ^
+lasreaditemraw.hpp:242:103: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->scan_angle_rank = I8_CLAMP(I16_QUANTIZE(((LAStempReadPoint14*)buffer)->scan_angle*0.006f));
+                                                                                                       ^
+mydefs.hpp:101:87: note: in definition of macro 'I8_CLAMP'
+ #define I8_CLAMP(n)     (((n) <= I8_MIN) ? I8_MIN : (((n) >= I8_MAX) ? I8_MAX : ((I8)(n))))
+                                                                                       ^
+lasreaditemraw.hpp:242:61: note: in expansion of macro 'I16_QUANTIZE'
+     ((LAStempReadPoint10*)item)->scan_angle_rank = I8_CLAMP(I16_QUANTIZE(((LAStempReadPoint14*)buffer)->scan_angle*0.006f));
+                                                             ^
+lasreaditemraw.hpp:242:103: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->scan_angle_rank = I8_CLAMP(I16_QUANTIZE(((LAStempReadPoint14*)buffer)->scan_angle*0.006f));
+                                                                                                       ^
+mydefs.hpp:101:87: note: in definition of macro 'I8_CLAMP'
+ #define I8_CLAMP(n)     (((n) <= I8_MIN) ? I8_MIN : (((n) >= I8_MAX) ? I8_MAX : ((I8)(n))))
+                                                                                       ^
+lasreaditemraw.hpp:242:61: note: in expansion of macro 'I16_QUANTIZE'
+     ((LAStempReadPoint10*)item)->scan_angle_rank = I8_CLAMP(I16_QUANTIZE(((LAStempReadPoint14*)buffer)->scan_angle*0.006f));
+                                                             ^
+In file included from lasreadpoint.cpp:35:0:
+lasreaditemraw.hpp:243:75: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->user_data = ((LAStempReadPoint14*)buffer)->user_data;
+                                                                           ^
+lasreaditemraw.hpp:244:81: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->point_source_ID = ((LAStempReadPoint14*)buffer)->point_source_ID;
+                                                                                 ^
+lasreaditemraw.hpp:245:90: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->extended_scanner_channel = ((LAStempReadPoint14*)buffer)->scanner_channel;
+                                                                                          ^
+lasreaditemraw.hpp:246:95: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->extended_classification_flags = ((LAStempReadPoint14*)buffer)->classification_flags & 8;
+                                                                                               ^
+lasreaditemraw.hpp:247:89: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->extended_classification = ((LAStempReadPoint14*)buffer)->classification;
+                                                                                         ^
+lasreaditemraw.hpp:248:88: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->extended_return_number = ((LAStempReadPoint14*)buffer)->return_number;
+                                                                                        ^
+lasreaditemraw.hpp:249:107: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->extended_number_of_returns_of_given_pulse = ((LAStempReadPoint14*)buffer)->number_of_returns_of_given_pulse;
+                                                                                                           ^
+lasreaditemraw.hpp:250:85: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->extended_scan_angle = ((LAStempReadPoint14*)buffer)->scan_angle;
+                                                                                     ^
+lasreaditemraw.hpp:251:64: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+     ((LAStempReadPoint10*)item)->gps_time = *((F64*)&buffer[22]);
+                                                                ^
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT lasreaditemcompressed_v2.lo -MD -MP -MF .deps/lasreaditemcompressed_v2.Tpo -c lasreaditemcompressed_v2.cpp -o lasreaditemcompressed_v2.o >/dev/null 2>&1
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT laswritepoint.lo -MD -MP -MF .deps/laswritepoint.Tpo -c laswritepoint.cpp -o laswritepoint.o >/dev/null 2>&1
+mv -f .deps/laswriteitemcompressed_v2.Tpo .deps/laswriteitemcompressed_v2.Plo
+/bin/bash ../libtool  --tag=CXX   --mode=compile g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" -DPACKAGE_STRING=\"laszip\ 2.2.0\" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I.  -I. -I../include -I../include/laszip   -Wall -Wno-long-long -pedantic -std=c++98  -O3 -DNDEBUG -MT laszip.lo -MD -MP -MF .deps/laszip.Tpo -c -o laszip.lo laszip.cpp
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT lasreadpoint.lo -MD -MP -MF .deps/lasreadpoint.Tpo -c lasreadpoint.cpp -o lasreadpoint.o >/dev/null 2>&1
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT laszip.lo -MD -MP -MF .deps/laszip.Tpo -c laszip.cpp  -fPIC -DPIC -o .libs/laszip.o
+mv -f .deps/lasreaditemcompressed_v2.Tpo .deps/lasreaditemcompressed_v2.Plo
+mv -f .deps/laswritepoint.Tpo .deps/laswritepoint.Plo
+/bin/bash ../libtool  --tag=CXX   --mode=compile g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" -DPACKAGE_STRING=\"laszip\ 2.2.0\" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I.  -I. -I../include -I../include/laszip   -Wall -Wno-long-long -pedantic -std=c++98  -O3 -DNDEBUG -MT laszipper.lo -MD -MP -MF .deps/laszipper.Tpo -c -o laszipper.lo laszipper.cpp
+/bin/bash ../libtool  --tag=CXX   --mode=compile g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" -DPACKAGE_STRING=\"laszip\ 2.2.0\" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I.  -I. -I../include -I../include/laszip   -Wall -Wno-long-long -pedantic -std=c++98  -O3 -DNDEBUG -MT lasunzipper.lo -MD -MP -MF .deps/lasunzipper.Tpo -c -o lasunzipper.lo lasunzipper.cpp
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT lasunzipper.lo -MD -MP -MF .deps/lasunzipper.Tpo -c lasunzipper.cpp  -fPIC -DPIC -o .libs/lasunzipper.o
+mv -f .deps/lasreadpoint.Tpo .deps/lasreadpoint.Plo
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT laszipper.lo -MD -MP -MF .deps/laszipper.Tpo -c laszipper.cpp  -fPIC -DPIC -o .libs/laszipper.o
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT laszip.lo -MD -MP -MF .deps/laszip.Tpo -c laszip.cpp -o laszip.o >/dev/null 2>&1
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT lasunzipper.lo -MD -MP -MF .deps/lasunzipper.Tpo -c lasunzipper.cpp -o lasunzipper.o >/dev/null 2>&1
+libtool: compile:  g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" "-DPACKAGE_STRING=\"laszip 2.2.0\"" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I. -I. -I../include -I../include/laszip -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -MT laszipper.lo -MD -MP -MF .deps/laszipper.Tpo -c laszipper.cpp -o laszipper.o >/dev/null 2>&1
+mv -f .deps/laszip.Tpo .deps/laszip.Plo
+mv -f .deps/laszipper.Tpo .deps/laszipper.Plo
+mv -f .deps/lasunzipper.Tpo .deps/lasunzipper.Plo
+/bin/bash ../libtool  --tag=CXX   --mode=link g++  -Wall -Wno-long-long -pedantic -std=c++98  -O3 -DNDEBUG   -o liblibrary.la  arithmeticmodel.lo arithmeticdecoder.lo arithmeticencoder.lo integercompressor.lo laswriteitemcompressed_v1.lo lasreaditemcompressed_v1.lo laswriteitemcompressed_v2.lo lasreaditemcompressed_v2.lo laswritepoint.lo lasreadpoint.lo laszip.lo laszipper.lo lasunzipper.lo  
+libtool: link: ar cru .libs/liblibrary.a .libs/arithmeticmodel.o .libs/arithmeticdecoder.o .libs/arithmeticencoder.o .libs/integercompressor.o .libs/laswriteitemcompressed_v1.o .libs/lasreaditemcompressed_v1.o .libs/laswriteitemcompressed_v2.o .libs/lasreaditemcompressed_v2.o .libs/laswritepoint.o .libs/lasreadpoint.o .libs/laszip.o .libs/laszipper.o .libs/lasunzipper.o 
+libtool: link: ranlib .libs/liblibrary.a
+libtool: link: ( cd ".libs" && rm -f "liblibrary.la" && ln -s "../liblibrary.la" "liblibrary.la" )
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/src'
+make[1]: Leaving directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/src'
+Making all in .
+make[1]: Entering directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0'
+/bin/bash ./libtool  --tag=CC   --mode=link gcc  -Wall -Wno-long-long -pedantic  -O3 -DNDEBUG -version-info 6:0:0  -o liblaszip.la -rpath /usr/local/lib  src/liblibrary.la  
+libtool: link: gcc -shared  -fPIC -DPIC  -Wl,--whole-archive src/.libs/liblibrary.a -Wl,--no-whole-archive   -O3   -Wl,-soname -Wl,liblaszip.so.6 -o .libs/liblaszip.so.6.0.0
+libtool: link: (cd ".libs" && rm -f "liblaszip.so.6" && ln -s "liblaszip.so.6.0.0" "liblaszip.so.6")
+libtool: link: (cd ".libs" && rm -f "liblaszip.so" && ln -s "liblaszip.so.6.0.0" "liblaszip.so")
+libtool: link: (cd .libs/liblaszip.lax/liblibrary.a && ar x "/home/sdrdis/iarpa/src/laszip-src-2.2.0/src/.libs/liblibrary.a")
+libtool: link: ar cru .libs/liblaszip.a   .libs/liblaszip.lax/liblibrary.a/arithmeticdecoder.o .libs/liblaszip.lax/liblibrary.a/arithmeticencoder.o .libs/liblaszip.lax/liblibrary.a/arithmeticmodel.o .libs/liblaszip.lax/liblibrary.a/integercompressor.o .libs/liblaszip.lax/liblibrary.a/lasreaditemcompressed_v1.o .libs/liblaszip.lax/liblibrary.a/lasreaditemcompressed_v2.o .libs/liblaszip.lax/liblibrary.a/lasreadpoint.o .libs/liblaszip.lax/liblibrary.a/lasunzipper.o .libs/liblaszip.lax/liblibrary.a/laswriteitemcompressed_v1.o .libs/liblaszip.lax/liblibrary.a/laswriteitemcompressed_v2.o .libs/liblaszip.lax/liblibrary.a/laswritepoint.o .libs/liblaszip.lax/liblibrary.a/laszip.o .libs/liblaszip.lax/liblibrary.a/laszipper.o 
+libtool: link: ranlib .libs/liblaszip.a
+libtool: link: rm -fr .libs/liblaszip.lax
+libtool: link: ( cd ".libs" && rm -f "liblaszip.la" && ln -s "../liblaszip.la" "liblaszip.la" )
+make[1]: Leaving directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0'
+Making all in include/laszip
+make[1]: Entering directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/include/laszip'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/include/laszip'
+Making all in tools
+make[1]: Entering directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/tools'
+g++ -DPACKAGE_NAME=\"laszip\" -DPACKAGE_TARNAME=\"laszip-src\" -DPACKAGE_VERSION=\"2.2.0\" -DPACKAGE_STRING=\"laszip\ 2.2.0\" -DPACKAGE_BUGREPORT=\"howard@hobu.co\" -DPACKAGE_URL=\"\" -DPACKAGE=\"laszip-src\" -DVERSION=\"2.2.0\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_STRING_H=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_LONG_LONG=1 -DHAVE_GETTIMEOFDAY=1 -DHAVE_BZERO=1 -DHAVE_MEMSET=1 -DHAVE_MEMCPY=1 -DHAVE_BCOPY=1 -I.  -I../include -I../include/laszip   -Wall -Wno-long-long -pedantic -std=c++98  -O3 -DNDEBUG -MT laszippertest.o -MD -MP -MF .deps/laszippertest.Tpo -c -o laszippertest.o laszippertest.cpp
+mv -f .deps/laszippertest.Tpo .deps/laszippertest.Po
+/bin/bash ../libtool  --tag=CXX   --mode=link g++  -Wall -Wno-long-long -pedantic -std=c++98  -O3 -DNDEBUG   -o laszippertest laszippertest.o ../liblaszip.la  
+libtool: link: g++ -Wall -Wno-long-long -pedantic -std=c++98 -O3 -DNDEBUG -o .libs/laszippertest laszippertest.o  ../.libs/liblaszip.so
+make[1]: Leaving directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/tools'
+Making install in src
+make[1]: Entering directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/src'
+Making install in .
+make[2]: Entering directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/src'
+make[3]: Entering directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/src'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/src'
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/src'
+make[1]: Leaving directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/src'
+Making install in .
+make[1]: Entering directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0'
+make[2]: Entering directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0'
+ /bin/mkdir -p '/usr/local/lib'
+ /bin/bash ./libtool   --mode=install /usr/bin/install -c   liblaszip.la '/usr/local/lib'
+libtool: install: /usr/bin/install -c .libs/liblaszip.so.6.0.0 /usr/local/lib/liblaszip.so.6.0.0
+libtool: install: (cd /usr/local/lib && { ln -s -f liblaszip.so.6.0.0 liblaszip.so.6 || { rm -f liblaszip.so.6 && ln -s liblaszip.so.6.0.0 liblaszip.so.6; }; })
+libtool: install: (cd /usr/local/lib && { ln -s -f liblaszip.so.6.0.0 liblaszip.so || { rm -f liblaszip.so && ln -s liblaszip.so.6.0.0 liblaszip.so; }; })
+libtool: install: /usr/bin/install -c .libs/liblaszip.lai /usr/local/lib/liblaszip.la
+libtool: install: /usr/bin/install -c .libs/liblaszip.a /usr/local/lib/liblaszip.a
+libtool: install: chmod 644 /usr/local/lib/liblaszip.a
+libtool: install: ranlib /usr/local/lib/liblaszip.a
+libtool: finish: PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin" ldconfig -n /usr/local/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0'
+make[1]: Leaving directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0'
+Making install in include/laszip
+make[1]: Entering directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/include/laszip'
+make[2]: Entering directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/include/laszip'
+make[2]: Nothing to be done for `install-exec-am'.
+ /bin/mkdir -p '/usr/local/include/'
+ /usr/bin/install -c -m 644 lasunzipper.hpp laszip.hpp laszipper.hpp laszipexport.hpp '/usr/local/include/'
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/include/laszip'
+make[1]: Leaving directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/include/laszip'
+Making install in tools
+make[1]: Entering directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/tools'
+make[2]: Entering directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/tools'
+ /bin/mkdir -p '/usr/local/bin'
+  /bin/bash ../libtool   --mode=install /usr/bin/install -c laszippertest '/usr/local/bin'
+libtool: install: /usr/bin/install -c .libs/laszippertest /usr/local/bin/laszippertest
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/tools'
+make[1]: Leaving directory `/home/sdrdis/iarpa/src/laszip-src-2.2.0/tools'

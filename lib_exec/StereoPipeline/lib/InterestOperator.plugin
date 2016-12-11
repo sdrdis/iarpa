@@ -1,0 +1,20 @@
+Group = Forstner
+  Library = ForstnerOperator
+  Routine = ForstnerOperatorPlugin
+End_Group
+Group = Gradient
+  Library = GradientOperator
+  Routine = GradientOperatorPlugin
+End_Group
+Group = StandardDeviation
+  Library = StandardDeviationOperator
+  Routine = StandardDeviationOperatorPlugin
+End_Group
+Group = No
+  Library = NoOperator
+  Routine = NoOperatorPlugin
+End_Group
+Group = Moravec
+  Library = MoravecOperator
+  Routine = MoravecOperatorPlugin
+End_Group

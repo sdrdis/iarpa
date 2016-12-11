@@ -1,0 +1,24 @@
+Group = Isotropic1
+  Library = Isotropic1
+  Routine = Isotropic1Plugin
+End_Group
+Group = Anisotropic2
+  Library = Anisotropic2
+  Routine = Anisotropic2Plugin
+End_Group
+Group = HapkeAtm1
+  Library = HapkeAtm1
+  Routine = HapkeAtm1Plugin
+End_Group
+Group = HapkeAtm2
+  Library = HapkeAtm2
+  Routine = HapkeAtm2Plugin
+End_Group
+Group = Isotropic2
+  Library = Isotropic2
+  Routine = Isotropic2Plugin
+End_Group
+Group = Anisotropic1
+  Library = Anisotropic1
+  Routine = Anisotropic1Plugin
+End_Group

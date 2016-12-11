@@ -1,0 +1,103 @@
+Group = RingCylindrical
+  Library = RingCylindrical
+  Routine = RingCylindricalPlugin
+  Keyword = CenterAzimuth
+  Keyword = CenterRadius
+EndGroup
+ 
+Group = TransverseMercator
+  Library = TransverseMercator
+  Routine = TransverseMercatorPlugin
+  Keyword = CenterLongitude
+  Keyword = CenterLatitude
+  Keyword = ScaleFactor
+EndGroup
+
+Group = Orthographic
+  Library = Orthographic
+  Routine = OrthographicPlugin
+  Keyword = CenterLongitude
+  Keyword = CenterLatitude
+EndGroup
+
+Group = ObliqueCylindrical
+  Library = ObliqueCylindrical
+  Routine = ObliqueCylindricalPlugin
+  Keyword = CenterLongitude
+EndGroup
+ 
+Group = Sinusoidal
+  Library = Sinusoidal
+  Routine = SinusoidalPlugin
+  Keyword = CenterLongitude
+EndGroup
+
+
+Group = LambertConformal
+  Library = LambertConformal
+  Routine = LambertConformalPlugin
+  Keyword = CenterLongitude
+  Keyword = CenterLatitude
+  Keyword = FirstStandardParallel
+  Keyword = SecondStandardParallel
+EndGroup
+
+Group = Equirectangular
+  Library = Equirectangular
+  Routine = EquirectangularPlugin
+  Keyword = CenterLongitude
+  Keyword = CenterLatitude
+EndGroup
+ 
+Group = Planar
+  Library = Planar
+  Routine = PlanarPlugin
+  Keyword = CenterAzimuth
+EndGroup
+Group = PointPerspective
+  Library = PointPerspective
+  Routine = PointPerspectivePlugin
+  Keyword = CenterLongitude
+  Keyword = CenterLatitude
+  Keyword = Distance
+EndGroup
+
+Group = LambertAzimuthalEqualArea
+  Library = LambertAzimuthalEqualArea
+  Routine = LambertAzimuthalEqualAreaPlugin
+  Keyword = CenterLongitude
+  Keyword = CenterLatitude
+EndGroup
+
+Group = Robinson
+  Library = Robinson
+  Routine = RobinsonPlugin
+  Keyword = CenterLongitude
+EndGroup
+
+
+Group = LunarAzimuthalEqualArea
+  Library = LunarAzimuthalEqualArea
+  Routine = LunarAzimuthalEqualAreaPlugin
+EndGroup
+Group = SimpleCylindrical
+  Library = SimpleCylindrical
+  Routine = SimpleCylindricalPlugin
+  Keyword = CenterLongitude
+EndGroup
+ 
+Group = PolarStereographic
+  Library = PolarStereographic
+  Routine = PolarStereographicPlugin
+  Keyword = CenterLongitude
+  Keyword = CenterLatitude
+EndGroup
+
+
+Group = Mercator
+  Library = Mercator
+  Routine = MercatorPlugin
+  Keyword = CenterLongitude
+  Keyword = CenterLatitude
+EndGroup
+

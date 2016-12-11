@@ -1,0 +1,13 @@
+Group = MinimumDifference
+  Library = MinimumDifference
+  Routine = MinimumDifferencePlugin
+End_Group
+Group = MaximumCorrelation
+  Library = MaximumCorrelation
+  Routine = MaximumCorrelationPlugin
+End_Group
+Group = AdaptiveGruen
+  Library = AdaptiveGruen
+  Routine = AdaptiveGruenPlugin
+End_Group
+

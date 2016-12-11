@@ -1,0 +1,3 @@
+*.pyc
+lib_exec/get-crop-area
+tmp

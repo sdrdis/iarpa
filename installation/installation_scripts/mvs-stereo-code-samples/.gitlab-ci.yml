@@ -1,0 +1,16 @@
+stages:
+  - build
+  - package
+
+build:
+  stage: build
+  script:
+    - mkdir build
+    - cd $CI_PROJECT_DIR/build
+    - cmake $CI_PROJECT_DIR
+    - make -j6
+  tags:
+    - ubuntu
+    - c++
+  except:
+    - tags

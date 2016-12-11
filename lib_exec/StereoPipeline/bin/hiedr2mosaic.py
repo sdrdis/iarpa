@@ -1,0 +1,426 @@
+#!/usr/bin/env python
+# __BEGIN_LICENSE__
+#  Copyright (c) 2009-2013, United States Government as represented by the
+#  Administrator of the National Aeronautics and Space Administration. All
+#  rights reserved.
+#
+#  The NGT platform is licensed under the Apache License, Version 2.0 (the
+#  "License"); you may not use this file except in compliance with the
+#  License. You may obtain a copy of the License at
+#  http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+# __END_LICENSE__
+
+
+import os, glob, optparse, re, shutil, subprocess, sys, string
+
+libexecpath = os.path.abspath(sys.path[0] + '/../libexec')
+sys.path.insert(0, libexecpath) # prepend to Python path
+from stereo_utils import get_asp_version
+
+import asp_system_utils
+asp_system_utils.verify_python_version_is_supported()
+
+job_pool = [];
+
+def man(option, opt, value, parser):
+    print >>sys.stderr, parser.usage
+    print >>sys.stderr, '''\
+This program operates on HiRISE EDR (.IMG) channel files, and performs the
+following ISIS 3 operations:
+ * Converts to ISIS format (hi2isis)
+ * Performs radiometric calibration (hical)
+ * Stitches the channel files together into single CCD files (histitch)
+ * Attaches SPICE information (spiceinit and spicefit)
+ * Removes camera distortions from the CCD images (noproj)
+ * Perfroms jitter analysis (hijitreg)
+ * Mosaics individual CCDs into one unified image file (handmos)
+ * Normalizes the mosaic (cubenorm)
+
+'''
+    sys.exit()
+
+class Usage(Exception):
+    def __init__(self, msg):
+        self.msg = msg
+
+class CCDs(dict):
+    ''''''
+    def __init__(self, cubes, match=5):
+        self.prefix = os.path.commonprefix( cubes )
+        dict.__init__(self)
+        for cub in cubes:
+            number = int( cub[len(self.prefix)] )
+            self[number] = cub
+        self.match = int(match)
+
+    def min(self):
+        return min( self.keys() )
+
+    def max(self):
+        return max( self.keys() )
+
+    def matchcube(self):
+        return self[self.match]
+
+
+def add_job( cmd, num_working_threads=4 ):
+    if ( len(job_pool) >= num_working_threads):
+        job_pool[0].wait();
+        job_pool.pop(0);
+    print(cmd)
+    job_pool.append( subprocess.Popen(cmd, shell=True) );
+
+def wait_on_all_jobs():
+    print("Waiting for jobs to finish")
+    while len(job_pool) > 0:
+        job_pool[0].wait();
+        job_pool.pop(0);
+
+def read_flatfile( flat ):
+    f = open(flat,'r')
+    averages = [0.0,0.0]
+    for line in f:
+        if ( line.rfind("Average Sample Offset:") > 0 ):
+            index       = line.rfind("Offset:");
+            index_e     = line.rfind("StdDev:");
+            crop        = line[index+7:index_e];
+            averages[0] = float(crop);
+        elif ( line.rfind("Average Line Offset:") > 0 ):
+            index       = line.rfind("Offset:");
+            index_e     = line.rfind("StdDev:");
+            crop        = line[index+7:index_e];
+            averages[1] = float(crop);
+    return averages;
+
+def isisversion(verbose=False):
+    path = ''
+    try: path = os.environ['ISISROOT']
+    except KeyError as msg:
+        raise Exception( "The ISIS environment does not seem to be enabled.\nThe " + str(msg) + " environment variable must be set." )
+
+    version = None
+    if os.path.exists( path+'/version' ):
+        v = open( path+"/version", 'r')
+        version = v.readline().strip()
+        v.close()
+
+    f = open(path+"/inc/Constants.h",'r');
+    for line in f:
+         if ( line.rfind("std::string version(") > 0 ):
+            index = line.find("version(\"");
+            index_e = line.rfind("|");
+            version = line[index+9:index_e].rstrip()
+            #version = version +'b'
+    f.close()
+
+    if( version ):
+        if( verbose ): 
+          print("\tFound Isis Version: "+version+ " at "+path)
+        alphaend = version.lstrip(string.digits+'.')
+        version_numbers = version.rstrip(string.ascii_letters);
+        version_strings = version_numbers.split('.')
+        version_list = []
+        version_list = [int(item) for item in version_strings]
+        if( alphaend ): version_list.append( alphaend )
+        version_tuple = tuple( version_list )
+        return version_tuple
+
+    raise Exception( "Could not find an ISIS version string in " + f.str() )
+    return False
+
+
+def hi2isis( img_files, threads ):
+    hi2isis_cubs = []
+    for img in img_files:
+        # Expect to end in .IMG, change to end in .cub
+        to_cub = os.path.splitext( os.path.basename(img) )[0] + '.cub'
+        if( os.path.exists(to_cub) ):
+            print(to_cub + ' exists, skipping hi2isis.')
+        else:
+            cmd = 'hi2isis from= '+ img +' to= '+ to_cub
+            add_job(cmd, threads)
+        hi2isis_cubs.append( to_cub )
+    wait_on_all_jobs()
+    return hi2isis_cubs
+
+def hical( cub_files, threads, delete=False ):
+    hical_cubs = []
+    for cub in cub_files:
+        # Expect to end in .cub, change to end in .hical.cub
+        to_cub = os.path.splitext(cub)[0] + '.hical.cub'
+        if( os.path.exists(to_cub) ):
+            print(to_cub + ' exists, skipping hical.')
+        else:
+            cmd = 'hical from=  '+ cub +' to= '+ to_cub
+            add_job(cmd, threads)
+        hical_cubs.append( to_cub )
+    wait_on_all_jobs()
+    if( delete ):
+        for cub in cub_files: os.remove( cub )
+        hical_log_files = glob.glob( os.path.commonprefix(cub_files) + '*.hical.log' )
+        for file in hical_log_files: os.remove( file )
+    return hical_cubs
+
+def histitch( cub_files, threads, delete=False ):
+    histitch_cubs = []
+    to_del_cubs = []
+    # Strictly, we should probably look in the image headers, but instead we'll
+    # assume that people have kept a sane naming convention for their files, such
+    # that the name consists of prefix + 'N_C' + suffix
+    # where prefix we extract below and the 'N_C' string is where N is the CCD number
+    # and C is the channel number.
+    prefix = os.path.commonprefix( cub_files )
+    channel_files = [[None]*2 for i in range(10)]
+    pattern = re.compile(r"(\d)_(\d)")
+    for cub in cub_files:
+        match = re.match( pattern, cub[len(prefix):] )
+        if( match ):
+            ccd     = match.group(1)
+            channel = match.group(2)
+            # print 'ccd: ' + ccd + ' channel: '+ channel
+            channel_files[int(ccd)][int(channel)] = cub
+        else:
+            raise Exception( 'Could not find a CCD and channel identifier in ' + cub )
+
+    for i in range(10):
+        to_cub = prefix + str(i) + '.histitch.cub'
+
+        if( channel_files[i][0] and channel_files[i][1] ):
+            if( os.path.exists(to_cub) ):
+                print(to_cub + ' exists, skipping histitch.')
+            else:
+                cmd = 'histitch balance= TRUE from1= '+ channel_files[i][0] \
+                        +' from2= '+ channel_files[i][1] +' to= '+ to_cub
+                add_job(cmd, threads)
+                to_del_cubs.append( channel_files[i][0] )
+                to_del_cubs.append( channel_files[i][1] )
+            histitch_cubs.append( to_cub )
+        elif( channel_files[i][0] or channel_files[i][1] ):
+            found = ''
+            if( channel_files[i][0] ):  found = channel_files[i][0]
+            else:                       found = channel_files[i][1]
+            print('Found '+ found  +' but not the matching channel file.')
+            cmd = 'histitch from1= '+ found +' to= '+ to_cub
+            add_job(cmd, threads)
+            to_del_cubs.append( found )
+            histitch_cubs.append( to_cub )
+
+    wait_on_all_jobs()
+    if( delete ):
+        for cub in to_del_cubs: os.remove( cub )
+    return histitch_cubs
+
+def spice( cub_files, threads):
+    for cub in cub_files:
+        cmd = 'spiceinit from= '+ cub
+        add_job(cmd, threads)
+    wait_on_all_jobs()
+    for cub in cub_files:
+        cmd = 'spicefit from= '+ cub
+        add_job(cmd, threads)
+    wait_on_all_jobs()
+    return
+
+def noproj( CCD_object, threads, delete=False ):
+    noproj_CCDs = []
+    for i in CCD_object.keys():
+        to_cub = CCD_object.prefix + str(i) + '.noproj.cub'
+        if os.path.exists( to_cub ):
+            print(to_cub + ' exists, skipping noproj.')
+        else:
+            cmd = 'mkdir -p tmp_' + CCD_object[i] + '&& ' \
+                + 'cd tmp_' + CCD_object[i] + '&& ' \
+                + 'noproj from=../' + CCD_object[i] \
+                + ' match=../' + CCD_object.matchcube() \
+                + ' source= frommatch to=../'+ to_cub + '&& ' \
+                + 'cd .. && rm -rf tmp_' + CCD_object[i]
+            # cmd = 'noproj from= '+ CCD_object[i]    \
+            #     +' match= '+ CCD_object.matchcube() \
+            #     +' source= frommatch to= '+ to_cub
+            add_job(cmd, threads)
+            # print cmd
+            # os.system(cmd)
+        noproj_CCDs.append( to_cub )
+    wait_on_all_jobs()
+    if( delete ):
+        for cub in CCD_object.values(): os.remove( cub )
+    return CCDs( noproj_CCDs, CCD_object.match )
+
+# Check for failure for hijitreg.  Sometimes bombs?  Default to zeros.
+def hijitreg( noproj_CCDs, threads ):
+    for i in noproj_CCDs.keys():
+        j = i + 1;
+        if( j not in noproj_CCDs ): continue
+        cmd = 'hijitreg from= '+ noproj_CCDs[i]         \
+            +' match= '+ noproj_CCDs[j]                 \
+            + ' flatfile= flat_'+str(i)+'_'+str(j)+'.txt'
+        add_job(cmd, threads)
+    wait_on_all_jobs()
+
+    averages = dict()
+
+    for i in noproj_CCDs.keys():
+        j = i + 1;
+        if( j not in noproj_CCDs ): continue
+        flat_file = 'flat_'+str(i)+'_'+str(j)+'.txt'
+        averages[i] = read_flatfile( flat_file )
+        os.remove( flat_file )
+
+    return averages
+
+def mosaic( noprojed_CCDs, averages ):
+    mosaic = noprojed_CCDs.prefix+'.mos_hijitreged.cub'
+    shutil.copy( noprojed_CCDs.matchcube(), mosaic )
+    sample_sum = 1;
+    line_sum   = 1;
+    for i in range( noprojed_CCDs.match-1, noprojed_CCDs.min()-1, -1):
+        if( i not in noprojed_CCDs): continue
+        sample_sum  += averages[i][0]
+        line_sum    += averages[i][1]
+        handmos( noprojed_CCDs[i], mosaic,
+                 str( int(round( sample_sum )) ),
+                 str( int(round( line_sum )) ) )
+
+    sample_sum = 1;
+    line_sum = 1;
+    for i in range( noprojed_CCDs.match+1, noprojed_CCDs.max()+1, 1):
+        if( i not in noprojed_CCDs): continue
+        sample_sum  -= averages[i-1][0]
+        line_sum    -= averages[i-1][1]
+        handmos( noprojed_CCDs[i], mosaic,
+                 str( int(round( sample_sum )) ),
+                 str( int(round( line_sum )) ) )
+
+    return mosaic
+
+
+def handmos( fromcub, tocub, outsamp, outline ):
+    cmd = 'handmos from= '+ fromcub +' mosaic= '+ tocub \
+            +' outsample= '+ outsamp \
+            +' outline= '+   outline
+
+    if( isisversion() > (3,1,20) ):
+        # ISIS 3.1.21+
+        cmd += ' priority= beneath'
+    else:
+        # ISIS 3.1.20-
+        cmd += ' input= beneath'
+    os.system(cmd)
+    return
+
+def cubenorm( fromcub, delete=False ):
+    tocub = os.path.splitext(fromcub)[0] + '.norm.cub'
+    cmd   = 'cubenorm from= '+ fromcub+' to= '+ tocub
+    print(cmd)
+    os.system(cmd)
+    if( delete ):
+        os.remove( fromcub )
+    return tocub
+
+
+#----------------------------
+
+def main():
+    try:
+        try:
+            usage = "usage: hiedr2mosaic.py [--help][--manual][--threads N][--keep][-m match] HiRISE-EDR.IMG-files\n  " + get_asp_version()
+            parser = optparse.OptionParser(usage=usage)
+            parser.set_defaults(delete=True)
+            parser.set_defaults(match=5)
+            parser.set_defaults(threads=4)
+            parser.add_option("--manual", action="callback", callback=man,
+                              help="Read the manual.")
+            parser.add_option("--stop-at-no-proj", dest="stop_no_proj", action="store_true",
+                              help="Process the IMG files only to have SPICE attached. This allows jigsaw to happen")
+            parser.add_option("--resume-at-no-proj", dest="resume_no_proj", action="store_true",
+                              help="Pick back up after spiceinit has happened or jigsaw. This was noproj uses your new camera information")
+            parser.add_option("-t", "--threads", dest="threads",
+                              help="Number of threads to use.",type="int")
+            parser.add_option("-m", "--match", dest="match",
+                              help="CCD number of match CCD")
+            parser.add_option("-k", "--keep", action="store_false",
+                              dest="delete",
+                              help="Will not delete intermediate files.")
+
+            (options, args) = parser.parse_args()
+
+            if not args: 
+                parser.error("need .IMG files")
+            
+            # Make sure there is a valid match CCD
+            if len(args) % 2 != 0:
+                raise Exception('An even number of input CCD files is required!')
+            numCcds = len(args) / 2
+            if options.match >= numCcds:
+                print 'Warning: match argument is greater than number of input CCDs, forcing it lower!'
+                options.match = numCcds - 1
+
+
+        except optparse.OptionError as msg:
+            raise Usage(msg)
+
+        # # Determine Isis Version
+        # post_isis_20 = is_post_isis_3_1_20();
+        isisversion( True )
+
+        if not options.resume_no_proj:
+            # hi2isis
+            hi2isised = hi2isis( args, options.threads )
+
+            # hical
+            hicaled = hical( hi2isised, options.threads, options.delete )
+
+            # histitch
+            histitched = histitch( hicaled, options.threads, options.delete )
+
+            # attach spice
+            spice( histitched, options.threads )
+
+        if options.stop_no_proj:
+            print("Finished")
+            return 0
+
+        if options.resume_no_proj:
+            histitched = args
+
+        CCD_files = CCDs( histitched, options.match )
+
+        # noproj
+        noprojed_CCDs = noproj( CCD_files, options.threads, options.delete )
+
+        # hijitreg
+        averages = hijitreg( noprojed_CCDs, options.threads )
+
+        # mosaic handmos
+        mosaicked = mosaic( noprojed_CCDs, averages )
+
+        # Clean up noproj files
+        if( options.delete ):
+          for cub in noprojed_CCDs.values():
+              os.remove( cub )
+
+        # Run a final cubenorm across the image:
+        cubenorm( mosaicked, options.delete )
+
+        print("Finished")
+        return 0
+
+    except Usage as err:
+        print >>sys.stderr, err.msg
+        # print >>sys.stderr, "for help use --help"
+        return 2
+
+	# To more easily debug this program, comment out this catch block.
+    # except Exception, err:
+    #     sys.stderr.write( str(err) + '\n' )
+    #     return 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

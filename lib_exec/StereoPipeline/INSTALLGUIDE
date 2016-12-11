@@ -1,0 +1,138 @@
+INSTALLATION AND USE
+
+A. Installing the Software
+
+Stereo Pipeline pre-built binaries are available from two locations:
+
+Official releases at:
+  http://ti.arc.nasa.gov/tech/asr/intelligent-robotics/ngt/stereo/
+
+Daily builds of the latest development version at:
+  http://byss.arc.nasa.gov/stereopipeline/daily_build/
+
+B. Using the Software
+
+When you unpack the Stereo Pipeline tarball, it will contain a copy of
+the documentation in pdf format, a set of command-line tools in the
+"bin/" directory, and other dependencies. The "bin/" directory needs
+to be in your path. See the README file for how to use Stereo
+Pipeline.
+
+C. Installing from Source
+
+If desired, Stereo Pipeline can be built from source code as
+well. The source code is available at 
+
+  https://github.com/NeoGeographyToolkit/StereoPipeline
+
+Building from source can be difficult, due to the large number of
+dependencies, and the variety of Linux and Mac architectures Stereo
+Pipeline supports. A separate software package called BinaryBuilder
+will take care of setting up the build environment and building the
+code. We describe below what dependencies BinaryBuilder needs and then
+how to invoke it.
+
+1. Base dependencies - LINUX
+
+The following packages need to be installed in order to build Stereo
+Pipeline:
+
+Python (version >= 2.6.1)
+g++, gfortran (version >= 4.4.7)
+csh
+libtool
+autoconf
+automake
+git-core
+subversion
+xserver-xorg-dev
+xorg-dev
+libx11-dev
+libxext-dev
+libxmu
+libxmu-dev
+libxi-dev
+libgl1-mesa-dev
+libglu1-mesa-dev
+freeglut3-dev
+
+If you have root access on your machine you can install them on a
+Debian-based distribution using the following command:
+
+sudo apt-get install g++ gfortran csh libtool autoconf automake   \
+  git-core subversion xserver-xorg-dev xorg-dev libx11-dev        \
+  libxext-dev libxmu6 libxmu-dev libxi-dev libgl1-mesa-dev        \
+  libglu1-mesa-dev freeglut3-dev
+
+For Red Hat-based distributions one can do instead:
+
+sudo yum -y install gcc-c++ gcc-gfortran tcsh libtool autoconf    \
+  automake git subversion xorg-x11-server-Xorg libX11-devel       \
+  libXext-devel libXmu libXmu-devel libXi-devel mesa-libGL-devel  \
+  freeglut-devel 
+
+If your git install fails on Red Hat, you may need to enable the EPEL
+repository.
+
+It is important to check that the gcc, g++, and gfortran versions
+are as above.
+
+Set: 
+export LD_LIBRARY_PATH=<path to libstdc++ for your version compliant gcc>:$LD_LIBRARY_PATH
+
+2. Base dependencies - MAC
+
+First install Homebrew or Macports, if you do not already have it.
+
+Next you need the following packages:
+
+g++, gfortran (version >= 4.4.7), the FSF version, not Apple's LLVM hybrid.
+automake
+libtool
+git
+subversion
+xz
+
+Here's an example for how to install some of these. First read
+http://superuser.com/questions/619498/can-i-install-homebrew-without-sudo-privileges
+about how to install homebrew without sudo. Then:
+
+Add "$HOME/local/bin/" to the PATH variable
+
+Run:
+brew doctor
+brew install automake libtool git subversion xz
+brew install gcc48 --with-fortran 
+
+Set the following env variable:
+export DYLD_LIBRARY_PATH=$HOME/local/lib/gcc/4.8/:$DYLD_LIBRARY_PATH
+
+3. Invoking Binary Builder
+
+Having installed the base libraries and tools, the following lines of
+code will start the build of Stereo Pipeline in the directory
+'~/projects/BinaryBuilder':
+
+cd ~; mkdir projects; cd projects
+git clone https://github.com/NeoGeographyToolkit/BinaryBuilder.git
+cd BinaryBuilder
+./build.py --download-dir tarballs --build-root build_asp
+
+Due to the amount of code that must be downloaded and built,
+BinaryBuilder will take quite a while to finish.  If you see the
+message "All done!" then it has succeeded.  Otherwise something has
+gone wrong and must be fixed before the build can continue.  Often
+this is due to one of the dependencies listed earlier being too old or
+missing.
+
+If the build failed and you need to restart it after finding a fix,
+use the following command:
+
+./build.py --download-dir tarballs --build-root build_asp --resume
+
+Once the build is successful you should make a distribution tarball to
+store the completed build. Do so using the following command from the
+BinaryBuilder directory:
+
+./make-dist.py last-completed-run/install
+

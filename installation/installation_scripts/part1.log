@@ -1,0 +1,118 @@
+Ign http://fr.archive.ubuntu.com trusty InRelease
+Ign http://extras.ubuntu.com trusty InRelease
+Ign http://dl.google.com stable InRelease
+Hit http://security.ubuntu.com trusty-security InRelease
+Hit http://fr.archive.ubuntu.com trusty-updates InRelease
+Hit http://fr.archive.ubuntu.com trusty-backports InRelease
+Hit http://fr.archive.ubuntu.com trusty Release.gpg
+Hit http://extras.ubuntu.com trusty Release.gpg
+Hit http://fr.archive.ubuntu.com trusty Release
+Hit http://dl.google.com stable Release.gpg
+Hit http://extras.ubuntu.com trusty Release
+Hit http://security.ubuntu.com trusty-security/main Sources
+Hit http://fr.archive.ubuntu.com trusty-updates/main Sources
+Hit http://fr.archive.ubuntu.com trusty-updates/restricted Sources
+Hit http://security.ubuntu.com trusty-security/restricted Sources
+Hit http://dl.google.com stable Release
+Hit http://fr.archive.ubuntu.com trusty-updates/universe Sources
+Hit http://fr.archive.ubuntu.com trusty-updates/multiverse Sources
+Hit http://security.ubuntu.com trusty-security/universe Sources
+Hit http://fr.archive.ubuntu.com trusty-updates/main amd64 Packages
+Hit http://extras.ubuntu.com trusty/main Sources
+Hit http://security.ubuntu.com trusty-security/multiverse Sources
+Hit http://fr.archive.ubuntu.com trusty-updates/restricted amd64 Packages
+Hit http://fr.archive.ubuntu.com trusty-updates/universe amd64 Packages
+Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+Hit http://extras.ubuntu.com trusty/main amd64 Packages
+Hit http://fr.archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+Hit http://dl.google.com stable/main amd64 Packages
+Hit http://fr.archive.ubuntu.com trusty-updates/main i386 Packages
+Hit http://extras.ubuntu.com trusty/main i386 Packages
+Hit http://security.ubuntu.com trusty-security/restricted amd64 Packages
+Hit http://fr.archive.ubuntu.com trusty-updates/restricted i386 Packages
+Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+Hit http://fr.archive.ubuntu.com trusty-updates/universe i386 Packages
+Hit http://fr.archive.ubuntu.com trusty-updates/multiverse i386 Packages
+Hit http://security.ubuntu.com trusty-security/multiverse amd64 Packages
+Hit http://fr.archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://security.ubuntu.com trusty-security/main i386 Packages
+Hit http://security.ubuntu.com trusty-security/restricted i386 Packages
+Hit http://security.ubuntu.com trusty-security/universe i386 Packages
+Hit http://fr.archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://security.ubuntu.com trusty-security/multiverse i386 Packages
+Hit http://fr.archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://fr.archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://fr.archive.ubuntu.com trusty-backports/main Sources
+Hit http://security.ubuntu.com trusty-security/multiverse Translation-en
+Hit http://fr.archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://fr.archive.ubuntu.com trusty-backports/universe Sources
+Hit http://security.ubuntu.com trusty-security/restricted Translation-en
+Hit http://fr.archive.ubuntu.com trusty-backports/multiverse Sources
+Ign http://extras.ubuntu.com trusty/main Translation-en_US
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Hit http://fr.archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://fr.archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Ign http://extras.ubuntu.com trusty/main Translation-en
+Hit http://fr.archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://fr.archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://fr.archive.ubuntu.com trusty-backports/main i386 Packages
+Hit http://fr.archive.ubuntu.com trusty-backports/restricted i386 Packages
+Hit http://fr.archive.ubuntu.com trusty-backports/universe i386 Packages
+Ign http://dl.google.com stable/main Translation-en_US
+Hit http://fr.archive.ubuntu.com trusty-backports/multiverse i386 Packages
+Hit http://fr.archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://fr.archive.ubuntu.com trusty-backports/multiverse Translation-en
+Ign http://dl.google.com stable/main Translation-en
+Hit http://fr.archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://fr.archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://fr.archive.ubuntu.com trusty/main Sources
+Hit http://fr.archive.ubuntu.com trusty/restricted Sources
+Hit http://fr.archive.ubuntu.com trusty/universe Sources
+Hit http://fr.archive.ubuntu.com trusty/multiverse Sources
+Hit http://fr.archive.ubuntu.com trusty/main amd64 Packages
+Hit http://fr.archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://fr.archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://fr.archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://fr.archive.ubuntu.com trusty/main i386 Packages
+Hit http://fr.archive.ubuntu.com trusty/restricted i386 Packages
+Hit http://fr.archive.ubuntu.com trusty/universe i386 Packages
+Hit http://fr.archive.ubuntu.com trusty/multiverse i386 Packages
+Hit http://fr.archive.ubuntu.com trusty/main Translation-en
+Hit http://fr.archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://fr.archive.ubuntu.com trusty/restricted Translation-en
+Hit http://fr.archive.ubuntu.com trusty/universe Translation-en
+Ign http://fr.archive.ubuntu.com trusty/main Translation-en_US
+Ign http://fr.archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://fr.archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://fr.archive.ubuntu.com trusty/universe Translation-en_US
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+cmake is already the newest version.
+g++ is already the newest version.
+gcc is already the newest version.
+geotiff-bin is already the newest version.
+libboost-all-dev is already the newest version.
+libgeotiff-dev is already the newest version.
+dpkg-dev is already the newest version.
+unzip is already the newest version.
+The following packages were automatically installed and are no longer required:
+  linux-headers-3.13.0-32 linux-headers-3.13.0-32-generic
+  linux-image-3.13.0-32-generic linux-image-extra-3.13.0-32-generic
+Use 'apt-get autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 12 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Picking 'liblas' as source package instead of 'liblas-bin'
+Picking 'gdal' as source package instead of 'gdal-bin'
+The following packages will be REMOVED:
+  python-pip python-setuptools
+0 upgraded, 0 newly installed, 2 to remove and 12 not upgraded.
+After this operation, 1 308 kB disk space will be freed.
+(Reading database ... 547746 files and directories currently installed.)
+Removing python-pip (1.5.4-1ubuntu4) ...
+Removing python-setuptools (3.3-1ubuntu2) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...

@@ -1,0 +1,36 @@
+Group = NoNormalization
+  Library = NoNormalization
+  Routine = NoNormalizationPlugin
+End_Group
+Group = MoonAlbedo
+  Library = MoonAlbedo
+  Routine = MoonAlbedoPlugin
+End_Group
+Group = ShadeAtm
+  Library = ShadeAtm
+  Routine = ShadeAtmPlugin
+End_Group
+Group = Shade
+  Library = Shade
+  Routine = ShadePlugin
+End_Group
+Group = TopoAtm
+  Library = TopoAtm
+  Routine = TopoAtmPlugin
+End_Group
+Group = Topo
+  Library = Topo
+  Routine = TopoPlugin
+End_Group
+Group = Albedo
+  Library = Albedo
+  Routine = AlbedoPlugin
+End_Group
+Group = AlbedoAtm
+  Library = AlbedoAtm
+  Routine = AlbedoAtmPlugin
+End_Group
+Group = Mixed
+  Library = Mixed
+  Routine = MixedPlugin
+End_Group

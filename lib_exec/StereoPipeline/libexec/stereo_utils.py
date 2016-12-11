@@ -1,0 +1,293 @@
+#!/usr/bin/env python
+# __BEGIN_LICENSE__
+#  Copyright (c) 2009-2013, United States Government as represented by the
+#  Administrator of the National Aeronautics and Space Administration. All
+#  rights reserved.
+#
+#  The NGT platform is licensed under the Apache License, Version 2.0 (the
+#  "License"); you may not use this file except in compliance with the
+#  License. You may obtain a copy of the License at
+#  http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+# __END_LICENSE__
+
+
+import sys, optparse, subprocess, re, os, time, glob
+import os.path as P
+
+# The path to the ASP python files.
+basepath    = os.path.abspath(sys.path[0])
+pythonpath  = os.path.abspath(basepath + '/../Python')  # for dev ASP
+libexecpath = os.path.abspath(basepath + '/../libexec') # for packaged ASP
+sys.path.insert(0, basepath) # prepend to Python path
+sys.path.insert(0, pythonpath)
+sys.path.insert(0, libexecpath)
+
+from asp_system_utils import *
+
+import asp_system_utils
+asp_system_utils.verify_python_version_is_supported()
+
+def get_asp_version():
+    '''Returns the current ASP version number'''
+    return "[ASP 2.5.2]"
+
+class Step:
+    # The ids of individual stereo steps
+    pprc = 0
+    corr = 1
+    rfne = 2
+    fltr = 3
+    tri  = 4
+
+# Utilities to ensure that the Python parser does not garble negative
+# integers such as '-365' into '-3'.
+escapeStr='esc_rand_str'
+def escape_vals(vals):
+    for index, val in enumerate(vals):
+        p = re.match("^-\d+$", val)
+        if p:
+            vals[index] = escapeStr + val
+    return vals
+def unescape_vals(vals):
+    for index, val in enumerate(vals):
+        p = re.match("^" + escapeStr + "(-\d+)$", val)
+        if p:
+            vals[index] = p.group(1)
+    return vals
+
+# Custom option parser that will ignore unknown options
+class PassThroughOptionParser(optparse.OptionParser):
+    def _process_args( self, largs, rargs, values ):
+
+        rargs=escape_vals(rargs)
+        largs=escape_vals(largs)
+
+        while rargs:
+            try:
+                optparse.OptionParser._process_args(self,largs,rargs,values)
+            except (optparse.BadOptionError) as e:
+                if sys.version_info < (2, 6, 0):
+                    # Port to Python 2.4
+                    p = re.match("^.*?no such option:\s*(.*?)$", e.msg)
+                    if p:
+                        largs.append(p.group(1))
+                else:
+                    largs.append(e.opt_str)
+
+class BBox:
+    def __init__(self, x, y, width, height):
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
+
+    def name_str(self):
+        return "%i_%i_%i_%i" % ( self.x, self.y, self.width, self.height )
+
+    def crop_str(self):
+        return ["--trans-crop-win",str(self.x),
+                str(self.y),str(self.width),str(self.height)]
+
+def intersect_boxes(A, B):
+    axmin = A.x; axmax = A.x + A.width; aymin = A.y; aymax = A.y + A.height
+    bxmin = B.x; bxmax = B.x + B.width; bymin = B.y; bymax = B.y + B.height
+    xmin = max(axmin, bxmin); xmax = min(axmax, bxmax)
+    ymin = max(aymin, bymin); ymax = min(aymax, bymax)
+    C = BBox(0, 0, 0, 0)
+    C.x = xmin; C.width = xmax - xmin
+    if (C.width  < 0): C.width = 0
+    C.y = ymin; C.height = ymax - ymin
+    if (C.height < 0): C.height = 0
+    return C
+
+# A very simple wrapper around subprocess
+def generic_run(cmd, verbose):
+
+    cmd_str = " ".join(cmd)
+    if verbose:
+        print(cmd_str)
+
+    try:
+        code = subprocess.call(cmd)
+    except OSError as e:
+        raise Exception('%s: %s' % (cmd_str, e))
+    if code != 0:
+            raise Exception('Failed to run: ' + cmd_str)
+
+# Run one of the stereo executables
+def stereo_run(prog, args, opt, **kw):
+    binpath = bin_path(prog)
+    call = [binpath]
+    call.extend(args)
+
+    if opt.dryrun or opt.verbose: print(" ".join(call))
+    if opt.dryrun: return
+    try:
+        t_start = time.time()
+        code = subprocess.call(call)
+        if opt.verbose:
+            wall_s = time.time() - t_start
+            print('Wall time (s): {0:.1f}\n'.format(wall_s))
+    except OSError as e:
+        raise Exception('%s: %s' % (binpath, e))
+    if code != 0:
+        raise Exception('Stereo step ' + kw['msg'] + ' failed')
+
+# When printing the version, don't throw an error. Just exit quetly.
+def print_version_and_exit(opt, args):
+    args.append('-v')
+    try:
+        stereo_run('stereo_parse', args, opt, msg='')
+    except Exception as e:
+        pass
+    sys.exit(0)
+
+def run_sparse_disp(args, opt):
+
+    settings   = run_and_parse_output( "stereo_parse", args, ",", opt.verbose )
+    left_img   = settings["trans_left_image"]
+    right_img  = settings["trans_right_image"]
+    out_prefix = settings["out_prefix"]
+
+    sparse_args = left_img + right_img + out_prefix + ['--nodata-value', str(0)]
+    if opt.sparse_disp_options is not None:
+        sparse_args += opt.sparse_disp_options.split()
+
+    # Pass the number of threads to sparse_disp
+    # sparse_disp_options should trump
+    if not any('--processes' in s for s in sparse_args):
+        num_threads = 0
+        if hasattr(opt, 'threads') and opt.threads is not None and opt.threads > 0:
+            num_threads = opt.threads
+        if hasattr(opt, 'threads_single') and opt.threads_single is not None and opt.threads_single > 0:
+            num_threads = opt.threads_single
+        if num_threads > 0:
+            sparse_args += ['--processes', str(num_threads)]
+
+    # Set the env variables needed by sparse_disp and its dependencies.
+    # We set those here as the LD_LIBRARY_PATH set below is not the
+    # right one for ASP executables.
+    if os.environ.get('ASP_PYTHON_MODULES_PATH') is None:
+        die('\nERROR: Must set the environmental variable ASP_PYTHON_MODULES_PATH.', code=2)
+    if os.environ.get('LD_LIBRARY_PATH') is None:
+        os.environ['LD_LIBRARY_PATH'] = os.environ.get('ASP_PYTHON_MODULES_PATH')
+    else:
+        os.environ['LD_LIBRARY_PATH'] = os.environ.get('LD_LIBRARY_PATH') + \
+                                        ":" + os.environ.get('ASP_PYTHON_MODULES_PATH')
+    if os.environ.get('PYTHONPATH') is None:
+        os.environ['PYTHONPATH'] = os.environ.get('ASP_PYTHON_MODULES_PATH')
+    else:
+        os.environ['PYTHONPATH'] = os.environ.get('ASP_PYTHON_MODULES_PATH') + ":" + \
+                                   os.environ.get('PYTHONPATH')
+
+    stereo_run('sparse_disp', sparse_args, opt,
+               msg='%d: Low-res correlation with sparse_disp' % Step.corr)
+
+# Do low-res correlation.
+def calc_lowres_disp(args, opt, sep):
+
+    if ( opt.seed_mode == 3 ):
+        run_sparse_disp(args, opt)
+    else:
+        tmp_args = args[:] # deep copy
+        tmp_args.extend(['--compute-low-res-disparity-only'])
+        # invoke here stereo_run to be able to see the output on screen
+        stereo_run('stereo_corr', tmp_args, opt, msg='')
+
+    # See if to attach a georef to D_sub and D_sub_spread.
+    tmp_args = args[:]
+    tmp_args.append('--attach-georeference-to-lowres-disparity')
+    run_and_parse_output("stereo_parse", tmp_args, sep, opt.verbose)
+
+def parse_corr_seed_mode(filename):
+
+    mode = None
+
+    # Extract corr-seed-mode from filename.
+    if not os.path.isfile(filename):
+        return mode
+
+    fh = open(filename, "r")
+    for line in fh:
+        line = re.sub('\#.*?$', '', line) # wipe comments
+        matches = re.match('^\s*corr-seed-mode\s+(\d+)', line)
+        if matches:
+            mode = int(matches.group(1))
+    fh.close()
+
+    return mode
+
+def run_multiview(prog_name, args, extra_args, entry_point, stop_point,
+                  verbose, settings):
+
+    # Invoke multiview stereo processing, either using 'stereo', or
+    # using 'parallel_stereo', depending on the caller of this function.
+
+    # Doing multi-view stereo amounts to doing all the steps of stereo
+    # save for triangulation for stereo pairs made up of first image
+    # and another image in the sequence. Then, triangulation is done
+    # using all images. The precise stereo command to use for each
+    # pair was already generated by stereo_parse, and here we extract
+    # it from 'settings'.
+
+    # We must respect caller's entry and stop points.
+
+    # Must make sure to use the same Python invoked by parent
+    python_path = sys.executable
+
+    # Run all steps but tri
+    for s in sorted(settings.keys()):
+
+        m = re.match('multiview_command', s)
+        if not m: continue
+
+        local_args    = settings[s][:]
+        local_args[0] = prog_name
+        local_entry   = entry_point
+        local_stop    = stop_point
+        if local_stop > Step.tri:
+            local_stop = Step.tri
+        local_args.extend(['--entry-point', str(local_entry)])
+        local_args.extend(['--stop-point',  str(local_stop)])
+        local_args.extend(extra_args)
+        cmd = [python_path] + local_args
+        # Go on even if some of the runs fail
+        try:
+            generic_run(cmd, verbose)
+        except:
+            pass
+
+    # Run tri
+    local_args  = [prog_name]
+    local_args.extend(args)
+    local_entry = Step.tri
+    local_stop  = stop_point
+    local_args.extend(['--entry-point', str(local_entry)])
+    local_args.extend(['--stop-point', str(local_stop)])
+    local_args.extend(extra_args)
+    cmd = [python_path] + local_args
+    generic_run(cmd, verbose)
+
+    # Here we ensure that in the run directory
+    # the L.tif file is present, by sym-linking
+    # from the subdirectory of one of the pairs.
+    # It is nice to have L.tif for when we later
+    # do point2dem PC.tif --orthoimage L.tif
+
+    # The code below amounts to:
+    # ln -s out_prefix-pair1/1-L.tif out_prefix-L.tif
+    out_prefix = settings['out_prefix'][0]
+    sym_f      = out_prefix + '-L.tif'
+    if not os.path.lexists(sym_f):
+        files = glob.glob(out_prefix + '-pair*/*-L.tif')
+        if len(files) > 0:
+            f = files[0]
+            run_dir = os.path.dirname(out_prefix)
+            rel_f   = os.path.relpath(f, run_dir)
+            os.symlink(rel_f, sym_f)

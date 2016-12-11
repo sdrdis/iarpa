@@ -1,0 +1,167 @@
+#!/usr/bin/env python
+# __BEGIN_LICENSE__
+#  Copyright (c) 2009-2013, United States Government as represented by the
+#  Administrator of the National Aeronautics and Space Administration. All
+#  rights reserved.
+#
+#  The NGT platform is licensed under the Apache License, Version 2.0 (the
+#  "License"); you may not use this file except in compliance with the
+#  License. You may obtain a copy of the License at
+#  http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+# __END_LICENSE__
+
+
+import sys, optparse, subprocess, re, os
+import os.path as P
+
+# The path to the ASP python files
+basepath    = os.path.abspath(sys.path[0])
+pythonpath  = os.path.abspath(basepath + '/../Python')  # for dev ASP
+libexecpath = os.path.abspath(basepath + '/../libexec') # for packaged ASP
+sys.path.insert(0, basepath) # prepend to Python path
+sys.path.insert(0, pythonpath)
+sys.path.insert(0, libexecpath)
+
+from stereo_utils import * # must be after the path is altered above
+
+import asp_system_utils
+asp_system_utils.verify_python_version_is_supported()
+
+# Prepend to system PATH
+os.environ["PATH"] = libexecpath + os.pathsep + os.environ["PATH"]
+
+if __name__ == '__main__':
+
+    usage = '''parallel_stereo [options] <images> [<cameras>]
+                  <output_file_prefix> [DEM]
+        Extensions are automaticaly added to the output files.
+        Camera model arguments may be optional for some stereo
+        session types (e.g. isis). Stereo parameters should be
+        set in the stereo.default file.
+
+  [ASP 2.5.2]'''
+
+    p = PassThroughOptionParser(usage=usage)
+    p.add_option('-t', '--session-type',   dest='session',
+                 help='Select the stereo session type to use for processing. Options: pinhole isis dg rpc spot5 aster pinholemappinhole isismapisis dgmaprpc rpcmaprpc astermaprpc.')
+    p.add_option('-s', '--stereo-file',    dest='stereo_file',    default='./stereo.default',
+                 help='Explicitly specify the stereo.default file to use. Default: ./stereo.default.')
+    p.add_option('--corr-seed-mode',    dest='seed_mode', default=None,
+                 help='Correlation seed strategy. See stereo_corr for options.', type='int')
+    p.add_option('-e', '--entry-point',    dest='entry_point', default=0,
+                 help='Pipeline entry point (an integer from 0-4)', type='int')
+    p.add_option('--stop-point',           dest='stop_point',  default=5,
+                 help='Stereo Pipeline stop point (an integer from 1-5).',
+                 type='int')
+    p.add_option('--sparse-disp-options', dest='sparse_disp_options',
+                 help='Options to pass directly to sparse_disp.')
+
+    p.add_option('--threads',              dest='threads', default=0, type='int',
+                 help='Set the number of threads to use. 0 means use as many threads as there are cores.')
+    p.add_option('--no-bigtiff',           dest='no_bigtiff',  default=False, action='store_true',
+                 help='Tell GDAL to not create bigtiffs.')
+
+    p.add_option('--tif-compress',   dest='tif_compress', default = 'LZW',
+                 help='TIFF compression method. Options: None, LZW, Deflate, Packbits. Default: LZW.')
+
+    p.add_option('-v', '--version',        dest='version',     default=False, action='store_true',
+                 help='Display the version of software.')
+
+    # Debug options
+    p.add_option('--dry-run',              dest='dryrun',      default=False, action='store_true',
+                 help=optparse.SUPPRESS_HELP)
+    p.add_option('--verbose',                dest='verbose', default=False, action='store_true',
+                 help=optparse.SUPPRESS_HELP)
+
+    global opt
+    (opt, args) = p.parse_args()
+    args=unescape_vals(args) # to do: somehow, merge into the above call
+
+    if not args and not opt.version:
+        p.print_help()
+        die('\nERROR: Missing input files', code=2)
+
+    if opt.threads == 0:
+        opt.threads = get_num_cpus()
+    args.extend(['--threads', str(opt.threads)])
+
+    # If corr-seed-mode was not specified, read it from the file
+    if opt.seed_mode is None:
+        opt.seed_mode = parse_corr_seed_mode(opt.stereo_file)
+    # If not set in the file either, use 1.
+    if opt.seed_mode is None:
+        opt.seed_mode = 1
+    # Pass it to the subprocesses
+    args.extend(['--corr-seed-mode', str(opt.seed_mode)])
+
+    # Pass to sub-processes other stereo options. We wanted these
+    # set in this Python script so that they show up in the help message.
+    if opt.session is not None:
+        args.extend(['--session-type', opt.session])
+    if opt.stereo_file is not None:
+        args.extend(['--stereo-file', opt.stereo_file])
+    if opt.no_bigtiff:
+        args.append('--no-bigtiff')
+    if opt.tif_compress is not None:
+        args.extend(['--tif-compress', opt.tif_compress])
+    if opt.version:
+        print_version_and_exit(opt, args)
+
+    # Run stereo_parse with these options, to get the values of some
+    # internal fields.
+    sep = ","
+    settings=run_and_parse_output( "stereo_parse", args, sep, opt.verbose )
+
+    try:
+
+        # Invoke itself for multiview if appropriate
+        num_pairs = int(settings['num_stereo_pairs'][0])
+        if num_pairs > 1 and opt.entry_point < Step.tri:
+            extra_args = []
+            run_multiview(__file__, args, extra_args, opt.entry_point,
+                          opt.stop_point, opt.verbose, settings)
+            sys.exit(0)
+
+        # Pre-processing
+        step = Step.pprc
+        if ( opt.entry_point <= step ):
+            if ( opt.stop_point <= step ): sys.exit()
+            stereo_run('stereo_pprc', args, opt, msg='%d: Preprocessing' % step)
+
+        # Correlation
+        step = Step.corr
+        if ( opt.entry_point <= step ):
+            if ( opt.stop_point <= step ): sys.exit()
+
+            # Do low-res correlation, this happens just once.
+            calc_lowres_disp(args, opt, sep)
+
+            # Run full-resolution stereo correlation
+            args.extend(['--skip-low-res-disparity-comp'])
+            stereo_run('stereo_corr', args, opt, msg='%d: Correlation' % step)
+
+        # Refinement
+        step = Step.rfne
+        if ( opt.entry_point <= step ):
+            if ( opt.stop_point <= step ): sys.exit()
+            stereo_run('stereo_rfne', args, opt, msg='%d: Refinement' % step)
+
+        # Filtering
+        step = Step.fltr
+        if ( opt.entry_point <= step ):
+            if ( opt.stop_point <= step ): sys.exit()
+            stereo_run('stereo_fltr', args, opt, msg='%d: Filtering' % step)
+
+        # Triangulation
+        step = Step.tri
+        if ( opt.entry_point <= step ):
+            if ( opt.stop_point <= step ): sys.exit()
+            stereo_run('stereo_tri',  args, opt, msg='%d: Triangulation' % step)
+    except Exception as e:
+            die(e)

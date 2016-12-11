@@ -1,0 +1,169 @@
+stereo_parse --threads 4 --corr-seed-mode 1 --session-type rpc --stereo-file ./stereo.default --tif-compress LZW test_3/01-extract.cub test_3/02-extract.cub re 
+
+uname -a
+Linux sdrdis-VirtualBox 4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+
+cat /proc/meminfo 2>/dev/null | grep MemTotal
+MemTotal:        4046388 kB
+
+cat /proc/cpuinfo 2>/dev/null | tail -n 25
+cpu family	: 6
+model		: 30
+model name	: Intel(R) Core(TM) i5 CPU         750  @ 2.67GHz
+stepping	: 5
+microcode	: 0x616
+cpu MHz		: 2659.998
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 4
+core id		: 3
+cpu cores	: 4
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 11
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc pni ssse3 sse4_1 sse4_2 x2apic hypervisor lahf_lm
+bugs		:
+bogomips	: 5319.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+sysctl -a hw 2>/dev/null | grep -E "ncpu|byteorder|memsize|cpufamily|cachesize|mmx|sse|machine|model" | grep -v ipv6
+
+cat ./stereo.default 2>/dev/null
+# -*- mode: sh -*-
+
+# Pre-Processing / stereo_pprc
+################################################################
+
+# Pre-alignment options
+#
+# Available choices are (however not all are supported by all sessions):
+#    NONE           (Recommended for anything map projected)
+#    EPIPOLAR       (Recommended for Pinhole Sessions)
+#    HOMOGRAPHY     (Recommended for ISIS wide-angle shots)
+#    AFFINEEPIPOLAR (Recommended for ISIS narrow-angle and DG sessions)
+alignment-method affineepipolar
+
+# Intensity Normalization
+force-use-entire-range       # Use entire input range
+
+# Select a preprocessing filter:
+#
+# 0 - None
+# 1 - Subtracted Mean
+# 2 - Laplacian of Gaussian (recommended)
+prefilter-mode 2
+
+# Kernel size (1-sigma) for pre-processing
+#
+# Recommend 1.4 px for Laplacian of Gaussian
+# Recommend 25 px for Subtracted Mean
+prefilter-kernel-width 1.4
+
+# Integer Correlation / stereo_corr
+################################################################
+
+# Select a cost function to use for initialization:
+#
+# 0 - absolute difference (fast)
+# 1 - squared difference  (faster .. but usually bad)
+# 2 - normalized cross correlation (recommended)
+cost-mode 2
+
+# Initialization step: correlation kernel size
+corr-kernel 21 21
+
+# Initializaion step: correlation window size
+# corr-search -80 -2 20 2
+
+# Subpixel Refinement / stereo_rfne
+################################################################
+
+# Subpixel step: subpixel modes
+#
+# 0 - disable subpixel correlation (fastest)
+# 1 - parabola fitting (draft mode - not as accurate)
+# 2 - affine adaptive window, bayes EM weighting (slower, but much more accurate)
+# 3 - affine window, (intermediate speed, results similar to bayes EM)
+subpixel-mode 1
+
+# Subpixel step: correlation kernel size
+subpixel-kernel 21 21
+
+# Post Filtering / stereo_fltr
+################################################################
+
+# Fill in holes up to 100,000 pixels in size with an inpainting method
+# disable-fill-holes
+
+# Automatic "erode" low confidence pixels
+filter-mode 1
+rm-half-kernel 5 5
+max-mean-diff 3
+rm-min-matches 60
+rm-threshold 3
+rm-cleanup-passes 1
+
+# Triangulation / stereo_tri
+################################################################
+
+# Size max of the universe in meters and altitude off the ground.
+# Setting both values to zero turns this post-processing step off.
+near-universe-radius 0.0
+far-universe-radius 0.0
+
+cat ~/.vwrc 2>/dev/null
+# This is an example VW configuration file. Save this file to ~/.vwrc
+# to adjust the VW log settings, even if the program is already running.
+# General settings
+[general]
+default_num_threads = 4
+write_pool_size = 40
+system_cache_size = 1024000000 # ~ 1 GB
+
+
+# The following integers are associated with the log levels throughout the Vision Workbench. Use these in the log rules below.
+
+# Once you have created a logfile (or selected the console), you can add log rules using the following syntax. (Note that you can use wildcard characters '*' to catch all log_levels for a given log_namespace, or vice versa.)
+# ErrorMessage = 0
+# WarningMessage = 10
+# InfoMessage = 20
+# DebugMessage = 30
+# VerboseDebugMessage = 40
+# EveryMessage = 100
+# You can create a new log file or adjust the settings for the console log: logfile <filename>
+# - or -
+# logfile console
+# <log_level> <log_namespace>
+# Below are examples of using the log settings.
+# Turn on various logging levels for several subsystems, with the
+# output going to the console (standard output).
+
+[logfile console]
+# Turn on error and warning messages for the thread subsystem.
+10 = thread
+# Turn on error, warning, and info messages for the asp subsystem.
+20 = asp
+# Turn on error, warning, info, and debug messages for the stereo subsystem.
+30 = stereo
+
+
+
+# Turn on every single message for the cache subsystem (this will be
+# extremely verbose and is not recommended).
+# 100 = cache
+# Turn off all progress bars to the console (not recommended).
+# 0 = *.progress
+#
+# Turn on logging of error and warning messages to a file for the
+# stereo subsystem. Warning: This file will be always appended to, so
+# it should be deleted periodically.
+# [logfile /tmp/vw_log.txt]
+# 10 = stereo
+

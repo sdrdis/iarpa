@@ -1,0 +1,334 @@
+Group = Clementine_1/Lwir
+  Version = 1
+  Library = LwirCamera
+  Routine = LwirCameraPlugin
+EndGroup
+ 
+Group = Clementine_1/Uvvis
+  Version = 1
+  Library = UvvisCamera
+  Routine = UvvisCameraPlugin
+EndGroup
+ 
+Group = Clementine_1/Hires
+  Version = 1
+  Library = HiresCamera
+  Routine = HiresCameraPlugin
+EndGroup
+ 
+Group = Clementine_1/Nir
+  Version = 1
+  Library = NirCamera
+  Routine = NirCameraPlugin
+EndGroup
+ 
+Group = KAGUYA/MI-VIS
+  Version = 1
+  Library = KaguyaMiCamera
+  Routine = KaguyaMiCameraPlugin
+EndGroup
+
+Group = KAGUYA/MI-NIR
+  Version = 1
+  Library = KaguyaMiCamera
+  Routine = KaguyaMiCameraPlugin
+EndGroup
+
+Group = Messenger/MDIS-WAC
+  Version = 2
+  Library = MdisCamera
+  Routine = MdisCameraPlugin
+EndGroup
+Group = Messenger/MDIS-NAC
+  Version = 2
+  Library = MdisCamera
+  Routine = MdisCameraPlugin
+EndGroup
+ 
+Group = Hayabusa/Amica
+  Version = 1
+  Library = AmicaCamera
+  Routine = AmicaCameraPlugin
+EndGroup
+ 
+Group = NEAR_EARTH_ASTEROID_RENDEZVOUS/MSI
+  Version = 1
+  Library = MsiCamera
+  Routine = MsiCameraPlugin
+EndGroup
+ 
+Group = VIKING_ORBITER_1/VISUAL_IMAGING_SUBSYSTEM_CAMERA_A 
+  Version = 1
+  Library = VikingCamera
+  Routine = VikingCameraPlugin
+EndGroup
+Group = VIKING_ORBITER_1/VISUAL_IMAGING_SUBSYSTEM_CAMERA_B 
+  Version = 1
+  Library = VikingCamera
+  Routine = VikingCameraPlugin
+EndGroup
+Group = VIKING_ORBITER_2/VISUAL_IMAGING_SUBSYSTEM_CAMERA_A 
+  Version = 1
+  Library = VikingCamera
+  Routine = VikingCameraPlugin
+EndGroup
+Group = VIKING_ORBITER_2/VISUAL_IMAGING_SUBSYSTEM_CAMERA_B 
+  Version = 1
+  Library = VikingCamera
+  Routine = VikingCameraPlugin
+EndGroup
+
+Group = Apollo15/Metric
+  Library = ApolloMetricCamera
+  Routine = ApolloMetricCameraPlugin
+  Version = 2 
+EndGroup
+Group = Apollo16/Metric
+  Library = ApolloMetricCamera
+  Routine = ApolloMetricCameraPlugin
+  Version = 2
+EndGroup
+Group = Apollo17/Metric
+  Library = ApolloMetricCamera
+  Routine = ApolloMetricCameraPlugin
+  Version = 2
+EndGroup
+Group = Apollo15/Apollo_Pan
+  Library = ApolloPanoramicCamera
+  Routine = ApolloPanoramicCameraPlugin
+  Version = 1
+EndGroup
+Group = Apollo16/Apollo_Pan
+  Library = ApolloPanoramicCamera
+  Routine = ApolloPanoramicCameraPlugin
+  Version = 1
+EndGroup
+Group = Apollo17/Apollo_Pan
+  Library = ApolloPanoramicCamera
+  Routine = ApolloPanoramicCameraPlugin
+  Version = 1
+EndGroup
+Group = Mars_Odyssey/Themis_Vis
+  Version = 1
+  Library = ThemisVisCamera
+  Routine = ThemisVisCameraPlugin
+EndGroup
+ 
+Group = Mars_Odyssey/Themis_Ir
+  Version = 2
+  Library = ThemisIrCamera
+  Routine = ThemisIrCameraPlugin
+EndGroup
+ 
+Group = LUNAR_RECONNAISSANCE_ORBITER/NACL
+  Version = 2
+  Library = LroNarrowAngleCamera
+  Routine = LroNarrowAngleCameraPlugin
+EndGroup
+
+Group = LUNAR_RECONNAISSANCE_ORBITER/NACR
+  Version = 2
+  Library = LroNarrowAngleCamera
+  Routine = LroNarrowAngleCameraPlugin
+EndGroup
+
+Group = LUNAR_RECONNAISSANCE_ORBITER/WAC-VIS
+  Library = LroWideAngleCamera
+  Routine = LroWideAngleCameraPlugin
+  Version = 3
+EndGroup
+
+Group = LUNAR_RECONNAISSANCE_ORBITER/WAC-UV
+  Library = LroWideAngleCamera
+  Routine = LroWideAngleCameraPlugin
+  Version = 3
+EndGroup
+Group = CHANDRAYAAN1_ORBITER/MRFFR
+  Version = 1
+  Library = MiniRF
+  Routine = MiniRFPlugin
+EndGroup
+Group = LUNARRECONNAISSANCEORBITER/MRFLRO
+  Version = 1
+  Library = MiniRF
+  Routine = MiniRFPlugin
+EndGroup
+Group = LunarOrbiter3/MediumResolutionCamera
+  Version = 1
+  Library = LoMediumCamera
+  Routine = LoMediumCameraPlugin
+EndGroup
+Group = LunarOrbiter4/MediumResolutionCamera
+  Version = 1
+  Library = LoMediumCamera
+  Routine = LoMediumCameraPlugin
+EndGroup
+Group = LunarOrbiter5/MediumResolutionCamera
+  Version = 1
+  Library = LoMediumCamera
+  Routine = LoMediumCameraPlugin
+EndGroup
+Group = LunarOrbiter3/HighResolutionCamera
+  Version = 1
+  Library = LoHighCamera
+  Routine = LoHighCameraPlugin
+EndGroup
+Group = LunarOrbiter4/HighResolutionCamera
+  Version = 1
+  Library = LoHighCamera
+  Routine = LoHighCameraPlugin
+EndGroup
+Group = LunarOrbiter5/HighResolutionCamera
+  Version = 1
+  Library = LoHighCamera
+  Routine = LoHighCameraPlugin
+EndGroup
+Group = MarsGlobalSurveyor/MOC-WA
+  Version = 1
+  Library = MocWideAngleCamera
+  Routine = MocWideAngleCameraPlugin
+EndGroup
+ 
+Group = MarsGlobalSurveyor/MOC-NA
+  Version = 1
+  Library = MocNarrowAngleCamera
+  Routine = MocNarrowAngleCameraPlugin
+EndGroup
+ 
+Group = VOYAGER_1/NARROW_ANGLE_CAMERA
+  Version = 1
+  Library = VoyagerCamera
+  Routine = VoyagerCameraPlugin
+EndGroup
+Group = VOYAGER_1/WIDE_ANGLE_CAMERA
+  Version = 1
+  Library = VoyagerCamera
+  Routine = VoyagerCameraPlugin
+EndGroup
+Group = VOYAGER_2/NARROW_ANGLE_CAMERA 
+  Version = 1
+  Library = VoyagerCamera
+  Routine = VoyagerCameraPlugin
+EndGroup
+Group = VOYAGER_2/WIDE_ANGLE_CAMERA 
+  Version = 1
+  Library = VoyagerCamera
+  Routine = VoyagerCameraPlugin
+EndGroup
+
+Group = IdealSpacecraft/IdealCamera
+  Version = 1
+  Library = IdealCamera
+  Routine = IdealCameraPlugin
+EndGroup
+ 
+Group = MarsExpress/HRSC
+  Version = 1
+  Library = HrscCamera
+  Routine = HrscCameraPlugin
+EndGroup
+ 
+Group = GalileoOrbiter/SolidStateImagingSystem
+  Version = 1
+  Library = SsiCamera
+  Routine = SsiCameraPlugin
+EndGroup
+ 
+Group = MARINER_10/M10_VIDICON_A 
+  Version = 1
+  Library = Mariner10Camera
+  Routine = Mariner10CameraPlugin
+EndGroup
+Group = MARINER_10/M10_VIDICON_B 
+  Version = 1
+  Library = Mariner10Camera
+  Routine = Mariner10CameraPlugin
+EndGroup
+
+Group = NewHorizons/MVIC_TDI
+  Version = 1
+  Library = NewHorizonsMvicTdiCamera
+  Routine = NewHorizonsMvicTdiCameraPlugin
+EndGroup
+ 
+Group = NewHorizons/LEISA
+  Version = 1
+  Library = NewHorizonsLeisaCamera
+  Routine = NewHorizonsLeisaCameraPlugin
+EndGroup
+
+Group = NewHorizons/MVIC_FRAMING
+  Version = 1
+  Library = NewHorizonsMvicFrameCamera
+  Routine = NewHorizonsMvicFrameCameraPlugin
+EndGroup
+ 
+Group = NewHorizons/LORRI
+  Version = 2
+  Library = NewHorizonsLorriCamera
+  Routine = NewHorizonsLorriCameraPlugin
+EndGroup
+
+Group = CHANDRAYAAN-1/M3
+  Version = 1
+  Library = Chandrayaan1M3Camera
+  Routine = Chandrayaan1M3CameraPlugin
+EndGroup
+ 
+Group = CASSINI-HUYGENS/VIMS
+  Version = 1
+  Library = VimsCamera
+  Routine = VimsCameraPlugin
+EndGroup
+ 
+Group = Cassini-Huygens/ISSWA
+  Version = 1
+  Library = IssWACamera
+  Routine = IssWACameraPlugin
+EndGroup
+ 
+Group = Cassini-Huygens/ISSNA
+  Version = 1
+  Library = IssNACamera
+  Routine = IssNACameraPlugin
+EndGroup
+ 
+Group = MarsReconnaissanceOrbiter/Marci
+  Version = 1
+  Library = MarciCamera
+  Routine = MarciCameraPlugin
+EndGroup
+ 
+Group = MarsReconnaissanceOrbiter/CRISM
+  Version = 1
+  Library = CrismCamera
+  Routine = CrismCameraPlugin
+EndGroup
+ 
+Group = MarsReconnaissanceOrbiter/HiRISE
+  Version = 1
+  Library = HiriseCamera
+  Routine = HiriseCameraPlugin
+EndGroup
+ 
+Group = MARS_RECONNAISSANCE_ORBITER/CTX
+  Version = 1
+  Library = CTXCamera
+  Routine = CTXCameraPlugin
+EndGroup
+ 
+Group = DAWN/FC1
+  Version = 2
+  Library = DawnFcCamera
+  Routine = DawnFcCameraPlugin
+EndGroup
+Group = DAWN/FC2
+  Version = 2
+  Library = DawnFcCamera
+  Routine = DawnFcCameraPlugin
+EndGroup
+Group = DAWN/VIR
+  Version = 1
+  Library = DawnVirCamera
+  Routine = DawnVirCameraPlugin
+EndGroup

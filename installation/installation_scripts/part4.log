@@ -1,0 +1,1649 @@
+--2016-08-02 19:01:13--  http://download.osgeo.org/liblas/libLAS-1.8.0.tar.bz2
+Resolving download.osgeo.org (download.osgeo.org)... 140.211.15.132
+Connecting to download.osgeo.org (download.osgeo.org)|140.211.15.132|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3907684 (3,7M) [application/x-bzip2]
+Saving to: ‘libLAS-1.8.0.tar.bz2’
+
+     0K .......... .......... .......... .......... ..........  1%  149K 25s
+    50K .......... .......... .......... .......... ..........  2%  150K 25s
+   100K .......... .......... .......... .......... ..........  3%  297K 20s
+   150K .......... .......... .......... .......... ..........  5%  297K 18s
+   200K .......... .......... .......... .......... ..........  6%  308K 17s
+   250K .......... .......... .......... .......... ..........  7% 2,42M 14s
+   300K .......... .......... .......... .......... ..........  9%  298K 13s
+   350K .......... .......... .......... .......... .......... 10%  301K 13s
+   400K .......... .......... .......... .......... .......... 11%  303K 13s
+   450K .......... .......... .......... .......... .......... 13%  307K 12s
+   500K .......... .......... .......... .......... .......... 14%  305K 12s
+   550K .......... .......... .......... .......... .......... 15%  301K 12s
+   600K .......... .......... .......... .......... .......... 17% 1,93M 11s
+   650K .......... .......... .......... .......... .......... 18%  298K 11s
+   700K .......... .......... .......... .......... .......... 19%  305K 10s
+   750K .......... .......... .......... .......... .......... 20%  306K 10s
+   800K .......... .......... .......... .......... .......... 22%  298K 10s
+   850K .......... .......... .......... .......... .......... 23%  336K 10s
+   900K .......... .......... .......... .......... .......... 24% 1,22M 9s
+   950K .......... .......... .......... .......... .......... 26%  286K 9s
+  1000K .......... .......... .......... .......... .......... 27%  313K 9s
+  1050K .......... .......... .......... .......... .......... 28%  293K 9s
+  1100K .......... .......... .......... .......... .......... 30%  369K 9s
+  1150K .......... .......... .......... .......... .......... 31%  298K 8s
+  1200K .......... .......... .......... .......... .......... 32%  326K 8s
+  1250K .......... .......... .......... .......... .......... 34%  299K 8s
+  1300K .......... .......... .......... .......... .......... 35%  299K 8s
+  1350K .......... .......... .......... .......... .......... 36% 1,71M 8s
+  1400K .......... .......... .......... .......... .......... 37%  299K 7s
+  1450K .......... .......... .......... .......... .......... 39%  322K 7s
+  1500K .......... .......... .......... .......... .......... 40%  297K 7s
+  1550K .......... .......... .......... .......... .......... 41%  297K 7s
+  1600K .......... .......... .......... .......... .......... 43% 1,94M 7s
+  1650K .......... .......... .......... .......... .......... 44%  299K 7s
+  1700K .......... .......... .......... .......... .......... 45%  299K 6s
+  1750K .......... .......... .......... .......... .......... 47%  298K 6s
+  1800K .......... .......... .......... .......... .......... 48%  307K 6s
+  1850K .......... .......... .......... .......... .......... 49%  296K 6s
+  1900K .......... .......... .......... .......... .......... 51%  301K 6s
+  1950K .......... .......... .......... .......... .......... 52%  404K 6s
+  2000K .......... .......... .......... .......... .......... 53%  297K 5s
+  2050K .......... .......... .......... .......... .......... 55%  849K 5s
+  2100K .......... .......... .......... .......... .......... 56%  300K 5s
+  2150K .......... .......... .......... .......... .......... 57%  298K 5s
+  2200K .......... .......... .......... .......... .......... 58%  307K 5s
+  2250K .......... .......... .......... .......... .......... 60%  385K 5s
+  2300K .......... .......... .......... .......... .......... 61%  311K 4s
+  2350K .......... .......... .......... .......... .......... 62%  301K 4s
+  2400K .......... .......... .......... .......... .......... 64%  295K 4s
+  2450K .......... .......... .......... .......... .......... 65%  304K 4s
+  2500K .......... .......... .......... .......... .......... 66%  300K 4s
+  2550K .......... .......... .......... .......... .......... 68% 2,20M 4s
+  2600K .......... .......... .......... .......... .......... 69%  302K 4s
+  2650K .......... .......... .......... .......... .......... 70%  298K 3s
+  2700K .......... .......... .......... .......... .......... 72%  309K 3s
+  2750K .......... .......... .......... .......... .......... 73%  297K 3s
+  2800K .......... .......... .......... .......... .......... 74%  307K 3s
+  2850K .......... .......... .......... .......... .......... 75%  308K 3s
+  2900K .......... .......... .......... .......... .......... 77%  302K 3s
+  2950K .......... .......... .......... .......... .......... 78%  307K 3s
+  3000K .......... .......... .......... .......... .......... 79% 1,61M 2s
+  3050K .......... .......... .......... .......... .......... 81%  317K 2s
+  3100K .......... .......... .......... .......... .......... 82%  299K 2s
+  3150K .......... .......... .......... .......... .......... 83%  294K 2s
+  3200K .......... .......... .......... .......... .......... 85%  319K 2s
+  3250K .......... .......... .......... .......... .......... 86%  299K 2s
+  3300K .......... .......... .......... .......... .......... 87%  318K 1s
+  3350K .......... .......... .......... .......... .......... 89% 1,45M 1s
+  3400K .......... .......... .......... .......... .......... 90%  307K 1s
+  3450K .......... .......... .......... .......... .......... 91%  161K 1s
+  3500K .......... .......... .......... .......... .......... 93%  296K 1s
+  3550K .......... .......... .......... .......... .......... 94% 2,81M 1s
+  3600K .......... .......... .......... .......... .......... 95%  303K 1s
+  3650K .......... .......... .......... .......... .......... 96%  298K 0s
+  3700K .......... .......... .......... .......... .......... 98%  297K 0s
+  3750K .......... .......... .......... .......... .......... 99%  295K 0s
+  3800K .......... ......                                     100% 11,6M=12s
+
+2016-08-02 19:01:25 (329 KB/s) - ‘libLAS-1.8.0.tar.bz2’ saved [3907684/3907684]
+
+libLAS-1.8.0/AUTHORS
+libLAS-1.8.0/.hgtags
+libLAS-1.8.0/COPYING
+libLAS-1.8.0/CTestConfig.cmake
+libLAS-1.8.0/INSTALL
+libLAS-1.8.0/LICENSE.txt
+libLAS-1.8.0/NEWS
+libLAS-1.8.0/apps/CMakeLists.txt
+libLAS-1.8.0/apps/bigfile_boost_iostreams_test.cpp
+libLAS-1.8.0/apps/bigtest.c
+libLAS-1.8.0/apps/las2las.cpp
+libLAS-1.8.0/apps/las2ogr.cpp
+libLAS-1.8.0/apps/las2txt.c
+libLAS-1.8.0/apps/las2txt.cpp
+libLAS-1.8.0/apps/lasblock.cpp
+libLAS-1.8.0/apps/lascommon.c
+libLAS-1.8.0/apps/lascommon.h
+libLAS-1.8.0/apps/lasdiff.c
+libLAS-1.8.0/apps/lasindex.cpp
+libLAS-1.8.0/apps/lasindex_test.cpp
+libLAS-1.8.0/apps/lasinfo.cpp
+libLAS-1.8.0/apps/laskernel.cpp
+libLAS-1.8.0/apps/laskernel.hpp
+libLAS-1.8.0/apps/liblas-config.in
+libLAS-1.8.0/apps/liblas.pc.in
+libLAS-1.8.0/apps/ts2las.cpp
+libLAS-1.8.0/apps/ts2las.hpp
+libLAS-1.8.0/apps/txt2las.c
+libLAS-1.8.0/apps/liblas-config
+libLAS-1.8.0/bin/ci/before_install.sh
+libLAS-1.8.0/bin/ci/common.sh
+libLAS-1.8.0/bin/ci/script.sh
+libLAS-1.8.0/buildout/bootstrap.py
+libLAS-1.8.0/buildout/buildout.cfg
+libLAS-1.8.0/buildout/setenv.in
+libLAS-1.8.0/cmake/CMakeLists.txt
+libLAS-1.8.0/cmake/libLAS.vcproj.user.template
+libLAS-1.8.0/cmake/liblas-config-version.cmake.in
+libLAS-1.8.0/cmake/liblas-config.cmake.in
+libLAS-1.8.0/cmake/modules/BuildOSGeo4W.cmake
+libLAS-1.8.0/cmake/modules/FindGDAL.cmake
+libLAS-1.8.0/cmake/modules/FindGeoTIFF.cmake
+libLAS-1.8.0/cmake/modules/FindLASzip.cmake
+libLAS-1.8.0/cmake/modules/FindOracle.cmake
+libLAS-1.8.0/cmake/modules/FindSpatialIndex.cmake
+libLAS-1.8.0/cmake/liblas-config.cmake
+libLAS-1.8.0/cmake/liblas-config-version.cmake
+libLAS-1.8.0/csharp-new/liblas_swig.sln
+libLAS-1.8.0/csharp-new/liblas_swig_cpp/liblas.i
+libLAS-1.8.0/csharp-new/liblas_swig_cpp/liblas_swig_cpp.vcxproj
+libLAS-1.8.0/csharp-new/liblas_swig_cpp/liblas_swig_cpp.vcxproj.filters
+libLAS-1.8.0/csharp-new/liblas_swig_cpp/liblas_swig_cpp.vcxproj.user
+libLAS-1.8.0/csharp-new/liblas_swig_cs/Properties/AssemblyInfo.cs
+libLAS-1.8.0/csharp-new/liblas_swig_cs/liblas_swig_cs.csproj
+libLAS-1.8.0/csharp-new/liblas_swig_test/Program.cs
+libLAS-1.8.0/csharp-new/liblas_swig_test/Properties/AssemblyInfo.cs
+libLAS-1.8.0/csharp-new/liblas_swig_test/TestGuid.cs
+libLAS-1.8.0/csharp-new/liblas_swig_test/TestHeader.cs
+libLAS-1.8.0/csharp-new/liblas_swig_test/TestPoint.cs
+libLAS-1.8.0/csharp-new/liblas_swig_test/TestReader.cs
+libLAS-1.8.0/csharp-new/liblas_swig_test/TestSpatialReference.cs
+libLAS-1.8.0/csharp-new/liblas_swig_test/TestVariableRecord.cs
+libLAS-1.8.0/csharp-new/liblas_swig_test/liblas_swig_test.csproj
+libLAS-1.8.0/csharp/HelloWorldLAS/HelloWorldLAS.csproj
+libLAS-1.8.0/csharp/HelloWorldLAS/HelloWorldLAS_Express.csproj
+libLAS-1.8.0/csharp/HelloWorldLAS/Program.cs
+libLAS-1.8.0/csharp/HelloWorldLAS/Properties/AssemblyInfo.cs
+libLAS-1.8.0/csharp/NUnitTest/LASFilesClass.cs
+libLAS-1.8.0/csharp/NUnitTest/LASGuidTest.cs
+libLAS-1.8.0/csharp/NUnitTest/LASHeaderTest.cs
+libLAS-1.8.0/csharp/NUnitTest/LASPointTest.cs
+libLAS-1.8.0/csharp/NUnitTest/LASReaderTest.cs
+libLAS-1.8.0/csharp/NUnitTest/LASVariableLengthRecordTest.cs
+libLAS-1.8.0/csharp/NUnitTest/LASWriterTest.cs
+libLAS-1.8.0/csharp/NUnitTest/NUnitTest.csproj
+libLAS-1.8.0/csharp/NUnitTest/NUnitTest_Express.csproj
+libLAS-1.8.0/csharp/NUnitTest/Properties/AssemblyInfo.cs
+libLAS-1.8.0/csharp/Samples/Read_Express/ReadLAS.cs
+libLAS-1.8.0/csharp/Samples/Read_Express/Read_Express.csproj
+libLAS-1.8.0/csharp/Samples/WriteLAS/Properties/AssemblyInfo.cs
+libLAS-1.8.0/csharp/Samples/WriteLAS/WriteLAS.cs
+libLAS-1.8.0/csharp/Samples/WriteLAS/Write_Express.csproj
+libLAS-1.8.0/csharp/dotnetLibLAS.sln
+libLAS-1.8.0/csharp/dotnetLibLAS/AssemblyInfo.cs
+libLAS-1.8.0/csharp/dotnetLibLAS/LASException.cs
+libLAS-1.8.0/csharp/dotnetLibLAS/LASGuid.cs
+libLAS-1.8.0/csharp/dotnetLibLAS/LASHeader.cs
+libLAS-1.8.0/csharp/dotnetLibLAS/LASPoint.cs
+libLAS-1.8.0/csharp/dotnetLibLAS/LASReader.cs
+libLAS-1.8.0/csharp/dotnetLibLAS/LASVariableLengthRecord.cs
+libLAS-1.8.0/csharp/dotnetLibLAS/LASWriter.cs
+libLAS-1.8.0/csharp/dotnetLibLAS/LibLASCAPI.cs
+libLAS-1.8.0/csharp/dotnetLibLAS/dotnetLibLAS.csproj
+libLAS-1.8.0/csharp/dotnetLibLAS/dotnetLibLAS.dll.config
+libLAS-1.8.0/csharp/dotnetLibLAS/dotnetLibLAS_Express.csproj
+libLAS-1.8.0/csharp/dotnetLibLAS/dotnetLibLas.xml
+libLAS-1.8.0/csharp/dotnetLibLAS/liblas.snk
+libLAS-1.8.0/csharp/dotnetLibLAS_xpress.sln
+libLAS-1.8.0/csharp/makefile.vc
+libLAS-1.8.0/doc/_static/liblas-color-pallette.css
+libLAS-1.8.0/doc/_static/liblaslogo.png
+libLAS-1.8.0/doc/_static/pdf.png
+libLAS-1.8.0/doc/_static/sphinx.css
+libLAS-1.8.0/doc/_templates/indexsidebar.html
+libLAS-1.8.0/doc/_templates/layout.html
+libLAS-1.8.0/doc/api/TracFooter.html
+libLAS-1.8.0/doc/api/TracHeader.html
+libLAS-1.8.0/doc/api/doxygen.conf
+libLAS-1.8.0/doc/api/doxygen.css
+libLAS-1.8.0/doc/api/doxygen_dev.conf
+libLAS-1.8.0/doc/community.txt
+libLAS-1.8.0/doc/compilation.txt
+libLAS-1.8.0/doc/conf.py
+libLAS-1.8.0/doc/copyright.txt
+libLAS-1.8.0/doc/development/annual_report_2010.txt
+libLAS-1.8.0/doc/development/buildbot.txt
+libLAS-1.8.0/doc/development/format_elements.txt
+libLAS-1.8.0/doc/development/index.txt
+libLAS-1.8.0/doc/development/rfc/index.txt
+libLAS-1.8.0/doc/development/rfc/rfc_1_verticalcs.txt
+libLAS-1.8.0/doc/development/rfc/rfc_2_spatialreference.txt
+libLAS-1.8.0/doc/development/source.txt
+libLAS-1.8.0/doc/development/specifications.txt
+libLAS-1.8.0/doc/development/wkt.txt
+libLAS-1.8.0/doc/docs.txt
+libLAS-1.8.0/doc/download.txt
+libLAS-1.8.0/doc/faq.txt
+libLAS-1.8.0/doc/features.txt
+libLAS-1.8.0/doc/images/boostpro-options.png
+libLAS-1.8.0/doc/images/ccmake-osx-start.png
+libLAS-1.8.0/doc/images/cmake-gui-osx-configured.png
+libLAS-1.8.0/doc/images/cmake-gui-osx-start.png
+libLAS-1.8.0/doc/images/lasblock_big.png
+libLAS-1.8.0/doc/images/lasblock_small.png
+libLAS-1.8.0/doc/images/liblas-logo.svg
+libLAS-1.8.0/doc/images/liblas-twitter-logo.png
+libLAS-1.8.0/doc/images/osgeo4w-advanced-install.png
+libLAS-1.8.0/doc/images/osgeo4w-las2las-reproject.png
+libLAS-1.8.0/doc/images/osgeo4w-lasinfo-output.png
+libLAS-1.8.0/doc/images/osgeo4w-lasinfo-point.png
+libLAS-1.8.0/doc/images/osgeo4w-run-liblas-shell.png
+libLAS-1.8.0/doc/images/osgeo4w-select-liblas.png
+libLAS-1.8.0/doc/images/windows-cmake-generator-makefiles.png
+libLAS-1.8.0/doc/images/windows-cmake-generator-visual-studio-9.png
+libLAS-1.8.0/doc/images/windows-cmake-start.png
+libLAS-1.8.0/doc/images/windows-command-prompt.png
+libLAS-1.8.0/doc/images/windows-msvc-build.png
+libLAS-1.8.0/doc/images/windows-osgeo4w-advanced-install.png
+libLAS-1.8.0/doc/images/windows-osgeo4w-choosing-packages.png
+libLAS-1.8.0/doc/images/xcode-lasinfo-arguments.png
+libLAS-1.8.0/doc/images/xcode-lasinfo-output.png
+libLAS-1.8.0/doc/images/xcode-set-default-executable.png
+libLAS-1.8.0/doc/images/xcode-start.png
+libLAS-1.8.0/doc/index.txt
+libLAS-1.8.0/doc/lastools.txt
+libLAS-1.8.0/doc/liblas.json
+libLAS-1.8.0/doc/make.bat
+libLAS-1.8.0/doc/osgeo4w.txt
+libLAS-1.8.0/doc/python.txt
+libLAS-1.8.0/doc/start.txt
+libLAS-1.8.0/doc/tutorial/boo.txt
+libLAS-1.8.0/doc/tutorial/cpp.txt
+libLAS-1.8.0/doc/tutorial/csharp.txt
+libLAS-1.8.0/doc/tutorial/index.txt
+libLAS-1.8.0/doc/tutorial/ironpython.txt
+libLAS-1.8.0/doc/tutorial/python.txt
+libLAS-1.8.0/doc/tutorial/qhull.txt
+libLAS-1.8.0/doc/tutorial/vbnet.txt
+libLAS-1.8.0/doc/utilities/index.txt
+libLAS-1.8.0/doc/utilities/las2las-old.txt
+libLAS-1.8.0/doc/utilities/las2las.txt
+libLAS-1.8.0/doc/utilities/las2ogr.txt
+libLAS-1.8.0/doc/utilities/las2tindex.txt
+libLAS-1.8.0/doc/utilities/las2txt.txt
+libLAS-1.8.0/doc/utilities/lasblock.txt
+libLAS-1.8.0/doc/utilities/lasdiff.txt
+libLAS-1.8.0/doc/utilities/lasinfo-old.txt
+libLAS-1.8.0/doc/utilities/lasinfo.txt
+libLAS-1.8.0/doc/utilities/lasmerge.txt
+libLAS-1.8.0/doc/utilities/ts2las.txt
+libLAS-1.8.0/doc/utilities/txt2las.txt
+libLAS-1.8.0/include/CMakeLists.txt
+libLAS-1.8.0/include/liblas/bounds.hpp
+libLAS-1.8.0/include/liblas/capi/las_config.h
+libLAS-1.8.0/include/liblas/capi/las_version.h
+libLAS-1.8.0/include/liblas/capi/liblas.h
+libLAS-1.8.0/include/liblas/chipper.hpp
+libLAS-1.8.0/include/liblas/classification.hpp
+libLAS-1.8.0/include/liblas/color.hpp
+libLAS-1.8.0/include/liblas/compatibility.hpp
+libLAS-1.8.0/include/liblas/detail/binary.hpp
+libLAS-1.8.0/include/liblas/detail/endian.hpp
+libLAS-1.8.0/include/liblas/detail/file_ptr_stream.hpp
+libLAS-1.8.0/include/liblas/detail/fwd.hpp
+libLAS-1.8.0/include/liblas/detail/index/indexcell.hpp
+libLAS-1.8.0/include/liblas/detail/index/indexoutput.hpp
+libLAS-1.8.0/include/liblas/detail/opt_allocator.hpp
+libLAS-1.8.0/include/liblas/detail/pointrecord.hpp
+libLAS-1.8.0/include/liblas/detail/private_utility.hpp
+libLAS-1.8.0/include/liblas/detail/reader/cachedreader.hpp
+libLAS-1.8.0/include/liblas/detail/reader/header.hpp
+libLAS-1.8.0/include/liblas/detail/reader/reader.hpp
+libLAS-1.8.0/include/liblas/detail/reader/zipreader.hpp
+libLAS-1.8.0/include/liblas/detail/sha1.hpp
+libLAS-1.8.0/include/liblas/detail/singleton.hpp
+libLAS-1.8.0/include/liblas/detail/timer.hpp
+libLAS-1.8.0/include/liblas/detail/writer/header.hpp
+libLAS-1.8.0/include/liblas/detail/writer/point.hpp
+libLAS-1.8.0/include/liblas/detail/writer/writer.hpp
+libLAS-1.8.0/include/liblas/detail/writer/zipwriter.hpp
+libLAS-1.8.0/include/liblas/detail/zippoint.hpp
+libLAS-1.8.0/include/liblas/dimension.hpp
+libLAS-1.8.0/include/liblas/error.hpp
+libLAS-1.8.0/include/liblas/exception.hpp
+libLAS-1.8.0/include/liblas/export.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/detail/exception_implementation.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/detail/file_parser_error.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/detail/info_parser_error.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/detail/info_parser_read.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/detail/info_parser_utils.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/detail/info_parser_write.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/detail/info_parser_writer_settings.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/detail/json_parser_error.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/detail/json_parser_read.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/detail/json_parser_write.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/detail/ptree_implementation.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/detail/ptree_utils.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/detail/rapidxml.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/detail/xml_parser_error.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/detail/xml_parser_flags.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/detail/xml_parser_read_rapidxml.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/detail/xml_parser_utils.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/detail/xml_parser_write.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/detail/xml_parser_writer_settings.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/exceptions.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/id_translator.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/info_parser.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/ini_parser.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/json_parser.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/ptree.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/ptree_fwd.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/ptree_serialization.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/stream_translator.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/string_path.hpp
+libLAS-1.8.0/include/liblas/external/property_tree/xml_parser.hpp
+libLAS-1.8.0/include/liblas/factory.hpp
+libLAS-1.8.0/include/liblas/filter.hpp
+libLAS-1.8.0/include/liblas/header.hpp
+libLAS-1.8.0/include/liblas/index.hpp
+libLAS-1.8.0/include/liblas/iterator.hpp
+libLAS-1.8.0/include/liblas/liblas.hpp
+libLAS-1.8.0/include/liblas/point.hpp
+libLAS-1.8.0/include/liblas/reader.hpp
+libLAS-1.8.0/include/liblas/schema.hpp
+libLAS-1.8.0/include/liblas/spatialreference.hpp
+libLAS-1.8.0/include/liblas/transform.hpp
+libLAS-1.8.0/include/liblas/utility.hpp
+libLAS-1.8.0/include/liblas/variablerecord.hpp
+libLAS-1.8.0/include/liblas/version.hpp
+libLAS-1.8.0/include/liblas/writer.hpp
+libLAS-1.8.0/python/examples/add_vlr.py
+libLAS-1.8.0/python/examples/grab_classes.py
+libLAS-1.8.0/python/examples/las_summary.py
+libLAS-1.8.0/python/examples/oci_pc.py
+libLAS-1.8.0/python/liblas/__init__.py
+libLAS-1.8.0/python/liblas/color.py
+libLAS-1.8.0/python/liblas/core.py
+libLAS-1.8.0/python/liblas/file.py
+libLAS-1.8.0/python/liblas/guid.py
+libLAS-1.8.0/python/liblas/header.py
+libLAS-1.8.0/python/liblas/point.py
+libLAS-1.8.0/python/liblas/schema.py
+libLAS-1.8.0/python/liblas/srs.py
+libLAS-1.8.0/python/liblas/vlr.py
+libLAS-1.8.0/python/scripts/las2tindex.py
+libLAS-1.8.0/python/scripts/oci2las.py
+libLAS-1.8.0/python/setup.py
+libLAS-1.8.0/python/tests/Color.txt
+libLAS-1.8.0/python/tests/File.txt
+libLAS-1.8.0/python/tests/GUID.txt
+libLAS-1.8.0/python/tests/Header.txt
+libLAS-1.8.0/python/tests/Point.txt
+libLAS-1.8.0/python/tests/SRS-GDAL.txt
+libLAS-1.8.0/python/tests/SRS-GeoTIFF.txt
+libLAS-1.8.0/python/tests/SRS.txt
+libLAS-1.8.0/python/tests/Schema.txt
+libLAS-1.8.0/python/tests/VLR.txt
+libLAS-1.8.0/python/tests/__init__.py
+libLAS-1.8.0/python/tests/test_doctests.py
+libLAS-1.8.0/rpm/libLAS.spec
+libLAS-1.8.0/src/CMakeLists.txt
+libLAS-1.8.0/src/Version.rc
+libLAS-1.8.0/src/c_api.cpp
+libLAS-1.8.0/src/chipper.cpp
+libLAS-1.8.0/src/classification.cpp
+libLAS-1.8.0/src/color.cpp
+libLAS-1.8.0/src/detail/index/indexcell.cpp
+libLAS-1.8.0/src/detail/index/indexoutput.cpp
+libLAS-1.8.0/src/detail/reader/cachedreader.cpp
+libLAS-1.8.0/src/detail/reader/header.cpp
+libLAS-1.8.0/src/detail/reader/reader.cpp
+libLAS-1.8.0/src/detail/reader/zipreader.cpp
+libLAS-1.8.0/src/detail/sha1.cpp
+libLAS-1.8.0/src/detail/utility.cpp
+libLAS-1.8.0/src/detail/writer/header.cpp
+libLAS-1.8.0/src/detail/writer/point.cpp
+libLAS-1.8.0/src/detail/writer/writer.cpp
+libLAS-1.8.0/src/detail/writer/zipwriter.cpp
+libLAS-1.8.0/src/detail/zippoint.cpp
+libLAS-1.8.0/src/dimension.cpp
+libLAS-1.8.0/src/error.cpp
+libLAS-1.8.0/src/factory.cpp
+libLAS-1.8.0/src/filter.cpp
+libLAS-1.8.0/src/gt_citation.cpp
+libLAS-1.8.0/src/gt_citation.h
+libLAS-1.8.0/src/gt_wkt_srs.cpp
+libLAS-1.8.0/src/gt_wkt_srs.h
+libLAS-1.8.0/src/gt_wkt_srs_for_gdal.h
+libLAS-1.8.0/src/header.cpp
+libLAS-1.8.0/src/index.cpp
+libLAS-1.8.0/src/point.cpp
+libLAS-1.8.0/src/reader.cpp
+libLAS-1.8.0/src/schema.cpp
+libLAS-1.8.0/src/spatialreference.cpp
+libLAS-1.8.0/src/tifvsi.cpp
+libLAS-1.8.0/src/tifvsi.h
+libLAS-1.8.0/src/transform.cpp
+libLAS-1.8.0/src/utility.cpp
+libLAS-1.8.0/src/variablerecord.cpp
+libLAS-1.8.0/src/version.cpp
+libLAS-1.8.0/src/writer.cpp
+libLAS-1.8.0/test/CMakeLists.txt
+libLAS-1.8.0/test/data/1.0_0.las
+libLAS-1.8.0/test/data/1.0_1.las
+libLAS-1.8.0/test/data/1.1_0.las
+libLAS-1.8.0/test/data/1.1_1.las
+libLAS-1.8.0/test/data/1.2-with-color.las
+libLAS-1.8.0/test/data/1.2-with-color.laz
+libLAS-1.8.0/test/data/1.2_0.las
+libLAS-1.8.0/test/data/1.2_1.las
+libLAS-1.8.0/test/data/1.2_2.las
+libLAS-1.8.0/test/data/1.2_3.las
+libLAS-1.8.0/test/data/TO_core_last_clip.las
+libLAS-1.8.0/test/data/autzen.jpg
+libLAS-1.8.0/test/data/autzen.jpg.aux.xml
+libLAS-1.8.0/test/data/autzen.las
+libLAS-1.8.0/test/data/autzen.wld
+libLAS-1.8.0/test/data/bad_points_1.1.las
+libLAS-1.8.0/test/data/certainty3d-color-utm-feet-navd88.las
+libLAS-1.8.0/test/data/lots_of_vlr.las
+libLAS-1.8.0/test/data/make_bad_points.py
+libLAS-1.8.0/test/data/make_data.py
+libLAS-1.8.0/test/data/srs.las
+libLAS-1.8.0/test/data/srs_utm17.las
+libLAS-1.8.0/test/data/srs_vertcs.las
+libLAS-1.8.0/test/sample/CMakeLists.txt
+libLAS-1.8.0/test/sample/files.cpp
+libLAS-1.8.0/test/sample/files.vcproj
+libLAS-1.8.0/test/sample/liblas.vsprops
+libLAS-1.8.0/test/sample/liblas_sample.sln
+libLAS-1.8.0/test/sample/read.cpp
+libLAS-1.8.0/test/sample/read.vcproj
+libLAS-1.8.0/test/sample/update.cpp
+libLAS-1.8.0/test/sample/update.vcproj
+libLAS-1.8.0/test/sample/utility.hpp
+libLAS-1.8.0/test/sample/write.cpp
+libLAS-1.8.0/test/sample/write.vcproj
+libLAS-1.8.0/test/unit/CMakeLists.txt
+libLAS-1.8.0/test/unit/bounds_test.cpp
+libLAS-1.8.0/test/unit/classification_test.cpp
+libLAS-1.8.0/test/unit/common.cpp
+libLAS-1.8.0/test/unit/common.hpp
+libLAS-1.8.0/test/unit/error_test.cpp
+libLAS-1.8.0/test/unit/header_test.cpp
+libLAS-1.8.0/test/unit/liblas_test.hpp
+libLAS-1.8.0/test/unit/liblas_test_suite.cpp
+libLAS-1.8.0/test/unit/point_test.cpp
+libLAS-1.8.0/test/unit/reader_iterator_test.cpp
+libLAS-1.8.0/test/unit/reader_test.cpp
+libLAS-1.8.0/test/unit/spatialreference_test.cpp
+libLAS-1.8.0/test/unit/transform_test.cpp
+libLAS-1.8.0/test/unit/tut/tut.hpp
+libLAS-1.8.0/test/unit/tut/tut_assert.hpp
+libLAS-1.8.0/test/unit/tut/tut_config.hpp
+libLAS-1.8.0/test/unit/tut/tut_console_reporter.hpp
+libLAS-1.8.0/test/unit/tut/tut_exception.hpp
+libLAS-1.8.0/test/unit/tut/tut_posix.hpp
+libLAS-1.8.0/test/unit/tut/tut_reporter.hpp
+libLAS-1.8.0/test/unit/tut/tut_restartable.hpp
+libLAS-1.8.0/test/unit/tut/tut_result.hpp
+libLAS-1.8.0/test/unit/tut/tut_runner.hpp
+libLAS-1.8.0/test/unit/variablerecord_test.cpp
+libLAS-1.8.0/test/unit/writer_test.cpp
+libLAS-1.8.0/test/unit/zipreader_test.cpp
+libLAS-1.8.0/test/unit/zipwriter_test.cpp
+libLAS-1.8.0/CMakeLists.txt
+-- The C compiler identification is GNU 4.8.4
+-- The CXX compiler identification is GNU 4.8.4
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Setting libLAS build type - Release
+-- Searching for Boost 1.38+ - done
+-- Looking for include file pthread.h
+-- Looking for include file pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Boost version: 1.54.0
+-- Found the following Boost libraries:
+--   program_options
+--   thread
+--   system
+--   iostreams
+--   filesystem
+-- Searching for LASzip 2.0.1+ library
+-- Found LASzip version: 2.2.0
+-- Found LASzip: /usr/local/lib/liblaszip.so (Required is at least version "2.0.1") 
+-- Searching for GDAL 1.7.0+ library
+-- Found acceptable GDAL version 2.1.0
+-- Found GDAL: /usr/local/lib/libgdal.so (Required is at least version "1.7.0") 
+-- Searching for GeoTIFF 1.2.5+ library
+-- Found GeoTIFF version: 1.4.0
+-- Found GeoTIFF: /usr/lib/libgeotiff.so (Required is at least version "1.2.5") 
+-- Found TIFF: /usr/lib/x86_64-linux-gnu/libtiff.so (found version "4.0.3") 
+-- Enable libLAS utilities to build - done
+-- Enable libLAS unit tests to build - done
+-- Enable CTest to support submissions of results to CDash at http://cdash.org
+-- Enable CTest to support submissions of results to CDash at http://cdash.org - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles
+/usr/bin/cmake -H/home/sdrdis/iarpa/src/libLAS-1.8.0 -B/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[1]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f src/CMakeFiles/las.dir/build.make src/CMakeFiles/las.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/src /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src/CMakeFiles/las.dir/DependInfo.cmake --color=
+Scanning dependencies of target las
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f src/CMakeFiles/las.dir/build.make src/CMakeFiles/las.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 3
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 4
+[  1%] /usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 5
+[  3%] [  4%] /usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 6
+[  6%] Building CXX object src/CMakeFiles/las.dir/detail/index/indexcell.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/detail/index/indexcell.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/detail/index/indexcell.cpp
+Building CXX object src/CMakeFiles/las.dir/chipper.cpp.o
+Building CXX object src/CMakeFiles/las.dir/detail/index/indexoutput.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/detail/index/indexoutput.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/detail/index/indexoutput.cpp
+Building CXX object src/CMakeFiles/las.dir/factory.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/chipper.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/chipper.cpp
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/factory.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/factory.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 7
+[  7%] Building CXX object src/CMakeFiles/las.dir/classification.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/classification.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/classification.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 8
+[  9%] Building CXX object src/CMakeFiles/las.dir/color.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/color.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/color.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 9
+[ 10%] Building CXX object src/CMakeFiles/las.dir/dimension.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/dimension.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/dimension.cpp
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include/liblas/external/property_tree/xml_parser.hpp:15:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/src/dimension.cpp:50:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_comment(std::basic_ostream<Ch>&, const std::basic_string<_CharT>&, int, bool, const liblas::property_tree::xml_parser::xml_writer_settings<Ch>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:38:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_element(std::basic_ostream<typename Ptree::key_type::value_type>&, const std::basic_string<typename Ptree::key_type::value_type>&, const Ptree&, int, const liblas::property_tree::xml_parser::xml_writer_settings<typename Ptree::key_type::value_type>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:72:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 10
+[ 12%] Building CXX object src/CMakeFiles/las.dir/error.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/error.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/error.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 11
+[ 13%] Building CXX object src/CMakeFiles/las.dir/filter.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/filter.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/filter.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 12
+[ 15%] Building CXX object src/CMakeFiles/las.dir/header.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/header.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/header.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 13
+[ 16%] Building CXX object src/CMakeFiles/las.dir/index.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/index.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/index.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 14
+[ 18%] Building CXX object src/CMakeFiles/las.dir/point.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/point.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/point.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 15
+[ 20%] Building CXX object src/CMakeFiles/las.dir/reader.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/reader.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/reader.cpp
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/header.cpp: In copy constructor ‘liblas::Header::Header(const liblas::Header&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/header.cpp:104:11: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+     void* p = 0;
+           ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/header.cpp: In member function ‘liblas::Header& liblas::Header::operator=(const liblas::Header&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/header.cpp:123:15: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+         void* p = 0;
+               ^
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 16
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 17
+[ 21%] [ 23%] Building CXX object src/CMakeFiles/las.dir/spatialreference.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/spatialreference.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/spatialreference.cpp
+Building CXX object src/CMakeFiles/las.dir/schema.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/schema.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/schema.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 18
+[ 24%] Building CXX object src/CMakeFiles/las.dir/transform.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/transform.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/transform.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 19
+[ 26%] Building CXX object src/CMakeFiles/las.dir/utility.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/utility.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/utility.cpp
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include/liblas/external/property_tree/xml_parser.hpp:15:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/src/spatialreference.cpp:72:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_comment(std::basic_ostream<Ch>&, const std::basic_string<_CharT>&, int, bool, const liblas::property_tree::xml_parser::xml_writer_settings<Ch>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:38:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_element(std::basic_ostream<typename Ptree::key_type::value_type>&, const std::basic_string<typename Ptree::key_type::value_type>&, const Ptree&, int, const liblas::property_tree::xml_parser::xml_writer_settings<typename Ptree::key_type::value_type>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:72:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include/liblas/external/property_tree/xml_parser.hpp:15:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/src/schema.cpp:50:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_comment(std::basic_ostream<Ch>&, const std::basic_string<_CharT>&, int, bool, const liblas::property_tree::xml_parser::xml_writer_settings<Ch>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:38:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_element(std::basic_ostream<typename Ptree::key_type::value_type>&, const std::basic_string<typename Ptree::key_type::value_type>&, const Ptree&, int, const liblas::property_tree::xml_parser::xml_writer_settings<typename Ptree::key_type::value_type>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:72:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 20
+[ 27%] Building CXX object src/CMakeFiles/las.dir/variablerecord.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/variablerecord.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/variablerecord.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 21
+[ 29%] Building CXX object src/CMakeFiles/las.dir/writer.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/writer.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/writer.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 22
+[ 30%] Building CXX object src/CMakeFiles/las.dir/version.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/version.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/version.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 23
+[ 32%] Building CXX object src/CMakeFiles/las.dir/detail/utility.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/detail/utility.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/detail/utility.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 24
+[ 33%] Building CXX object src/CMakeFiles/las.dir/detail/sha1.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/detail/sha1.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/detail/sha1.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 25
+[ 35%] Building CXX object src/CMakeFiles/las.dir/detail/zippoint.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/detail/zippoint.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/detail/zippoint.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 26
+[ 36%] Building CXX object src/CMakeFiles/las.dir/detail/reader/header.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/detail/reader/header.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/detail/reader/header.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 27
+[ 38%] Building CXX object src/CMakeFiles/las.dir/detail/reader/reader.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/detail/reader/reader.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/detail/reader/reader.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 28
+[ 40%] Building CXX object src/CMakeFiles/las.dir/detail/reader/zipreader.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/detail/reader/zipreader.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/detail/reader/zipreader.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 29
+[ 41%] Building CXX object src/CMakeFiles/las.dir/detail/reader/cachedreader.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/detail/reader/cachedreader.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/detail/reader/cachedreader.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 30
+[ 43%] Building CXX object src/CMakeFiles/las.dir/detail/writer/header.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/detail/writer/header.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/detail/writer/header.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 31
+[ 44%] Building CXX object src/CMakeFiles/las.dir/detail/writer/point.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/detail/writer/point.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/detail/writer/point.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 32
+[ 46%] Building CXX object src/CMakeFiles/las.dir/detail/writer/zipwriter.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/detail/writer/zipwriter.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/detail/writer/zipwriter.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 33
+[ 47%] Building CXX object src/CMakeFiles/las.dir/detail/writer/writer.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/detail/writer/writer.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/detail/writer/writer.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 34
+[ 49%] Building CXX object src/CMakeFiles/las.dir/gt_citation.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/gt_citation.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_citation.cpp
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_citation.cpp: In function ‘char* ImagineCitationTranslation(char*, geokey_t)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_citation.cpp:158:19: warning: ordered comparison of pointer with integer zero [-Wextra]
+         while( p2>0 && (p2[0] == ' ' || p2[0] == '\0' || p2[0] == '\n') )
+                   ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_citation.cpp:201:19: warning: ordered comparison of pointer with integer zero [-Wextra]
+         while( p2>0 && (p2[0] == ' ' || p2[0] == '\0' || p2[0] == '\n') )
+                   ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_citation.cpp: In function ‘OGRBoolean SetCitationToSRS(GTIF*, char*, int, geokey_t, OGRSpatialReference*, OGRBoolean*)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_citation.cpp:464:23: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+       if( unitSize == 0.0 )
+                       ^
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 35
+[ 50%] /usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 36
+Building CXX object src/CMakeFiles/las.dir/gt_wkt_srs.cpp.o
+[ 52%] cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/gt_wkt_srs.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp
+Building CXX object src/CMakeFiles/las.dir/tifvsi.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las.dir/tifvsi.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/tifvsi.cpp
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.h:39:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:44:
+/usr/include/geotiff/geo_normalize.h:177:79: warning: redundant redeclaration of ‘void SetCSVFilenameHook(const char* (*)(const char*))’ in same scope [-Wredundant-decls]
+ void CPL_DLL SetCSVFilenameHook( const char *(*CSVFileOverride)(const char *) );
+                                                                               ^
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:35:0:
+/usr/local/include/cpl_csv.h:72:14: warning: previous declaration of ‘void SetCSVFilenameHook(const char* (*)(const char*))’ [-Wredundant-decls]
+ void CPL_DLL SetCSVFilenameHook( const char *(*)(const char *) );
+              ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp: In function ‘char* GTIFGetOGISDefn(GTIF*, GTIFDefn*)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:432:50: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+                 if( psDefn->UOMLengthInMeters != 0 
+                                                  ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:433:53: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+                     && psDefn->UOMLengthInMeters != 1.0 )
+                                                     ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:570:24: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     if( dfSemiMajor == 0.0 )
+                        ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:577:33: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     else if( dfInvFlattening == 0.0 && ((psDefn->SemiMinor / psDefn->SemiMajor) < 0.99999999999999999
+                                 ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:1058:30: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+             if( dfFactorB != 0.0 && dfFactorC != 0.0 )
+                              ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:1058:50: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+             if( dfFactorB != 0.0 && dfFactorC != 0.0 )
+                                                  ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp: In function ‘int GTIFSetFromOGISDefn(GTIF*, const char*)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:1187:41: warning: cast from type ‘const char**’ to type ‘char**’ casts away qualifiers [-Wcast-qual]
+     if( poSRS->importFromWkt((char **) &pszOGCWKT) != OGRERR_NONE )
+                                         ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2112:21: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         && (dfFE != 0.0 || dfFN != 0.0) 
+                     ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2112:36: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         && (dfFE != 0.0 || dfFN != 0.0) 
+                                    ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2228:33: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         else if( dfSemiMajor != 0.0 )
+                                 ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2238:36: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+             if( dfInvFlattening == 0.0 )
+                                    ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2257:32: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         if( dfInvFlattening != 0.0 )
+                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2261:28: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         if( dfSemiMajor != 0.0 )
+                            ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2280:30: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         if( adfTOWGS84[3] == 0.0 && adfTOWGS84[4] == 0.0
+                              ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2280:54: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         if( adfTOWGS84[3] == 0.0 && adfTOWGS84[4] == 0.0
+                                                      ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2281:33: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+             && adfTOWGS84[5] == 0.0 && adfTOWGS84[6] == 0.0 )
+                                 ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2281:57: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+             && adfTOWGS84[5] == 0.0 && adfTOWGS84[6] == 0.0 )
+                                                         ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2283:56: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+             if( nGCS == GCS_WGS_84 && adfTOWGS84[0] == 0.0
+                                                        ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2284:37: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+                 && adfTOWGS84[1] == 0.0 && adfTOWGS84[2] == 0.0 )
+                                     ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2284:61: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+                 && adfTOWGS84[1] == 0.0 && adfTOWGS84[2] == 0.0 )
+                                                             ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp: In function ‘CPLErr GTIFMemBufFromWktEx(const char*, const double*, int, const GDAL_GCP*, int*, unsigned char**, int)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2596:32: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     if( padfGeoTransform[0] != 0.0 || padfGeoTransform[1] != 1.0
+                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2596:62: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     if( padfGeoTransform[0] != 0.0 || padfGeoTransform[1] != 1.0
+                                                              ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2597:35: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         || padfGeoTransform[2] != 0.0 || padfGeoTransform[3] != 0.0
+                                   ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2597:65: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         || padfGeoTransform[2] != 0.0 || padfGeoTransform[3] != 0.0
+                                                                 ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2598:35: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         || padfGeoTransform[4] != 0.0 || ABS(padfGeoTransform[5]) != 1.0 )
+                                   ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2598:70: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         || padfGeoTransform[4] != 0.0 || ABS(padfGeoTransform[5]) != 1.0 )
+                                                                      ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2601:36: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         if( padfGeoTransform[2] == 0.0 && padfGeoTransform[4] == 0.0 )
+                                    ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/gt_wkt_srs.cpp:2601:66: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         if( padfGeoTransform[2] == 0.0 && padfGeoTransform[4] == 0.0 )
+                                                                  ^
+Linking CXX shared library ../bin/Release/liblas.so
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/cmake -E cmake_link_script CMakeFiles/las.dir/link.txt --verbose=1
+/usr/bin/c++  -fPIC   -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG   -shared -Wl,-soname,liblas.so.3 -o ../bin/Release/liblas.so.2.3.0 CMakeFiles/las.dir/detail/index/indexcell.cpp.o CMakeFiles/las.dir/detail/index/indexoutput.cpp.o CMakeFiles/las.dir/chipper.cpp.o CMakeFiles/las.dir/factory.cpp.o CMakeFiles/las.dir/classification.cpp.o CMakeFiles/las.dir/color.cpp.o CMakeFiles/las.dir/dimension.cpp.o CMakeFiles/las.dir/error.cpp.o CMakeFiles/las.dir/filter.cpp.o CMakeFiles/las.dir/header.cpp.o CMakeFiles/las.dir/index.cpp.o CMakeFiles/las.dir/point.cpp.o CMakeFiles/las.dir/reader.cpp.o CMakeFiles/las.dir/spatialreference.cpp.o CMakeFiles/las.dir/schema.cpp.o CMakeFiles/las.dir/transform.cpp.o CMakeFiles/las.dir/utility.cpp.o CMakeFiles/las.dir/variablerecord.cpp.o CMakeFiles/las.dir/writer.cpp.o CMakeFiles/las.dir/version.cpp.o CMakeFiles/las.dir/detail/utility.cpp.o CMakeFiles/las.dir/detail/sha1.cpp.o CMakeFiles/las.dir/detail/zippoint.cpp.o CMakeFiles/las.dir/detail/reader/header.cpp.o CMakeFiles/las.dir/detail/reader/reader.cpp.o CMakeFiles/las.dir/detail/reader/zipreader.cpp.o CMakeFiles/las.dir/detail/reader/cachedreader.cpp.o CMakeFiles/las.dir/detail/writer/header.cpp.o CMakeFiles/las.dir/detail/writer/point.cpp.o CMakeFiles/las.dir/detail/writer/zipwriter.cpp.o CMakeFiles/las.dir/detail/writer/writer.cpp.o CMakeFiles/las.dir/gt_citation.cpp.o CMakeFiles/las.dir/gt_wkt_srs.cpp.o CMakeFiles/las.dir/tifvsi.cpp.o -ltiff -lgeotiff /usr/local/lib/libgdal.so /usr/local/lib/liblaszip.so -lboost_program_options -lboost_thread -lboost_system -lboost_iostreams -lboost_filesystem -lpthread -Wl,-rpath,/usr/local/lib: 
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/cmake -E cmake_symlink_library ../bin/Release/liblas.so.2.3.0 ../bin/Release/liblas.so.3 ../bin/Release/liblas.so
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36
+[ 52%] Built target las
+make -f src/CMakeFiles/las_c.dir/build.make src/CMakeFiles/las_c.dir/depend
+make -f apps/CMakeFiles/bigfile_boost_iostreams_test.dir/build.make apps/CMakeFiles/bigfile_boost_iostreams_test.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/src /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src/CMakeFiles/las_c.dir/DependInfo.cmake --color=
+make -f apps/CMakeFiles/las2las.dir/build.make apps/CMakeFiles/las2las.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps/CMakeFiles/bigfile_boost_iostreams_test.dir/DependInfo.cmake --color=
+make -f apps/CMakeFiles/las2ogr.dir/build.make apps/CMakeFiles/las2ogr.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps/CMakeFiles/las2las.dir/DependInfo.cmake --color=
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps/CMakeFiles/las2ogr.dir/DependInfo.cmake --color=
+Scanning dependencies of target las2las
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f apps/CMakeFiles/las2las.dir/build.make apps/CMakeFiles/las2las.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+Scanning dependencies of target las_c
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 37
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f src/CMakeFiles/las_c.dir/build.make src/CMakeFiles/las_c.dir/build
+[ 53%] make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 42
+[ 55%] Building CXX object apps/CMakeFiles/las2las.dir/las2las.cpp.o
+Scanning dependencies of target bigfile_boost_iostreams_test
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f apps/CMakeFiles/bigfile_boost_iostreams_test.dir/build.make apps/CMakeFiles/bigfile_boost_iostreams_test.dir/build
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/capi -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las2las.dir/las2las.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/las2las.cpp
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 1
+Scanning dependencies of target las2ogr
+Building CXX object src/CMakeFiles/las_c.dir/c_api.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Dlas_c_EXPORTS -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -fPIC -I/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las_c.dir/c_api.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/src/c_api.cpp
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+[ 56%] make -f apps/CMakeFiles/las2ogr.dir/build.make apps/CMakeFiles/las2ogr.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 39
+[ 58%] Building CXX object apps/CMakeFiles/las2ogr.dir/las2ogr.cpp.o
+Building CXX object apps/CMakeFiles/bigfile_boost_iostreams_test.dir/bigfile_boost_iostreams_test.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/capi -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/bigfile_boost_iostreams_test.dir/bigfile_boost_iostreams_test.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/bigfile_boost_iostreams_test.cpp
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/capi -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las2ogr.dir/las2ogr.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/las2ogr.cpp
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include/liblas/external/property_tree/xml_parser.hpp:15:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/src/c_api.cpp:58:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_comment(std::basic_ostream<Ch>&, const std::basic_string<_CharT>&, int, bool, const liblas::property_tree::xml_parser::xml_writer_settings<Ch>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:38:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_element(std::basic_ostream<typename Ptree::key_type::value_type>&, const std::basic_string<typename Ptree::key_type::value_type>&, const Ptree&, int, const liblas::property_tree::xml_parser::xml_writer_settings<typename Ptree::key_type::value_type>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:72:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/c_api.cpp: In function ‘LASPointHS* LASReader_GetNextPoint(LASReaderH)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/c_api.cpp:367:52: warning: cast from type ‘const liblas::Point*’ to type ‘LASPointH’ casts away qualifiers [-Wcast-qual]
+             return (LASPointH) &(reader->GetPoint());
+                                                    ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/c_api.cpp: In function ‘LASPointHS* LASReader_GetPointAt(LASReaderH, uint32_t)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/src/c_api.cpp:388:52: warning: cast from type ‘const liblas::Point*’ to type ‘LASPointH’ casts away qualifiers [-Wcast-qual]
+             return (LASPointH) &(reader->GetPoint());
+                                                    ^
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/xml_parser.hpp:15:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.hpp:49,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/las2las.cpp:13:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_comment(std::basic_ostream<Ch>&, const std::basic_string<_CharT>&, int, bool, const liblas::property_tree::xml_parser::xml_writer_settings<Ch>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:38:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_element(std::basic_ostream<typename Ptree::key_type::value_type>&, const std::basic_string<typename Ptree::key_type::value_type>&, const Ptree&, int, const liblas::property_tree::xml_parser::xml_writer_settings<typename Ptree::key_type::value_type>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:72:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+Linking CXX executable ../bin/Release/las2ogr
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/cmake -E cmake_link_script CMakeFiles/las2ogr.dir/link.txt --verbose=1
+/usr/bin/c++     -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG    CMakeFiles/las2ogr.dir/las2ogr.cpp.o  -o ../bin/Release/las2ogr -rdynamic ../bin/Release/liblas.so.2.3.0 -ltiff -lgeotiff /usr/local/lib/libgdal.so /usr/local/lib/liblaszip.so -lboost_program_options -lboost_thread -lboost_system -lboost_iostreams -lboost_filesystem -lpthread -Wl,-rpath,/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/bin/Release:/usr/local/lib: 
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  39
+[ 58%] Built target las2ogr
+make -f apps/CMakeFiles/las2txt.dir/build.make apps/CMakeFiles/las2txt.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps/CMakeFiles/las2txt.dir/DependInfo.cmake --color=
+Scanning dependencies of target las2txt
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f apps/CMakeFiles/las2txt.dir/build.make apps/CMakeFiles/las2txt.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 40
+[ 60%] Building CXX object apps/CMakeFiles/las2txt.dir/las2txt.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/capi -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las2txt.dir/las2txt.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/las2txt.cpp
+Linking CXX executable ../bin/Release/bigfile_boost_iostreams_test
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/cmake -E cmake_link_script CMakeFiles/bigfile_boost_iostreams_test.dir/link.txt --verbose=1
+/usr/bin/c++     -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG    CMakeFiles/bigfile_boost_iostreams_test.dir/bigfile_boost_iostreams_test.cpp.o  -o ../bin/Release/bigfile_boost_iostreams_test -rdynamic ../bin/Release/liblas.so.2.3.0 -ltiff -lgeotiff /usr/local/lib/libgdal.so /usr/local/lib/liblaszip.so -lboost_program_options -lboost_thread -lboost_system -lboost_iostreams -lboost_filesystem -lpthread -Wl,-rpath,/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/bin/Release:/usr/local/lib 
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  1
+[ 60%] Built target bigfile_boost_iostreams_test
+make -f apps/CMakeFiles/lasblock.dir/build.make apps/CMakeFiles/lasblock.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps/CMakeFiles/lasblock.dir/DependInfo.cmake --color=
+Scanning dependencies of target lasblock
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f apps/CMakeFiles/lasblock.dir/build.make apps/CMakeFiles/lasblock.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 43
+[ 61%] Building CXX object apps/CMakeFiles/lasblock.dir/lasblock.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/capi -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/lasblock.dir/lasblock.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/lasblock.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 38
+[ 63%] Building CXX object apps/CMakeFiles/las2las.dir/laskernel.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/capi -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las2las.dir/laskernel.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.cpp
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/xml_parser.hpp:15:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.hpp:49,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/las2txt.cpp:14:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_comment(std::basic_ostream<Ch>&, const std::basic_string<_CharT>&, int, bool, const liblas::property_tree::xml_parser::xml_writer_settings<Ch>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:38:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_element(std::basic_ostream<typename Ptree::key_type::value_type>&, const std::basic_string<typename Ptree::key_type::value_type>&, const Ptree&, int, const liblas::property_tree::xml_parser::xml_writer_settings<typename Ptree::key_type::value_type>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:72:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+Linking CXX shared library ../bin/Release/liblas_c.so
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/cmake -E cmake_link_script CMakeFiles/las_c.dir/link.txt --verbose=1
+/usr/bin/c++  -fPIC   -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG   -shared -Wl,-soname,liblas_c.so.3 -o ../bin/Release/liblas_c.so.2.3.0 CMakeFiles/las_c.dir/c_api.cpp.o ../bin/Release/liblas.so.2.3.0 -ltiff -lgeotiff /usr/local/lib/libgdal.so /usr/local/lib/liblaszip.so -lboost_program_options -lboost_thread -lboost_system -lboost_iostreams -lboost_filesystem -lpthread -Wl,-rpath,/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/bin/Release:/usr/local/lib: 
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src && /usr/bin/cmake -E cmake_symlink_library ../bin/Release/liblas_c.so.2.3.0 ../bin/Release/liblas_c.so.3 ../bin/Release/liblas_c.so
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  42
+[ 63%] Built target las_c
+make -f apps/CMakeFiles/lasindex_test.dir/build.make apps/CMakeFiles/lasindex_test.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps/CMakeFiles/lasindex_test.dir/DependInfo.cmake --color=
+Scanning dependencies of target lasindex_test
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f apps/CMakeFiles/lasindex_test.dir/build.make apps/CMakeFiles/lasindex_test.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 45
+[ 64%] Building CXX object apps/CMakeFiles/lasindex_test.dir/lasindex_test.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/capi -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/lasindex_test.dir/lasindex_test.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/lasindex_test.cpp
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/xml_parser.hpp:15:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.hpp:49,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.cpp:1:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_comment(std::basic_ostream<Ch>&, const std::basic_string<_CharT>&, int, bool, const liblas::property_tree::xml_parser::xml_writer_settings<Ch>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:38:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_element(std::basic_ostream<typename Ptree::key_type::value_type>&, const std::basic_string<typename Ptree::key_type::value_type>&, const Ptree&, int, const liblas::property_tree::xml_parser::xml_writer_settings<typename Ptree::key_type::value_type>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:72:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/xml_parser.hpp:15:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.hpp:49,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/lasblock.cpp:14:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_comment(std::basic_ostream<Ch>&, const std::basic_string<_CharT>&, int, bool, const liblas::property_tree::xml_parser::xml_writer_settings<Ch>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:38:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_element(std::basic_ostream<typename Ptree::key_type::value_type>&, const std::basic_string<typename Ptree::key_type::value_type>&, const Ptree&, int, const liblas::property_tree::xml_parser::xml_writer_settings<typename Ptree::key_type::value_type>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:72:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.cpp: In function ‘std::vector<boost::shared_ptr<liblas::TransformI> > GetTransforms(boost::program_options::variables_map, bool, liblas::Header&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.cpp:876:14: warning: variable ‘mins’ set but not used [-Wunused-but-set-variable]
+         bool mins = false;
+              ^
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 41
+[ 66%] Building CXX object apps/CMakeFiles/las2txt.dir/laskernel.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/capi -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/las2txt.dir/laskernel.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.cpp
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/lasindex_test.cpp: In function ‘int main(int, char**)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/lasindex_test.cpp:367:41: warning: cast from type ‘const char*’ to type ‘char*’ casts away qualifiers [-Wcast-qual]
+             tmpfilenme = (char *)arggv[i];
+                                         ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/lasindex_test.cpp:374:43: warning: cast from type ‘const char*’ to type ‘char*’ casts away qualifiers [-Wcast-qual]
+             lasinfilenme = (char *)arggv[i];
+                                           ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/lasindex_test.cpp:381:44: warning: cast from type ‘const char*’ to type ‘char*’ casts away qualifiers [-Wcast-qual]
+             lasoutfilenme = (char *)arggv[i];
+                                            ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/lasindex_test.cpp:388:43: warning: cast from type ‘const char*’ to type ‘char*’ casts away qualifiers [-Wcast-qual]
+             idxinfilenme = (char *)arggv[i];
+                                           ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/lasindex_test.cpp:409:41: warning: cast from type ‘const char*’ to type ‘char*’ casts away qualifiers [-Wcast-qual]
+             authorname = (char *)arggv[i];
+                                         ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/lasindex_test.cpp:416:43: warning: cast from type ‘const char*’ to type ‘char*’ casts away qualifiers [-Wcast-qual]
+             commentfield = (char *)arggv[i];
+                                           ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/lasindex_test.cpp:423:40: warning: cast from type ‘const char*’ to type ‘char*’ casts away qualifiers [-Wcast-qual]
+             datefield = (char *)arggv[i];
+                                        ^
+Linking CXX executable ../bin/Release/lasindex_test
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/cmake -E cmake_link_script CMakeFiles/lasindex_test.dir/link.txt --verbose=1
+/usr/bin/c++     -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG    CMakeFiles/lasindex_test.dir/lasindex_test.cpp.o  -o ../bin/Release/lasindex_test -rdynamic ../bin/Release/liblas.so.2.3.0 -ltiff -lgeotiff /usr/local/lib/libgdal.so /usr/local/lib/liblaszip.so -lboost_program_options -lboost_thread -lboost_system -lboost_iostreams -lboost_filesystem -lpthread -Wl,-rpath,/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/bin/Release:/usr/local/lib 
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 44
+[ 67%] Building CXX object apps/CMakeFiles/lasblock.dir/laskernel.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/capi -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/lasblock.dir/laskernel.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.cpp
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  45
+[ 67%] Built target lasindex_test
+make -f apps/CMakeFiles/lasinfo.dir/build.make apps/CMakeFiles/lasinfo.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps/CMakeFiles/lasinfo.dir/DependInfo.cmake --color=
+Scanning dependencies of target lasinfo
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f apps/CMakeFiles/lasinfo.dir/build.make apps/CMakeFiles/lasinfo.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 46
+[ 69%] Building CXX object apps/CMakeFiles/lasinfo.dir/lasinfo.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/capi -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/lasinfo.dir/lasinfo.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/lasinfo.cpp
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/xml_parser.hpp:15:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.hpp:49,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.cpp:1:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_comment(std::basic_ostream<Ch>&, const std::basic_string<_CharT>&, int, bool, const liblas::property_tree::xml_parser::xml_writer_settings<Ch>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:38:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_element(std::basic_ostream<typename Ptree::key_type::value_type>&, const std::basic_string<typename Ptree::key_type::value_type>&, const Ptree&, int, const liblas::property_tree::xml_parser::xml_writer_settings<typename Ptree::key_type::value_type>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:72:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.cpp: In function ‘std::vector<boost::shared_ptr<liblas::TransformI> > GetTransforms(boost::program_options::variables_map, bool, liblas::Header&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.cpp:876:14: warning: variable ‘mins’ set but not used [-Wunused-but-set-variable]
+         bool mins = false;
+              ^
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/xml_parser.hpp:15:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.hpp:49,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.cpp:1:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_comment(std::basic_ostream<Ch>&, const std::basic_string<_CharT>&, int, bool, const liblas::property_tree::xml_parser::xml_writer_settings<Ch>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:38:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_element(std::basic_ostream<typename Ptree::key_type::value_type>&, const std::basic_string<typename Ptree::key_type::value_type>&, const Ptree&, int, const liblas::property_tree::xml_parser::xml_writer_settings<typename Ptree::key_type::value_type>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:72:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.cpp: In function ‘std::vector<boost::shared_ptr<liblas::TransformI> > GetTransforms(boost::program_options::variables_map, bool, liblas::Header&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.cpp:876:14: warning: variable ‘mins’ set but not used [-Wunused-but-set-variable]
+         bool mins = false;
+              ^
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/xml_parser.hpp:15:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.hpp:49,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/lasinfo.cpp:13:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_comment(std::basic_ostream<Ch>&, const std::basic_string<_CharT>&, int, bool, const liblas::property_tree::xml_parser::xml_writer_settings<Ch>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:38:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_element(std::basic_ostream<typename Ptree::key_type::value_type>&, const std::basic_string<typename Ptree::key_type::value_type>&, const Ptree&, int, const liblas::property_tree::xml_parser::xml_writer_settings<typename Ptree::key_type::value_type>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:72:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 47
+[ 70%] Building CXX object apps/CMakeFiles/lasinfo.dir/laskernel.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/capi -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/lasinfo.dir/laskernel.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.cpp
+Linking CXX executable ../bin/Release/las2las
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/cmake -E cmake_link_script CMakeFiles/las2las.dir/link.txt --verbose=1
+/usr/bin/c++     -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG    CMakeFiles/las2las.dir/las2las.cpp.o CMakeFiles/las2las.dir/laskernel.cpp.o  -o ../bin/Release/las2las -rdynamic ../bin/Release/liblas.so.2.3.0 -ltiff -lgeotiff /usr/local/lib/libgdal.so /usr/local/lib/liblaszip.so -lboost_program_options -lboost_thread -lboost_system -lboost_iostreams -lboost_filesystem -lpthread -Wl,-rpath,/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/bin/Release:/usr/local/lib: 
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  37 38
+[ 70%] Built target las2las
+make -f apps/CMakeFiles/ts2las.dir/build.make apps/CMakeFiles/ts2las.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps/CMakeFiles/ts2las.dir/DependInfo.cmake --color=
+Scanning dependencies of target ts2las
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f apps/CMakeFiles/ts2las.dir/build.make apps/CMakeFiles/ts2las.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 62
+[ 72%] Building CXX object apps/CMakeFiles/ts2las.dir/ts2las.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/capi -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/ts2las.dir/ts2las.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/ts2las.cpp
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/xml_parser.hpp:15:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.hpp:49,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.cpp:1:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_comment(std::basic_ostream<Ch>&, const std::basic_string<_CharT>&, int, bool, const liblas::property_tree::xml_parser::xml_writer_settings<Ch>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:38:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_element(std::basic_ostream<typename Ptree::key_type::value_type>&, const std::basic_string<typename Ptree::key_type::value_type>&, const Ptree&, int, const liblas::property_tree::xml_parser::xml_writer_settings<typename Ptree::key_type::value_type>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:72:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.cpp: In function ‘std::vector<boost::shared_ptr<liblas::TransformI> > GetTransforms(boost::program_options::variables_map, bool, liblas::Header&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.cpp:876:14: warning: variable ‘mins’ set but not used [-Wunused-but-set-variable]
+         bool mins = false;
+              ^
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/xml_parser.hpp:15:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.hpp:49,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/ts2las.cpp:14:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_comment(std::basic_ostream<Ch>&, const std::basic_string<_CharT>&, int, bool, const liblas::property_tree::xml_parser::xml_writer_settings<Ch>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:38:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_element(std::basic_ostream<typename Ptree::key_type::value_type>&, const std::basic_string<typename Ptree::key_type::value_type>&, const Ptree&, int, const liblas::property_tree::xml_parser::xml_writer_settings<typename Ptree::key_type::value_type>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:72:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+Linking CXX executable ../bin/Release/las2txt
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/cmake -E cmake_link_script CMakeFiles/las2txt.dir/link.txt --verbose=1
+/usr/bin/c++     -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG    CMakeFiles/las2txt.dir/las2txt.cpp.o CMakeFiles/las2txt.dir/laskernel.cpp.o  -o ../bin/Release/las2txt -rdynamic ../bin/Release/liblas.so.2.3.0 -ltiff -lgeotiff /usr/local/lib/libgdal.so /usr/local/lib/liblaszip.so -lboost_program_options -lboost_thread -lboost_system -lboost_iostreams -lboost_filesystem -lpthread -Wl,-rpath,/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/bin/Release:/usr/local/lib: 
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  40 41
+[ 72%] Built target las2txt
+make -f apps/CMakeFiles/txt2las.dir/build.make apps/CMakeFiles/txt2las.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps/CMakeFiles/txt2las.dir/DependInfo.cmake --color=
+Scanning dependencies of target txt2las
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f apps/CMakeFiles/txt2las.dir/build.make apps/CMakeFiles/txt2las.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 64
+[ 73%] Building C object apps/CMakeFiles/txt2las.dir/lascommon.c.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/cc  -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/capi -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/txt2las.dir/lascommon.c.o   -c /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/lascommon.c
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 65
+[ 75%] Building C object apps/CMakeFiles/txt2las.dir/txt2las.c.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/cc  -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/capi -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/txt2las.dir/txt2las.c.o   -c /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/txt2las.c
+Linking CXX executable ../bin/Release/lasblock
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/cmake -E cmake_link_script CMakeFiles/lasblock.dir/link.txt --verbose=1
+/usr/bin/c++     -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG    CMakeFiles/lasblock.dir/lasblock.cpp.o CMakeFiles/lasblock.dir/laskernel.cpp.o  -o ../bin/Release/lasblock -rdynamic ../bin/Release/liblas.so.2.3.0 -ltiff -lgeotiff /usr/local/lib/libgdal.so /usr/local/lib/liblaszip.so -lboost_program_options -lboost_thread -lboost_system -lboost_iostreams -lboost_filesystem -lpthread -Wl,-rpath,/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/bin/Release:/usr/local/lib: 
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  43 44
+[ 75%] Built target lasblock
+make -f test/unit/CMakeFiles/liblas_test.dir/build.make test/unit/CMakeFiles/liblas_test.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/test/unit /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/test/unit/CMakeFiles/liblas_test.dir/DependInfo.cmake --color=
+Scanning dependencies of target liblas_test
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f test/unit/CMakeFiles/liblas_test.dir/build.make test/unit/CMakeFiles/liblas_test.dir/build
+Linking C executable ../bin/Release/txt2las
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/cmake -E cmake_link_script CMakeFiles/txt2las.dir/link.txt --verbose=1
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 48
+[ 76%] /usr/bin/cc  -O3 -DNDEBUG    CMakeFiles/txt2las.dir/lascommon.c.o CMakeFiles/txt2las.dir/txt2las.c.o  -o ../bin/Release/txt2las -rdynamic ../bin/Release/liblas_c.so.2.3.0 ../bin/Release/liblas.so.2.3.0 -ltiff -lgeotiff /usr/local/lib/libgdal.so /usr/local/lib/liblaszip.so -lboost_program_options -lboost_thread -lboost_system -lboost_iostreams -lboost_filesystem -lpthread -Wl,-rpath,/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/bin/Release:/usr/local/lib: 
+Building CXX object test/unit/CMakeFiles/liblas_test.dir/bounds_test.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/test/unit && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -DLAS_DLL_IMPORT -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/../../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/liblas_test.dir/bounds_test.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/bounds_test.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 63
+[ 78%] Building CXX object apps/CMakeFiles/ts2las.dir/laskernel.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/capi -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/ts2las.dir/laskernel.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.cpp
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  64 65
+[ 78%] Built target txt2las
+make -f apps/CMakeFiles/bigfile_test.dir/build.make apps/CMakeFiles/bigfile_test.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps/CMakeFiles/bigfile_test.dir/DependInfo.cmake --color=
+Scanning dependencies of target bigfile_test
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f apps/CMakeFiles/bigfile_test.dir/build.make apps/CMakeFiles/bigfile_test.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 2
+[ 80%] Building C object apps/CMakeFiles/bigfile_test.dir/bigtest.c.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/cc  -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include -I/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/capi -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/bigfile_test.dir/bigtest.c.o   -c /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/bigtest.c
+Linking C executable ../bin/Release/bigfile_test
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/cmake -E cmake_link_script CMakeFiles/bigfile_test.dir/link.txt --verbose=1
+/usr/bin/cc  -O3 -DNDEBUG    CMakeFiles/bigfile_test.dir/bigtest.c.o  -o ../bin/Release/bigfile_test -rdynamic ../bin/Release/liblas_c.so.2.3.0 ../bin/Release/liblas.so.2.3.0 -ltiff -lgeotiff /usr/local/lib/libgdal.so /usr/local/lib/liblaszip.so -lboost_program_options -lboost_thread -lboost_system -lboost_iostreams -lboost_filesystem -lpthread -Wl,-rpath,/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/bin/Release:/usr/local/lib 
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  2
+[ 80%] Built target bigfile_test
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 49
+[ 81%] Building CXX object test/unit/CMakeFiles/liblas_test.dir/common.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/test/unit && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -DLAS_DLL_IMPORT -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/../../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/liblas_test.dir/common.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/common.cpp
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut.hpp:17:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/bounds_test.cpp:7:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:19:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic push
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:20:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic ignored "-Wunused-function"
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:311:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic pop
+ ^
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut.hpp:17:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/common.cpp:9:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:19:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic push
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:20:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic ignored "-Wunused-function"
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:311:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic pop
+ ^
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/xml_parser.hpp:15:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.hpp:49,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.cpp:1:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_comment(std::basic_ostream<Ch>&, const std::basic_string<_CharT>&, int, bool, const liblas::property_tree::xml_parser::xml_writer_settings<Ch>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:38:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp: In function ‘void liblas::property_tree::xml_parser::write_xml_element(std::basic_ostream<typename Ptree::key_type::value_type>&, const std::basic_string<typename Ptree::key_type::value_type>&, const Ptree&, int, const liblas::property_tree::xml_parser::xml_writer_settings<typename Ptree::key_type::value_type>&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/../include/liblas/external/property_tree/detail/xml_parser_write.hpp:72:48: warning: typedef ‘Str’ locally defined but not used [-Wunused-local-typedefs]
+         typedef typename std::basic_string<Ch> Str;
+                                                ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.cpp: In function ‘std::vector<boost::shared_ptr<liblas::TransformI> > GetTransforms(boost::program_options::variables_map, bool, liblas::Header&)’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/apps/laskernel.cpp:876:14: warning: variable ‘mins’ set but not used [-Wunused-but-set-variable]
+         bool mins = false;
+              ^
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 50
+[ 83%] Building CXX object test/unit/CMakeFiles/liblas_test.dir/error_test.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/test/unit && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -DLAS_DLL_IMPORT -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/../../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/liblas_test.dir/error_test.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/error_test.cpp
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut.hpp:17:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/error_test.cpp:9:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:19:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic push
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:20:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic ignored "-Wunused-function"
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:311:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic pop
+ ^
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 51
+[ 84%] Building CXX object test/unit/CMakeFiles/liblas_test.dir/header_test.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/test/unit && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -DLAS_DLL_IMPORT -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/../../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/liblas_test.dir/header_test.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/header_test.cpp
+Linking CXX executable ../bin/Release/lasinfo
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/cmake -E cmake_link_script CMakeFiles/lasinfo.dir/link.txt --verbose=1
+/usr/bin/c++     -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG    CMakeFiles/lasinfo.dir/lasinfo.cpp.o CMakeFiles/lasinfo.dir/laskernel.cpp.o  -o ../bin/Release/lasinfo -rdynamic ../bin/Release/liblas.so.2.3.0 -ltiff -lgeotiff /usr/local/lib/libgdal.so /usr/local/lib/liblaszip.so -lboost_program_options -lboost_thread -lboost_system -lboost_iostreams -lboost_filesystem -lpthread -Wl,-rpath,/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/bin/Release:/usr/local/lib: 
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 52
+[ 86%] Building CXX object test/unit/CMakeFiles/liblas_test.dir/point_test.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/test/unit && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -DLAS_DLL_IMPORT -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/../../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/liblas_test.dir/point_test.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/point_test.cpp
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  46 47
+[ 86%] Built target lasinfo
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 53
+[ 87%] Building CXX object test/unit/CMakeFiles/liblas_test.dir/reader_iterator_test.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/test/unit && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -DLAS_DLL_IMPORT -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/../../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/liblas_test.dir/reader_iterator_test.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/reader_iterator_test.cpp
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut.hpp:17:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/header_test.cpp:9:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:19:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic push
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:20:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic ignored "-Wunused-function"
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:311:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic pop
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/header_test.cpp:123:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic push
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/header_test.cpp:124:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic ignored "-Wconstant-conversion"
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/header_test.cpp:131:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic pop
+ ^
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut.hpp:17:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/point_test.cpp:9:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:19:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic push
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:20:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic ignored "-Wunused-function"
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:311:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic pop
+ ^
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut.hpp:17:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/reader_iterator_test.cpp:10:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:19:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic push
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:20:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic ignored "-Wunused-function"
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:311:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic pop
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/header_test.cpp: In member function ‘void tut::test_object<Data>::test() [with int n = 5; Data = tut::lasheader_data]’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/header_test.cpp:128:35: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+         h1.SetFileSourceId(id2 + 1);
+                                   ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/header_test.cpp: In member function ‘void tut::test_object<Data>::test() [with int n = 11; Data = tut::lasheader_data]’:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/header_test.cpp:257:67: warning: typedef ‘size_type’ locally defined but not used [-Wunused-local-typedefs]
+         typedef ::liblas::Header::RecordsByReturnArray::size_type size_type;
+                                                                   ^
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 54
+[ 89%] Building CXX object test/unit/CMakeFiles/liblas_test.dir/reader_test.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/test/unit && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -DLAS_DLL_IMPORT -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/../../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/liblas_test.dir/reader_test.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/reader_test.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 55
+[ 90%] Building CXX object test/unit/CMakeFiles/liblas_test.dir/spatialreference_test.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/test/unit && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -DLAS_DLL_IMPORT -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/../../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/liblas_test.dir/spatialreference_test.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/spatialreference_test.cpp
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut.hpp:17:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/reader_test.cpp:10:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:19:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic push
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:20:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic ignored "-Wunused-function"
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:311:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic pop
+ ^
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 56
+[ 92%] Building CXX object test/unit/CMakeFiles/liblas_test.dir/transform_test.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/test/unit && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -DLAS_DLL_IMPORT -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/../../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/liblas_test.dir/transform_test.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/transform_test.cpp
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut.hpp:17:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/spatialreference_test.cpp:9:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:19:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic push
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:20:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic ignored "-Wunused-function"
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:311:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic pop
+ ^
+Linking CXX executable ../bin/Release/ts2las
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps && /usr/bin/cmake -E cmake_link_script CMakeFiles/ts2las.dir/link.txt --verbose=1
+/usr/bin/c++     -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG    CMakeFiles/ts2las.dir/ts2las.cpp.o CMakeFiles/ts2las.dir/laskernel.cpp.o  -o ../bin/Release/ts2las -rdynamic ../bin/Release/liblas.so.2.3.0 -ltiff -lgeotiff /usr/local/lib/libgdal.so /usr/local/lib/liblaszip.so -lboost_program_options -lboost_thread -lboost_system -lboost_iostreams -lboost_filesystem -lpthread -Wl,-rpath,/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/bin/Release:/usr/local/lib: 
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  62 63
+[ 92%] Built target ts2las
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 57
+[ 93%] Building CXX object test/unit/CMakeFiles/liblas_test.dir/variablerecord_test.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/test/unit && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -DLAS_DLL_IMPORT -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/../../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/liblas_test.dir/variablerecord_test.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/variablerecord_test.cpp
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut.hpp:17:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/transform_test.cpp:7:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:19:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic push
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:20:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic ignored "-Wunused-function"
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:311:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic pop
+ ^
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut.hpp:17:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/variablerecord_test.cpp:11:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:19:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic push
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:20:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic ignored "-Wunused-function"
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:311:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic pop
+ ^
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 58
+[ 95%] Building CXX object test/unit/CMakeFiles/liblas_test.dir/writer_test.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/test/unit && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -DLAS_DLL_IMPORT -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/../../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/liblas_test.dir/writer_test.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/writer_test.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 59
+[ 96%] Building CXX object test/unit/CMakeFiles/liblas_test.dir/zipreader_test.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/test/unit && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -DLAS_DLL_IMPORT -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/../../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/liblas_test.dir/zipreader_test.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/zipreader_test.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 60
+[ 98%] Building CXX object test/unit/CMakeFiles/liblas_test.dir/zipwriter_test.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/test/unit && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -DLAS_DLL_IMPORT -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/../../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/liblas_test.dir/zipwriter_test.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/zipwriter_test.cpp
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 61
+[100%] Building CXX object test/unit/CMakeFiles/liblas_test.dir/liblas_test_suite.cpp.o
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/test/unit && /usr/bin/c++   -DHAVE_GDAL=1 -DHAVE_LASZIP=1 -DHAVE_LIBGEOTIFF=1 -DLAS_DLL_IMPORT -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/. -I/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/../../include -I/home/sdrdis/iarpa/src/laszip-src-2.2.0/include -I/usr/include/gdal -I/usr/include/geotiff -I/usr/include/x86_64-linux-gnu    -o CMakeFiles/liblas_test.dir/liblas_test_suite.cpp.o -c /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/liblas_test_suite.cpp
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut.hpp:17:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/liblas_test_suite.cpp:8:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:19:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic push
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:20:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic ignored "-Wunused-function"
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:311:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic pop
+ ^
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut.hpp:17:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/writer_test.cpp:10:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:19:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic push
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:20:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic ignored "-Wunused-function"
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:311:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic pop
+ ^
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut.hpp:17:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/zipreader_test.cpp:12:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:19:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic push
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:20:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic ignored "-Wunused-function"
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:311:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic pop
+ ^
+In file included from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut.hpp:17:0,
+                 from /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/zipwriter_test.cpp:11:
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:19:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic push
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:20:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic ignored "-Wunused-function"
+ ^
+/home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit/./tut/tut_assert.hpp:311:0: warning: ignoring #pragma clang diagnostic [-Wunknown-pragmas]
+ #pragma clang diagnostic pop
+ ^
+Linking CXX executable ../../bin/Release/liblas_test
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/test/unit && /usr/bin/cmake -E cmake_link_script CMakeFiles/liblas_test.dir/link.txt --verbose=1
+/usr/bin/c++     -Wextra -Wall -Wno-unused-parameter -Wno-unused-variable -Wpointer-arith -Wcast-align -Wcast-qual -Wfloat-equal -Wredundant-decls -Wno-long-long -std=c++98 -ansi -O3 -DNDEBUG    CMakeFiles/liblas_test.dir/bounds_test.cpp.o CMakeFiles/liblas_test.dir/common.cpp.o CMakeFiles/liblas_test.dir/error_test.cpp.o CMakeFiles/liblas_test.dir/header_test.cpp.o CMakeFiles/liblas_test.dir/point_test.cpp.o CMakeFiles/liblas_test.dir/reader_iterator_test.cpp.o CMakeFiles/liblas_test.dir/reader_test.cpp.o CMakeFiles/liblas_test.dir/spatialreference_test.cpp.o CMakeFiles/liblas_test.dir/transform_test.cpp.o CMakeFiles/liblas_test.dir/variablerecord_test.cpp.o CMakeFiles/liblas_test.dir/writer_test.cpp.o CMakeFiles/liblas_test.dir/zipreader_test.cpp.o CMakeFiles/liblas_test.dir/zipwriter_test.cpp.o CMakeFiles/liblas_test.dir/liblas_test_suite.cpp.o  -o ../../bin/Release/liblas_test -rdynamic ../../bin/Release/liblas.so.2.3.0 -ltiff -lgeotiff /usr/local/lib/libgdal.so /usr/local/lib/liblaszip.so -lboost_program_options -lboost_thread -lboost_system -lboost_iostreams -lboost_filesystem -lpthread -Wl,-rpath,/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/bin/Release:/usr/local/lib 
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  48 49 50 51 52 53 54 55 56 57 58 59 60 61
+[100%] Built target liblas_test
+make[1]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_start /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 0
+/usr/bin/cmake -H/home/sdrdis/iarpa/src/libLAS-1.8.0 -B/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles/progress.marks
+make -f CMakeFiles/Makefile2 all
+make[1]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f src/CMakeFiles/las.dir/build.make src/CMakeFiles/las.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/src /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src/CMakeFiles/las.dir/DependInfo.cmake --color=
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f src/CMakeFiles/las.dir/build.make src/CMakeFiles/las.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make[2]: Nothing to be done for `src/CMakeFiles/las.dir/build'.
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36
+[ 52%] Built target las
+make -f src/CMakeFiles/las_c.dir/build.make src/CMakeFiles/las_c.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/src /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/src/CMakeFiles/las_c.dir/DependInfo.cmake --color=
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f src/CMakeFiles/las_c.dir/build.make src/CMakeFiles/las_c.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make[2]: Nothing to be done for `src/CMakeFiles/las_c.dir/build'.
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  42
+[ 53%] Built target las_c
+make -f apps/CMakeFiles/bigfile_boost_iostreams_test.dir/build.make apps/CMakeFiles/bigfile_boost_iostreams_test.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps/CMakeFiles/bigfile_boost_iostreams_test.dir/DependInfo.cmake --color=
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f apps/CMakeFiles/bigfile_boost_iostreams_test.dir/build.make apps/CMakeFiles/bigfile_boost_iostreams_test.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make[2]: Nothing to be done for `apps/CMakeFiles/bigfile_boost_iostreams_test.dir/build'.
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  1
+[ 55%] Built target bigfile_boost_iostreams_test
+make -f apps/CMakeFiles/bigfile_test.dir/build.make apps/CMakeFiles/bigfile_test.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps/CMakeFiles/bigfile_test.dir/DependInfo.cmake --color=
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f apps/CMakeFiles/bigfile_test.dir/build.make apps/CMakeFiles/bigfile_test.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make[2]: Nothing to be done for `apps/CMakeFiles/bigfile_test.dir/build'.
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  2
+[ 56%] Built target bigfile_test
+make -f apps/CMakeFiles/las2las.dir/build.make apps/CMakeFiles/las2las.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps/CMakeFiles/las2las.dir/DependInfo.cmake --color=
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f apps/CMakeFiles/las2las.dir/build.make apps/CMakeFiles/las2las.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make[2]: Nothing to be done for `apps/CMakeFiles/las2las.dir/build'.
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  37 38
+[ 60%] Built target las2las
+make -f apps/CMakeFiles/las2ogr.dir/build.make apps/CMakeFiles/las2ogr.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps/CMakeFiles/las2ogr.dir/DependInfo.cmake --color=
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f apps/CMakeFiles/las2ogr.dir/build.make apps/CMakeFiles/las2ogr.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make[2]: Nothing to be done for `apps/CMakeFiles/las2ogr.dir/build'.
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  39
+[ 61%] Built target las2ogr
+make -f apps/CMakeFiles/las2txt.dir/build.make apps/CMakeFiles/las2txt.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps/CMakeFiles/las2txt.dir/DependInfo.cmake --color=
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f apps/CMakeFiles/las2txt.dir/build.make apps/CMakeFiles/las2txt.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make[2]: Nothing to be done for `apps/CMakeFiles/las2txt.dir/build'.
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  40 41
+[ 64%] Built target las2txt
+make -f apps/CMakeFiles/lasblock.dir/build.make apps/CMakeFiles/lasblock.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps/CMakeFiles/lasblock.dir/DependInfo.cmake --color=
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f apps/CMakeFiles/lasblock.dir/build.make apps/CMakeFiles/lasblock.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make[2]: Nothing to be done for `apps/CMakeFiles/lasblock.dir/build'.
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  43 44
+[ 67%] Built target lasblock
+make -f apps/CMakeFiles/lasindex_test.dir/build.make apps/CMakeFiles/lasindex_test.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps/CMakeFiles/lasindex_test.dir/DependInfo.cmake --color=
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f apps/CMakeFiles/lasindex_test.dir/build.make apps/CMakeFiles/lasindex_test.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make[2]: Nothing to be done for `apps/CMakeFiles/lasindex_test.dir/build'.
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  45
+[ 69%] Built target lasindex_test
+make -f apps/CMakeFiles/lasinfo.dir/build.make apps/CMakeFiles/lasinfo.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps/CMakeFiles/lasinfo.dir/DependInfo.cmake --color=
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f apps/CMakeFiles/lasinfo.dir/build.make apps/CMakeFiles/lasinfo.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make[2]: Nothing to be done for `apps/CMakeFiles/lasinfo.dir/build'.
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  46 47
+[ 72%] Built target lasinfo
+make -f apps/CMakeFiles/ts2las.dir/build.make apps/CMakeFiles/ts2las.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps/CMakeFiles/ts2las.dir/DependInfo.cmake --color=
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f apps/CMakeFiles/ts2las.dir/build.make apps/CMakeFiles/ts2las.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make[2]: Nothing to be done for `apps/CMakeFiles/ts2las.dir/build'.
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  62 63
+[ 75%] Built target ts2las
+make -f apps/CMakeFiles/txt2las.dir/build.make apps/CMakeFiles/txt2las.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/apps/CMakeFiles/txt2las.dir/DependInfo.cmake --color=
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f apps/CMakeFiles/txt2las.dir/build.make apps/CMakeFiles/txt2las.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make[2]: Nothing to be done for `apps/CMakeFiles/txt2las.dir/build'.
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  64 65
+[ 78%] Built target txt2las
+make -f test/unit/CMakeFiles/liblas_test.dir/build.make test/unit/CMakeFiles/liblas_test.dir/depend
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+cd /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/sdrdis/iarpa/src/libLAS-1.8.0 /home/sdrdis/iarpa/src/libLAS-1.8.0/test/unit /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/test/unit /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/test/unit/CMakeFiles/liblas_test.dir/DependInfo.cmake --color=
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make -f test/unit/CMakeFiles/liblas_test.dir/build.make test/unit/CMakeFiles/liblas_test.dir/build
+make[2]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make[2]: Nothing to be done for `test/unit/CMakeFiles/liblas_test.dir/build'.
+make[2]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_report /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles  48 49 50 51 52 53 54 55 56 57 58 59 60 61
+[100%] Built target liblas_test
+make[1]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+/usr/bin/cmake -E cmake_progress_start /home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles/CMakeFiles 0
+make -f CMakeFiles/Makefile2 preinstall
+make[1]: Entering directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+make[1]: Nothing to be done for `preinstall'.
+make[1]: Leaving directory `/home/sdrdis/iarpa/src/libLAS-1.8.0/makefiles'
+Install the project...
+/usr/bin/cmake -P cmake_install.cmake
+-- Install configuration: "Release"
+-- Installing: /usr/share/liblas/doc/AUTHORS
+-- Installing: /usr/share/liblas/doc/COPYING
+-- Installing: /usr/share/liblas/doc/INSTALL
+-- Installing: /usr/share/liblas/doc/LICENSE.txt
+-- Installing: /usr/share/liblas/doc/README.txt
+-- Installing: /usr/lib/liblas.so.2.3.0
+-- Installing: /usr/lib/liblas.so.3
+-- Installing: /usr/lib/liblas.so
+-- Removed runtime path from "/usr/lib/liblas.so.2.3.0"
+-- Installing: /usr/lib/liblas_c.so.2.3.0
+-- Installing: /usr/lib/liblas_c.so.3
+-- Installing: /usr/lib/liblas_c.so
+-- Removed runtime path from "/usr/lib/liblas_c.so.2.3.0"
+-- Installing: /usr/include/liblas
+-- Installing: /usr/include/liblas/filter.hpp
+-- Installing: /usr/include/liblas/chipper.hpp
+-- Installing: /usr/include/liblas/classification.hpp
+-- Installing: /usr/include/liblas/error.hpp
+-- Installing: /usr/include/liblas/spatialreference.hpp
+-- Installing: /usr/include/liblas/capi
+-- Installing: /usr/include/liblas/capi/las_config.h
+-- Installing: /usr/include/liblas/capi/las_version.h
+-- Installing: /usr/include/liblas/capi/liblas.h
+-- Installing: /usr/include/liblas/factory.hpp
+-- Installing: /usr/include/liblas/transform.hpp
+-- Installing: /usr/include/liblas/color.hpp
+-- Installing: /usr/include/liblas/utility.hpp
+-- Installing: /usr/include/liblas/version.hpp
+-- Installing: /usr/include/liblas/index.hpp
+-- Installing: /usr/include/liblas/schema.hpp
+-- Installing: /usr/include/liblas/header.hpp
+-- Installing: /usr/include/liblas/bounds.hpp
+-- Installing: /usr/include/liblas/liblas.hpp
+-- Installing: /usr/include/liblas/variablerecord.hpp
+-- Installing: /usr/include/liblas/iterator.hpp
+-- Installing: /usr/include/liblas/writer.hpp
+-- Installing: /usr/include/liblas/point.hpp
+-- Installing: /usr/include/liblas/external
+-- Installing: /usr/include/liblas/external/property_tree
+-- Installing: /usr/include/liblas/external/property_tree/json_parser.hpp
+-- Installing: /usr/include/liblas/external/property_tree/info_parser.hpp
+-- Installing: /usr/include/liblas/external/property_tree/exceptions.hpp
+-- Installing: /usr/include/liblas/external/property_tree/ini_parser.hpp
+-- Installing: /usr/include/liblas/external/property_tree/ptree_fwd.hpp
+-- Installing: /usr/include/liblas/external/property_tree/stream_translator.hpp
+-- Installing: /usr/include/liblas/external/property_tree/ptree_serialization.hpp
+-- Installing: /usr/include/liblas/external/property_tree/ptree.hpp
+-- Installing: /usr/include/liblas/external/property_tree/detail
+-- Installing: /usr/include/liblas/external/property_tree/detail/info_parser_error.hpp
+-- Installing: /usr/include/liblas/external/property_tree/detail/xml_parser_writer_settings.hpp
+-- Installing: /usr/include/liblas/external/property_tree/detail/info_parser_writer_settings.hpp
+-- Installing: /usr/include/liblas/external/property_tree/detail/json_parser_error.hpp
+-- Installing: /usr/include/liblas/external/property_tree/detail/json_parser_read.hpp
+-- Installing: /usr/include/liblas/external/property_tree/detail/info_parser_read.hpp
+-- Installing: /usr/include/liblas/external/property_tree/detail/xml_parser_flags.hpp
+-- Installing: /usr/include/liblas/external/property_tree/detail/file_parser_error.hpp
+-- Installing: /usr/include/liblas/external/property_tree/detail/xml_parser_utils.hpp
+-- Installing: /usr/include/liblas/external/property_tree/detail/xml_parser_error.hpp
+-- Installing: /usr/include/liblas/external/property_tree/detail/xml_parser_read_rapidxml.hpp
+-- Installing: /usr/include/liblas/external/property_tree/detail/xml_parser_write.hpp
+-- Installing: /usr/include/liblas/external/property_tree/detail/exception_implementation.hpp
+-- Installing: /usr/include/liblas/external/property_tree/detail/info_parser_write.hpp
+-- Installing: /usr/include/liblas/external/property_tree/detail/info_parser_utils.hpp
+-- Installing: /usr/include/liblas/external/property_tree/detail/json_parser_write.hpp
+-- Installing: /usr/include/liblas/external/property_tree/detail/rapidxml.hpp
+-- Installing: /usr/include/liblas/external/property_tree/detail/ptree_utils.hpp
+-- Installing: /usr/include/liblas/external/property_tree/detail/ptree_implementation.hpp
+-- Installing: /usr/include/liblas/external/property_tree/string_path.hpp
+-- Installing: /usr/include/liblas/external/property_tree/id_translator.hpp
+-- Installing: /usr/include/liblas/external/property_tree/xml_parser.hpp
+-- Installing: /usr/include/liblas/detail
+-- Installing: /usr/include/liblas/detail/index
+-- Installing: /usr/include/liblas/detail/index/indexcell.hpp
+-- Installing: /usr/include/liblas/detail/index/indexoutput.hpp
+-- Installing: /usr/include/liblas/detail/file_ptr_stream.hpp
+-- Installing: /usr/include/liblas/detail/binary.hpp
+-- Installing: /usr/include/liblas/detail/fwd.hpp
+-- Installing: /usr/include/liblas/detail/private_utility.hpp
+-- Installing: /usr/include/liblas/detail/opt_allocator.hpp
+-- Installing: /usr/include/liblas/detail/timer.hpp
+-- Installing: /usr/include/liblas/detail/zippoint.hpp
+-- Installing: /usr/include/liblas/detail/endian.hpp
+-- Installing: /usr/include/liblas/detail/writer
+-- Installing: /usr/include/liblas/detail/writer/header.hpp
+-- Installing: /usr/include/liblas/detail/writer/writer.hpp
+-- Installing: /usr/include/liblas/detail/writer/zipwriter.hpp
+-- Installing: /usr/include/liblas/detail/writer/point.hpp
+-- Installing: /usr/include/liblas/detail/reader
+-- Installing: /usr/include/liblas/detail/reader/zipreader.hpp
+-- Installing: /usr/include/liblas/detail/reader/cachedreader.hpp
+-- Installing: /usr/include/liblas/detail/reader/header.hpp
+-- Installing: /usr/include/liblas/detail/reader/reader.hpp
+-- Installing: /usr/include/liblas/detail/sha1.hpp
+-- Installing: /usr/include/liblas/detail/pointrecord.hpp
+-- Installing: /usr/include/liblas/detail/singleton.hpp
+-- Installing: /usr/include/liblas/export.hpp
+-- Installing: /usr/include/liblas/dimension.hpp
+-- Installing: /usr/include/liblas/exception.hpp
+-- Installing: /usr/include/liblas/reader.hpp
+-- Installing: /usr/include/liblas/compatibility.hpp
+-- Installing: /usr/bin/lasinfo
+-- Set runtime path of "/usr/bin/lasinfo" to "/usr/lib:/usr/lib/x86_64-linux-gnu:/usr/local/lib"
+-- Installing: /usr/bin/las2las
+-- Set runtime path of "/usr/bin/las2las" to "/usr/lib:/usr/lib/x86_64-linux-gnu:/usr/local/lib"
+-- Installing: /usr/bin/txt2las
+-- Set runtime path of "/usr/bin/txt2las" to "/usr/lib:/usr/lib/x86_64-linux-gnu:/usr/local/lib"
+-- Installing: /usr/bin/las2ogr
+-- Set runtime path of "/usr/bin/las2ogr" to "/usr/lib:/usr/lib/x86_64-linux-gnu:/usr/local/lib"
+-- Up-to-date: /usr/bin/las2las
+-- Installing: /usr/bin/lasblock
+-- Set runtime path of "/usr/bin/lasblock" to "/usr/lib:/usr/lib/x86_64-linux-gnu:/usr/local/lib"
+-- Installing: /usr/bin/ts2las
+-- Set runtime path of "/usr/bin/ts2las" to "/usr/lib:/usr/lib/x86_64-linux-gnu:/usr/local/lib"
+-- Installing: /usr/bin/las2txt
+-- Set runtime path of "/usr/bin/las2txt" to "/usr/lib:/usr/lib/x86_64-linux-gnu:/usr/local/lib"
+-- Installing: /usr/bin/liblas-config
+-- Installing: /usr/share/cmake/libLAS-1.8.0/liblas-config.cmake
+-- Installing: /usr/share/cmake/libLAS-1.8.0/liblas-config-version.cmake
+-- Installing: /usr/share/cmake/libLAS-1.8.0/liblas-depends.cmake
+-- Installing: /usr/share/cmake/libLAS-1.8.0/liblas-depends-release.cmake

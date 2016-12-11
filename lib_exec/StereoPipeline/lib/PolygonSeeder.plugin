@@ -1,0 +1,12 @@
+Group = Grid
+  Library = GridPolygonSeeder
+  Routine = GridPolygonSeederPlugin
+End_Group
+Group = Limit
+  Library = LimitPolygonSeeder
+  Routine = LimitPolygonSeederPlugin
+End_Group
+Group = Strip
+  Library = StripPolygonSeeder
+  Routine = StripPolygonSeederPlugin
+End_Group

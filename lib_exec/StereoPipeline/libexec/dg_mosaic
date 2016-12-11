@@ -1,0 +1,1003 @@
+#!/usr/bin/env python
+# __BEGIN_LICENSE__
+#  Copyright (c) 2009-2013, United States Government as represented by the
+#  Administrator of the National Aeronautics and Space Administration. All
+#  rights reserved.
+#
+#  The NGT platform is licensed under the Apache License, Version 2.0 (the
+#  "License"); you may not use this file except in compliance with the
+#  License. You may obtain a copy of the License at
+#  http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+# __END_LICENSE__
+
+# To do: There is no need to round the corners of the images
+# which are combined into the mosaic. May improve accuracy
+# that way. This change would need very careful testing.
+
+import os, sys, string, subprocess, math, re, optparse, time, copy, tempfile
+
+from datetime import datetime, timedelta
+
+# The path to the ASP python files
+basepath    = os.path.abspath(sys.path[0])
+pythonpath  = os.path.abspath(basepath + '/../Python')  # for dev ASP
+libexecpath = os.path.abspath(basepath + '/../libexec') # for packaged ASP
+sys.path.insert(0, basepath) # prepend to Python path
+sys.path.insert(0, pythonpath)
+sys.path.insert(0, libexecpath)
+
+from asp_system_utils import * # must be after the path is altered above
+verify_python_version_is_supported()
+
+# Prepend to system PATH
+os.environ["PATH"] = libexecpath + os.pathsep + os.environ["PATH"]
+
+def format_microsec(microsec):
+    # Ensure that we have 6 digits in a microsecond. Pre-pad with
+    # zeros if necessary.
+    if len(microsec) > 6:
+        raise Exception('InputError', "The microsecond value: " + microsec
+                        + " has more than 6 digits.")
+
+    microsec  = (6 - len(microsec)) * '0' + microsec
+    return microsec
+
+try:
+    import xml.etree.ElementTree as ET
+except ImportError:
+    # python 2.4
+    import elementtree.ElementTree as ET
+
+if hasattr(datetime, 'strptime'):
+    def parse_time(date_string, fmt):
+        return datetime.strptime(date_string, fmt)
+else:
+    # python 2.4
+    def parse_time(date_str, fmt):
+        m = re.match('^(.*?)T(.*?)\.(\d+)Z', date_str)
+        if m:
+            date_str  = m.group(1) + " " + m.group(2)
+            microsec  = format_microsec(m.group(3))
+        else:
+            raise Exception('InputError', "Could not match string: " + date_str)
+
+        m = re.match('^(.*?)T(.*?)\.(.*?)Z', fmt)
+        if m:
+            fmt = m.group(1) + " " + m.group(2)
+        else:
+            raise Exception('InputError', "Could not match string: " + fmt)
+
+        parsed = datetime(*(time.strptime(date_str, fmt)[0:6]))
+        parsed = parsed.replace(microsecond=int(microsec))
+
+        return parsed
+
+class Usage(Exception):
+    def __init__(self, msg):
+        self.msg = msg
+
+# TODO: Move this function into the utils file
+def lonlat_point_distance(pt1, pt2):
+    '''Computes the great circle distance in meters between two lonlat coordinates'''
+
+    # This function uses a simple, less accurate calculation.
+
+    PI           =  3.141592653589793
+    EARTH_RADIUS = 6371.009 # In km
+    DEG2RAD      = PI / 180.0
+
+    lon1  = pt1[0] * DEG2RAD
+    lon2  = pt2[0] * DEG2RAD
+    lat1  = pt1[1] * DEG2RAD
+    lat2  = pt2[1] * DEG2RAD
+    theta = lon2 - lon1
+    dist  = math.acos(math.sin(lat1) * math.sin(lat2) + math.cos(lat1) * math.cos(lat2) * math.cos(theta))
+    if (dist < 0):
+        dist = dist + PI
+    dist = dist * EARTH_RADIUS
+    return dist * 1000.0 # Convert km to meters
+
+# We assume that the boxes are products of closed intervals, [a, b] x
+# [c, d]. As such, the box [0, 0] x [0, 0] of width 0 is not empty.
+class BBox:
+    def __init__(self,
+                 minx =  sys.float_info.max, miny =  sys.float_info.max,
+                 maxx = -sys.float_info.max, maxy = -sys.float_info.max):
+        self.minx = minx
+        self.miny = miny
+        self.maxx = maxx
+        self.maxy = maxy
+
+    def empty(self):
+        return ( self.maxx < self.minx ) or ( self.maxy < self.miny )
+
+    def expand_with_box(self, box):
+        if box.empty(): return
+        if self.empty():
+            self.minx = box.minx
+            self.miny = box.miny
+            self.maxx = box.maxx
+            self.maxy = box.maxy
+            return
+        if box.minx < self.minx: self.minx = box.minx
+        if box.miny < self.miny: self.miny = box.miny
+        if box.maxx > self.maxx: self.maxx = box.maxx
+        if box.maxy > self.maxy: self.maxy = box.maxy
+
+    def add_point(self, pt):
+        self.expand_with_box(BBox(pt[0], pt[1], pt[0], pt[1]))
+
+    def extend (self, val):
+        # Note: val can be negative
+        if self.empty(): return
+        self.minx = self.minx - val
+        self.miny = self.miny - val
+        self.maxx = self.maxx + val
+        self.maxy = self.maxy + val
+        if self.empty():
+            # Ensure all empty boxes are identical. For some reason
+            # the line self = BBox() does not work.  So need to assign
+            # the members one by one.
+            b = BBox()
+            self.minx = b.minx
+            self.miny = b.miny
+            self.maxx = b.maxx
+            self.maxy = b.maxy
+
+    def width(self):
+        if self.empty(): return 0
+        return self.maxx - self.minx
+
+    def height(self):
+        if self.empty(): return 0
+        return self.maxy - self.miny
+
+    def __repr__(self):
+        return "BBox %f %f -> %f %f" % (self.minx,self.miny,self.maxx,self.maxy)
+
+# Create an object made of an image name and a box. Sort an array of
+# such objects by the min coordinate of the box.
+class StrBox:
+    def __init__(self, img_str, box):
+        self.img_str = img_str
+        self.box     = box
+
+
+# Sort by miny. If miny is same, sort by height.
+def minyCompare(P, Q):
+    val = int(round(P.box.miny - Q.box.miny))
+    if val != 0:
+        return val
+    val = int(round((P.box.maxy - P.box.miny) - (Q.box.maxy - Q.box.miny)))
+    return val
+
+def sort_by_miny(imgVec, boxVec):
+    S = []
+    for i in range(len(imgVec)):
+        S.append(StrBox(copy.deepcopy(imgVec[i]), copy.deepcopy(boxVec[i])))
+    S.sort(minyCompare)
+    imgVec = []
+    for i in range(len(S)):
+        imgVec.append(S[i].img_str)
+    return imgVec
+
+def set_or_wipe_image_tags(IMAGE, avg_meanproductgsd, avg_meancollectedgsd):
+
+    # Wipe most image tags as they differ from image to image. Set the
+    # MEANPRODUCTGSD and MEANCOLLECTEDGSD tags as the average of
+    # individual values of this tag.
+
+    keep_tags = set(["SATID", "MODE", "SCANDIRECTION", "CATID", "TLCTIME",
+                     "NUMTLC", "TLCLISTList", "FIRSTLINETIME", "AVGLINERATE",
+                     "EXPOSUREDURATION", "MEANPRODUCTGSD", "MEANCOLLECTEDGSD",
+                     "CLOUDCOVER", "RESAMPLINGKERNEL", "POSITIONKNOWLEDGESRC",
+                     "ATTITUDEKNOWLEDGESRC", "REVNUMBER"]);
+
+    # Read existing tags.
+    tags = []
+    for i in range(len(IMAGE)):
+        tag = IMAGE[i].tag
+        tags.append(tag)
+
+    # Wipe some of the tags.
+    for tag in tags:
+        if not tag in keep_tags:
+            IMAGE.remove( IMAGE.find (tag) )
+
+    # Set some tags to average value.
+    if IMAGE.find("MEANPRODUCTGSD") is not None:
+        IMAGE.find("MEANPRODUCTGSD").text   = str(avg_meanproductgsd)
+    if IMAGE.find("MEANCOLLECTEDGSD") is not None:
+        IMAGE.find("MEANCOLLECTEDGSD").text = str(avg_meancollectedgsd)
+
+def get_corners(A, B, indices):
+    # Each corner of C will be picked either from A or from B,
+    # depending on the value of 'indices' for that corner.
+    C=[]
+    for i in range(len(indices)):
+        j = indices[i]
+        if j == 0:
+            C.append(A[i])
+        else:
+            C.append(B[i])
+
+    return C
+
+def signed_triangle_area(P, Q, R):
+    return ( (Q[0]-P[0])*(R[1]-Q[1])-(Q[1]-P[1])*(R[0]-Q[0]) )/2.0
+
+def find_combined_box(A, B):
+
+    # Given two boxes, A and B, find the rough box containing both A and B.
+    # Both A and B is a vector of 4 points, each point having two
+    # coordinates, x and y.
+
+    # Each of the corners of the new box will be one of the corresponding
+    # corners of either A or B. Pick the new corners as to maximize
+    # the area of the obtained box.
+
+    if len(A) == 0: return B
+    if len(A) != 4 or len(B) != 4:
+        raise Exception('Error', "A box is supposed to have 4 corners.")
+
+    max_area = 0
+    max_indices = []
+    for a in range(2):
+        for b in range(2):
+            for c in range(2):
+                for d in range(2):
+                    indices = [a, b, c, d]
+                    C = get_corners(A, B, indices)
+                    area = abs( signed_triangle_area(C[0], C[1], C[2]) +
+                                signed_triangle_area(C[2], C[3], C[0]))
+                    if area > max_area:
+                        max_area = area
+                        max_indices = indices
+
+    return get_corners(A, B, max_indices)
+
+
+def adjust_camera_corners(BAND, all_ll_corners, ref_htbox):
+
+    # The lon-lat box for the combined camera is the union of the
+    # lon-lat boxes for all the cameras.
+
+#    # Wipe unneeded tags. For that, first store the tags, then wipe them.
+#    wipe_tags = set(["ULHAE", "URHAE","LRHAE","LLHAE"]);
+    tags = []
+    for i in range(len(BAND)):
+        tag = BAND[i].tag
+        tags.append(tag)
+#    for tag in tags:
+#        if tag in wipe_tags:
+#            BAND.remove( BAND.find (tag) )
+
+    if len(all_ll_corners) == 0: return # no data
+
+    # Each camera is a rectangle. Find the rough bounding box of all rectangles.
+    out_corners = []
+    for corner_vec in all_ll_corners:
+        out_corners = find_combined_box(out_corners, corner_vec)
+
+    # Each point has a height term -> Just set it to the mean of the input height bounds
+    out_height = (ref_htbox.minx+ref_htbox.maxx)/2.0
+
+    BAND.find("ULLON").text = str(out_corners[0][0])
+    BAND.find("ULLAT").text = str(out_corners[0][1])
+
+    BAND.find("URLON").text = str(out_corners[1][0])
+    BAND.find("URLAT").text = str(out_corners[1][1])
+
+    BAND.find("LRLON").text = str(out_corners[2][0])
+    BAND.find("LRLAT").text = str(out_corners[2][1])
+
+    BAND.find("LLLON").text = str(out_corners[3][0])
+    BAND.find("LLLAT").text = str(out_corners[3][1])
+
+    try: # Set these fields if they exist
+        BAND.find("ULHAE").text = str(out_height)
+        BAND.find("URHAE").text = str(out_height)
+        BAND.find("LRHAE").text = str(out_height)
+        BAND.find("LLHAE").text = str(out_height)
+    except:
+        pass
+
+def find_bands(node):
+
+    # Extract the bands at the current node. Usually we have
+    # panchromatic data, that corresponds to BAND_P. The
+    # other ones are for multispectral data.
+    bands = []
+    for b in ["BAND_P", "BAND_B", "BAND_G", "BAND_R", "BAND_N"]:
+        p = node.find(b)
+        if p is not None:
+            bands.append(p)
+
+    if len(bands) == 0:
+        raise Exception('InputError', "XML files lack information on bands.")
+
+    return bands
+
+# bugfix for the situation ullon = -178.6 and urlon = 178.34
+def maybe_swap_add_360(a, b):
+    if b - a > 270:
+        tmp = b
+        b   = a + 360
+        a   = tmp
+    return [a, b]
+    
+def read_corners(band):
+    '''Read in the corners from a DG XML file from one band.
+       The points are stored in clockwise order from the upper left.'''
+
+    llbox = BBox()
+    ll_corners = []
+
+    ullon = float(band.find("ULLON").text)
+    ullat = float(band.find("ULLAT").text)
+
+    urlon = float(band.find("URLON").text)
+    urlat = float(band.find("URLAT").text)
+
+    lrlon = float(band.find("LRLON").text)
+    lrlat = float(band.find("LRLAT").text)
+
+    lllon = float(band.find("LLLON").text)
+    lllat = float(band.find("LLLAT").text)
+
+    # Bugfix for the situation when ullon = -178.6 and urlon = 178.34
+    [ullon, urlon] = maybe_swap_add_360(ullon, urlon)
+    [lllon, lrlon] = maybe_swap_add_360(lllon, lrlon)
+    
+    llbox.add_point([ullon, ullat])
+    llbox.add_point([urlon, urlat])
+    llbox.add_point([lrlon, lrlat])
+    llbox.add_point([lllon, lllat])
+
+    ll_corners.append([ullon, ullat])
+    ll_corners.append([urlon, urlat])
+    ll_corners.append([lrlon, lrlat])
+    ll_corners.append([lllon, lllat])
+
+    return (llbox, ll_corners)
+
+# Provide the image files that make up the composite. We assume the XML
+# files are in the same directory and end with extension ".xml" or ".XML".
+def read_xml( filename, options):
+
+    tree = ET.parse( filename )
+    root = tree.getroot()
+    IMD  = root.find("IMD")
+    GEO  = root.find("GEO")
+    EPH  = root.find("EPH")
+    ATT  = root.find("ATT")
+    RPB  = root.find("RPB")
+
+    IMAGE = IMD.find("IMAGE")
+    tlctime = parse_time(IMAGE.find("TLCTIME").text.strip(),
+                         "%Y-%m-%dT%H:%M:%S.%fZ")
+    tlclist = []
+    for tlc_item in IMAGE.find("TLCLISTList").findall("TLCLIST"):
+        tokens = tlc_item.text.strip().split(' ')
+        tlclist.append([float(tokens[0]), float(tokens[1])])
+    if len(tlclist) == 1:
+        direction = 1.0
+        if IMAGE.find("SCANDIRECTION").text.lower() != "forward":
+            direction = -1.0
+        linerate = float(IMAGE.find("AVGLINERATE").text)
+        tlclist.append([(linerate+tlclist[0][0]), (tlclist[0][1]+direction)])
+    firstlinetime = parse_time(IMAGE.find("FIRSTLINETIME").text,
+                               "%Y-%m-%dT%H:%M:%S.%fZ")
+
+    if IMAGE.find("MEANPRODUCTGSD") is not None:
+        meanproductgsd   = float(IMAGE.find("MEANPRODUCTGSD").text)
+    else:
+        meanproductgsd = None
+    if IMAGE.find("MEANCOLLECTEDGSD") is not None:
+        meancollectedgsd = float(IMAGE.find("MEANCOLLECTEDGSD").text)
+    else:
+        meancollectedgsd = None
+
+    image_size = []
+    image_size.append( int(IMD.find("NUMCOLUMNS").text) )
+    image_size.append( int(IMD.find("NUMROWS").text) )
+
+    llbox = BBox()
+    htbox = BBox()
+    ll_corners = []
+
+    for band in find_bands(IMD):
+
+      # The longitude-latitude box. Note: Later when we create
+      # the adjusted box we will traverse the corners in
+      # exactly the same order as here, so this and that
+      # code blocks must be kept consistent.
+      # Verify that all bands have the same corners
+      try:
+          ll_box_curr, ll_corners_curr =  read_corners(band)
+          for i in range(0,4):
+              llbox.add_point( [ll_corners_curr[i][0], ll_corners_curr[i][1]] )
+
+      except Exception as e:
+          print("Warning: File " + filename + " lacks longitude/latitude information.")
+
+      if len(ll_corners) == 0:
+          ll_corners = ll_corners_curr
+      if ll_corners != ll_corners_curr:
+          raise Exception('InputError', "File " + filename
+                          + " has multiple bands with inconsistent LON/LAT info.")
+
+    if not options.skip_rpc_gen:
+        # The height range, [ht_min, ht_max]. We store it as a 2D box
+        # as to not create an interval class.
+        try:
+            ht_scale  = float(RPB.find("IMAGE").find("HEIGHTSCALE").text)
+            ht_offset = float(RPB.find("IMAGE").find("HEIGHTOFFSET").text)
+            min_ht = -ht_scale + ht_offset
+            max_ht =  ht_scale + ht_offset
+            htbox = BBox(min_ht, min_ht, max_ht, max_ht)
+        except Exception as e:
+            raise Exception('InputError', "File " + filename
+                            + " lacks RPC model information.")
+
+    # Get the pitch, originx, and pd. Verify that all bands are consistent.
+    pitch = None; originx = None; pd = None
+    for band in find_bands(GEO.find("DETECTOR_MOUNTING")):
+        DET_ARRAY      = band.find("DETECTOR_ARRAY")
+        curr_pitch     = float(DET_ARRAY.find("DETPITCH").text)
+        curr_originx   = DET_ARRAY.find("DETORIGINX").text
+        curr_pd        = GEO.find("PRINCIPAL_DISTANCE").find("PD").text
+
+        if pitch   is None: pitch   = curr_pitch
+        if originx is None: originx = curr_originx
+        if pd      is None: pd      = curr_pd
+
+        if pitch != curr_pitch or originx != curr_originx or pd != curr_pd:
+            raise Exception('InputError', "File " + filename
+                            + " has inconsistent info across bands.")
+
+    # Note: We concatenate all eph values into one single array,
+    # the proper structure would be an array of arrays.
+    eph_list = []
+    for eph_item in EPH.find("EPHEMLISTList").findall("EPHEMLIST"):
+        tokens = eph_item.text.strip().split(' ')
+        eph_list.extend(tokens)
+
+    # Note: We concatenate all att values into one single array,
+    # the proper structure would be an array of arrays.
+    att_list = []
+    for att_item in ATT.find("ATTLISTList").findall("ATTLIST"):
+        tokens = att_item.text.strip().split(' ')
+        att_list.extend(tokens)
+
+    return [tlctime, tlclist, firstlinetime, image_size, pitch,
+            originx, pd, eph_list, att_list, llbox, htbox, ll_corners,
+            meanproductgsd, meancollectedgsd]
+
+def tlc_time_lookup( tlctime, tlclist, pixel_y ):
+    fraction = (pixel_y - tlclist[0][0]) / (tlclist[1][0] - tlclist[0][0])
+    seconds_off = fraction * ( tlclist[1][1] - tlclist[0][1]) + tlclist[0][1]
+    return tlctime + timedelta(seconds=seconds_off)
+
+def tlc_pixel_lookup( tlctime, tlclist, time ):
+    difference = time - tlctime
+    seconds_since_ref = difference.microseconds /  10.0**6 + difference.seconds + difference.days*24.0*3600.0
+    fraction = ( seconds_since_ref - tlclist[0][1] ) / (tlclist[1][1] - tlclist[0][1]);
+    return fraction * ( tlclist[1][0] - tlclist[0][0] ) + tlclist[0][0]
+
+# Get the xml file name from the .ntf or .tif file name. The xml file
+# must exist and end in either '.xml' or '.XML'.
+def xml_name( filename ):
+
+    path, ext = os.path.splitext(filename)
+    xml_file_l = path + ".xml"
+    xml_file_u = path + ".XML"
+
+    if os.path.isfile(xml_file_l):
+        xml_file = xml_file_l
+    elif os.path.isfile(xml_file_u):
+        xml_file = xml_file_u
+    else:
+        raise Exception('InputError', 'Cannot find any of: '
+                        + xml_file_l + ' ' + xml_file_u)
+
+    return xml_file
+
+
+def estimate_ground_resolution( xml_tree ):
+    '''Parse the DG XML file to estimate the ground resolution in meters per pixel'''
+
+    # Retrieve the image size and the four corners from the XML file
+    root = xml_tree.getroot()
+    imd  = root.find("IMD")
+    num_cols = float(imd.find("NUMCOLUMNS").text)
+    num_rows = float(imd.find("NUMROWS").text)
+
+    bands = find_bands(imd)
+    band  = bands[0]
+    ll_box, ll_corners = read_corners(band)
+
+    # Estimate meters per pixel in the X and Y directions of the image.
+    top_dist   = lonlat_point_distance(ll_corners[0], ll_corners[1])
+    bot_dist   = lonlat_point_distance(ll_corners[2], ll_corners[3])
+    left_dist  = lonlat_point_distance(ll_corners[3], ll_corners[0])
+    right_dist = lonlat_point_distance(ll_corners[1], ll_corners[2])
+
+    x_dist     = (top_dist  + bot_dist  ) / 2.0
+    y_dist     = (left_dist + right_dist) / 2.0
+    gsd_x      = x_dist / num_cols
+    gsd_y      = y_dist / num_rows
+
+    # Just take the average of the two sizes
+    return (gsd_x + gsd_y) / 2.0
+
+def run_cmd( cmd, options ):
+    if options.dryrun or options.verbose: 
+        print(cmd)
+    if options.dryrun: return
+    code = subprocess.call(cmd, shell=True)
+    if code:
+        raise Exception('ProcessError', 'Non zero return code ('+str(code)+')')
+
+def die(msg, code=-1):
+    print >>sys.stderr, msg
+    sys.exit(code)
+
+def scale_xml_element(elem, scale):
+    tokens = elem.text.strip().split(' ')
+    for i in range(len(tokens)):
+        tokens[i] = str(float(tokens[i]) * scale)
+    elem.text = " ".join(tokens)
+
+# convert a list of lists to a string, to be able
+# to use it as a hash key.
+def listlist_to_str(listlist):
+    ans = ""
+    for list_entry in listlist:
+        for val in list_entry:
+            ans += str(val) + " "
+    return ans
+
+def examine_discrepancy_in_arrays(A, B):
+
+    if len(A) != len(B):
+        raise Exception('InputError', 'Cannot process arrays of different lengths.')
+
+    max_err = 1.0e-10
+    print("Will go on if the relative discrepancies are less than %g." % max_err)
+
+    observed_max_err = 0
+    num_messages = 0
+    max_num_messages = 10
+    for i in range(len(A)):
+        if A[i] != B[i]:
+            a=float(A[i])
+            b=float(B[i])
+            if a != b:
+                err = abs( (a-b)/a )
+                num_messages = num_messages + 1
+
+                if err > observed_max_err:
+                    observed_max_err = err
+                    
+                if err > max_err and num_messages < max_num_messages:
+                    print("Warning: Disagreeing values and relative error: %0.18g %0.18g %0.18g" \
+                      % (a, b, err))
+                    continue
+                
+                if err > max_err and num_messages == max_num_messages:
+                    print("Will stop printing more warnings.")
+                    
+    print('Maximum observed relative discrepancy is ' + str(observed_max_err))
+    if observed_max_err > max_err:
+        raise Exception('InputError', 'Error is too large')
+
+
+def main():
+
+    try:
+        try:
+            usage = '''dg_mosaic [--help] <all ntf or tif files that make up the observation>
+
+  [ASP 2.5.2]'''
+
+            parser = optparse.OptionParser(usage=usage)
+            parser.set_defaults(dryrun=False)
+            parser.set_defaults(preview=False)
+            parser.set_defaults(gdaldir="")
+            parser.set_defaults(target_resolution=-1.0)
+            parser.set_defaults(reduce_percent=100.0)
+            parser.set_defaults(output_prefix="")
+            parser.set_defaults(band=0)
+            parser.set_defaults(input_nodata_value=None)
+            parser.set_defaults(output_nodata_value=None)
+            parser.add_option("--target_resolution", dest="target_resolution", type="float",
+                              help="Choose the output resolution in meters per pixel on the ground (note that a coarse resolution may result in aliasing).")
+            parser.add_option("--reduce-percent", dest="reduce_percent", type="float",
+                              help="Render a reduced resolution image and xml based on this percentage.")
+            parser.add_option("-o", "--output-prefix", dest="output_prefix", type="str",
+                              help="The prefix for the output .tif and .xml files.")
+            parser.add_option("--band", dest="band", type="int",
+                              help="Which band to use (for multi-spectral images).")
+            parser.add_option("--input-nodata-value", dest="input_nodata_value", type="float",
+                              help="Nodata value to use on input; input pixel values less than or equal to this are considered invalid.")
+            parser.add_option("--output-nodata-value", dest="output_nodata_value", type="float",
+                              help="Nodata value to use on output.")
+            parser.add_option("--rpc-penalty-weight", dest="penalty_weight", type="float",
+                              default=0.01,
+                              help="The weight to use to penalize higher order RPC coefficients when generating the combined RPC model. Higher penalty weight results in smaller such coefficients.")
+            parser.add_option('--fix-seams', dest='fix_seams', default=False,
+                              action='store_true', help="Fix seams in the output mosaic due to inconsistencies between image and camera data using interest point matching.")
+            parser.add_option("--preview", dest="preview",
+                              action="store_true",
+                              help="Render a small 8 bit png of the input for preview.")
+            parser.add_option("-v", "--verbose", dest="verbose",
+                              action="store_true", help="Increase verbosity.")
+            parser.add_option("-n", "--dry-run", dest="dryrun",
+                              action="store_true",
+                              help="Make the calculations, but just print out the commands.")
+            parser.add_option('--skip-rpc-gen', dest='skip_rpc_gen', default=False,
+                              action='store_true', help="Skip RPC model generation")
+            parser.add_option('--skip-tif-gen', dest='skip_tif_gen', default=False,
+                              action='store_true', help="Skip TIF file generation.")
+            # This option is obsolete. We now ship gdal_translate with ASP.
+            parser.add_option("--gdal-dir", dest="gdaldir", help=optparse.SUPPRESS_HELP)
+
+            (options, args) = parser.parse_args()
+
+            # Transform 50.0 into just 50
+            if options.reduce_percent == int(options.reduce_percent):
+                options.reduce_percent = int(options.reduce_percent)
+
+            # Quit if the user provided conflicting resolution options
+            if (options.reduce_percent != 100) and (options.target_resolution > 0):
+                die('\nERROR: Cannot specify both --reduce-percent and --target-resolution!')
+
+            if not args:
+                parser.print_help()
+                die('\nERROR: Need .ntf or .tif files.', code=2)
+
+            if len(options.gdaldir): options.gdaldir += "/"
+
+        except optparse.OptionError as msg:
+            raise Usage(msg)
+
+        if options.output_prefix == "":
+            options.output_prefix = args[0].split('-')[-1].split('.')[0]
+        if options.output_prefix == "":
+            die('\nERROR: Empty output prefix. Please set it via the ' + \
+                '--output-prefix option', code=2)
+        out_dir=os.path.dirname(options.output_prefix)
+        if len(out_dir)==0: out_dir='.'
+        if not os.path.exists(out_dir): os.makedirs(out_dir)
+
+        # Do a couple of passes at parsing the xml files and
+        # extracting and combining the data. At the second pass, the
+        # files (stored in args) and all other data will be in the
+        # order in which they need to be mosaiced.
+        for it in range(2):
+
+            all_ll_corners = []
+            tlclist_arr    = []
+
+            # We reference everything from the perspective of the first
+            # image. So lets load it up first into our special variables.
+            avg_meanproductgsd   = 0; num_meanproductgsd   = 0
+            avg_meancollectedgsd = 0; num_meancollectedgsd = 0
+            [ref_tlctime, ref_tlclist, ref_firstlinetime, ref_image_size,
+             ref_pitch, ref_originx, ref_pd, ref_eph_list, ref_att_list,
+             ref_llbox, ref_htbox, ll_corners,
+             meanproductgsd, meancollectedgsd] \
+             = read_xml( xml_name(args[0]), options )
+            all_ll_corners.append(ll_corners)
+            tlclist_arr.append(ref_tlclist)
+
+            if meanproductgsd is not None:
+                avg_meanproductgsd += meanproductgsd
+                num_meanproductgsd += 1
+            if meancollectedgsd is not None:
+                avg_meancollectedgsd += meancollectedgsd
+                num_meancollectedgsd += 1
+
+            # orig_sizes[i] holds the original size of i-th image. After
+            # we scale i-th image by i_th_image_pitch/0_th_image_pitch, we
+            # store the new image box in placements[i].
+            orig_sizes = []
+            placements = []
+            orig_sizes.append(ref_image_size)
+            shiftx = 0
+            shifty = tlc_pixel_lookup(ref_tlctime, ref_tlclist, ref_firstlinetime)
+            placement = BBox(shiftx, shifty,
+                             shiftx + ref_image_size[0],
+                             shifty + ref_image_size[1])
+            placements.append( placement )
+
+            for filename in args[1:]:
+
+                [tlctime, tlclist, firstlinetime, image_size, pitch, originx, pd,
+                 eph_list, att_list, llbox, htbox, ll_corners, meanproductgsd,
+                 meancollectedgsd] = read_xml( xml_name(filename), options )
+                all_ll_corners.append(ll_corners)
+                tlclist_arr.append(tlclist)
+
+                # Sanity checks
+                if ref_originx != originx:
+                    raise Exception('InputError', 'Must have the same originx in: '
+                                    + xml_name(args[0]) + ' ' + xml_name(filename) )
+                if ref_pd != pd:
+                    raise Exception('InputError', 'Must have the same pd in: '
+                                    + xml_name(args[0]) + ' ' + xml_name(filename) )
+
+                if len(ref_eph_list) != len(eph_list):
+                    raise Exception('InputError', 'Must have the same number of ephem values in: '
+                                    + xml_name(args[0]) + ' and ' + xml_name(filename) )
+
+                if ref_eph_list != eph_list:
+                    # Normally we'd expect the same ephh in all files, as after all,
+                    # they are components of the same observation. Oddly, in practice
+                    # that is not always so. Print a warning if the discrepancies are
+                    # minor, and thow an error if they are major.
+                    print("Warning: ephem values must be identical in " \
+                          + xml_name(args[0]) + ' and ' + xml_name(filename))
+                    examine_discrepancy_in_arrays(ref_eph_list, eph_list)
+
+                if len(ref_att_list) != len(att_list):
+                    raise Exception('InputError', 'Must have the same number of att values in: '
+                                    + xml_name(args[0]) + ' and ' + xml_name(filename) )
+
+                if ref_att_list != att_list:
+                    # Same thing as for ephem.
+                    print("Warning: att values must be identical in " \
+                          + xml_name(args[0]) + ' and ' + xml_name(filename))
+                    examine_discrepancy_in_arrays(ref_att_list, att_list)
+
+                orig_sizes.append(image_size)
+
+                shiftx = 0
+                shifty = tlc_pixel_lookup(ref_tlctime, ref_tlclist, firstlinetime)
+
+                # We compensate for the fact that different images
+                # may have different physical pixel sizes.
+                pitch_ratio = pitch/ref_pitch
+                scaled_image_size = [image_size[0]*pitch_ratio,
+                                     image_size[1]*pitch_ratio]
+
+                placement = BBox(shiftx, shifty,
+                                 shiftx + scaled_image_size[0],
+                                 shifty + scaled_image_size[1])
+                placements.append( placement )
+
+                ref_llbox.expand_with_box(llbox)
+                ref_htbox.expand_with_box(htbox)
+
+                if meanproductgsd is not None:
+                    avg_meanproductgsd += meanproductgsd
+                    num_meanproductgsd += 1
+                if meancollectedgsd is not None:
+                    avg_meancollectedgsd += meancollectedgsd
+                    num_meancollectedgsd += 1
+
+            if num_meanproductgsd != 0:
+                avg_meanproductgsd   = avg_meanproductgsd/num_meanproductgsd
+            if num_meancollectedgsd != 0:
+                avg_meancollectedgsd = avg_meancollectedgsd/num_meancollectedgsd
+
+            boundary = BBox()
+            for placement in placements:
+                boundary.expand_with_box(placement)
+
+            for i in range(len(args)):
+                placements[i].miny -= boundary.miny
+                placements[i].maxy -= boundary.miny
+
+            # Ensure that the images are placed in order, from top to
+            # bottom.  So the second image will partially cover the first
+            # image, etc.  This is a bug fix for the situation when some
+            # images have a black area at the bottom.
+            s_args = sort_by_miny(args, placements)
+
+            if it == 0:
+                args = s_args[:] # deep copy
+        # End passes loop
+
+        # Look for duplicate files that will insert at same location
+        # and with the same tlclist. Files that do this would be the
+        # R?C1 variants that have the same XML file due to download
+        # errors or simplying mixing of R?C1 and the other format.
+        seen = set()
+        for i in range(len(args)):
+
+            # form a tuple of a string and a number
+            val = listlist_to_str(tlclist_arr[i]), placements[i].miny
+
+            if val in seen:
+                raise Exception('InputError', 'Input images have same input ' +
+                                'location which could be caused by repeated ' +
+                                'XML file or invalid TLC information.')
+            seen.add(val)
+
+        if options.target_resolution > 0:
+            # Compute the reduce percentage based on GSD
+            current_gsd = estimate_ground_resolution(ET.parse(xml_name(args[0])))
+            options.reduce_percent = (current_gsd / options.target_resolution) * 100
+
+        # Compute scale factor for adjusting XML values
+        scale  = options.reduce_percent / 100.0
+        suffix = ".r" + str(options.reduce_percent)
+
+        # The band to output
+        if options.band > 0:
+            suffix += ".b" + str(options.band)
+
+        # Write a composite scaled XML file. We first create the xml at
+        # the original resolution and then we scale it.
+        tree = ET.parse(xml_name(args[0]))
+        root = tree.getroot()
+        imd = root.find("IMD")
+        imd.find("NUMROWS").text = str(int(boundary.height()))
+        imd.find("NUMCOLUMNS").text = str(int(boundary.width()))
+        for tlc_item in imd.find("IMAGE").find("TLCLISTList").findall("TLCLIST"):
+            tokens        = tlc_item.text.strip().split(' ')
+            tokens[0]     = str(float(tokens[0])- boundary.miny)
+            tlc_item.text = " ".join(tokens)
+        first_line_item = root.find("IMD").find("IMAGE").find("FIRSTLINETIME")
+        tlc_lookup      = tlc_time_lookup( ref_tlctime, ref_tlclist, boundary.miny )
+        # The verbose operation below is needed for python 2.4
+        first_line_item.text = tlc_lookup.strftime("%Y-%m-%dT%H:%M:%S") + '.' \
+                               + format_microsec(str(tlc_lookup.microsecond)) + "Z"
+
+        sep = ","
+
+        if not options.skip_rpc_gen:
+            # Find the best-fitting RPC coefficients.
+            temp_xml_file = tempfile.NamedTemporaryFile(suffix = ".xml",
+                                                        dir = out_dir)
+            tree.write(temp_xml_file.name)
+            rpc_cmd = "rpc_gen"
+            rpc_args = ['--penalty-weight', str(options.penalty_weight),
+                        '--output-prefix', options.output_prefix,
+                        '--lon-lat-height-box',
+                        str(ref_llbox.minx), str(ref_llbox.miny),
+                        str(ref_htbox.minx), str(ref_llbox.maxx),
+                        str(ref_llbox.maxy), str(ref_htbox.maxx), temp_xml_file.name]
+            rpc_model = run_and_parse_output( rpc_cmd, rpc_args, sep,
+                                              options.verbose )
+            try:
+                # Set the RPC model info. Wipe all other outdated info.
+                RPI = root.find("RPB").find("IMAGE")
+                if RPI.find("ERRBIAS") != None: RPI.remove( RPI.find ("ERRBIAS") )
+                if RPI.find("ERRRAND") != None: RPI.remove( RPI.find ("ERRRAND") )
+
+                RPI.find("SAMPSCALE").text    = rpc_model["uv_scale"][0]
+                RPI.find("LINESCALE").text    = rpc_model["uv_scale"][1]
+
+                RPI.find("SAMPOFFSET").text   = rpc_model["uv_offset"][0]
+                RPI.find("LINEOFFSET").text   = rpc_model["uv_offset"][1]
+
+                RPI.find("LONGSCALE").text    = rpc_model["llh_scale"][0]
+                RPI.find("LATSCALE").text     = rpc_model["llh_scale"][1]
+                RPI.find("HEIGHTSCALE").text  = rpc_model["llh_scale"][2]
+
+                RPI.find("LONGOFFSET").text   = rpc_model["llh_offset"][0]
+                RPI.find("LATOFFSET").text    = rpc_model["llh_offset"][1]
+                RPI.find("HEIGHTOFFSET").text = rpc_model["llh_offset"][2]
+
+                RPI.find("LINENUMCOEFList").find("LINENUMCOEF").text = " ".join(rpc_model["line_num"])
+                RPI.find("LINEDENCOEFList").find("LINEDENCOEF").text = " ".join(rpc_model["line_den"])
+                RPI.find("SAMPNUMCOEFList").find("SAMPNUMCOEF").text = " ".join(rpc_model["samp_num"])
+                RPI.find("SAMPDENCOEFList").find("SAMPDENCOEF").text = " ".join(rpc_model["samp_den"])
+            except Exception as e:
+                print('Caught exception: ' + str(e))
+                raise Exception('InputError', "File " + args[0] +
+                                " lacks complete RPC model information.")
+        else:
+            if root.find("RPB") != None: root.remove( root.find ("RPB") )
+
+        # Wipe other outdated info
+        if root.find("TIL")   != None: root.remove( root.find("TIL") )
+
+        # Adjust image corners
+        for band in find_bands(imd):
+            adjust_camera_corners(band, all_ll_corners, ref_htbox)
+
+        # Adjust avg gsd tags and wipe other tags
+        set_or_wipe_image_tags(root.find("IMD").find("IMAGE"),
+                               avg_meanproductgsd, avg_meancollectedgsd)
+
+        # Scale the xml file
+        # Update NUMROWS and NUMCOLUMNS
+        nrows = int(boundary.height() * scale)
+        ncols = int(boundary.width()  * scale)
+        imd = root.find("IMD")
+        imd.find("NUMROWS").text = str(nrows)
+        imd.find("NUMCOLUMNS").text = str(ncols)
+        print("Output image size: %dx%d px" % (nrows, ncols))
+
+        # Update TLCList, AVGLineRate, ExposureDur
+        image = imd.find("IMAGE")
+        for tlc_item in image.find("TLCLISTList").findall("TLCLIST"):
+            tokens = tlc_item.text.strip().split(' ')
+            tokens[0] = str(float(tokens[0]) * scale)
+            tlc_item.text = " ".join(tokens)
+        scale_xml_element(image.find("AVGLINERATE"), scale)
+        scale_xml_element(image.find("EXPOSUREDURATION"), 1.0/scale)
+        # Update detector pitch. Verify that pitch is consistent
+        # accross multiple bands.
+        pitch = None
+        for band in find_bands(root.find("GEO").find("DETECTOR_MOUNTING")):
+            curr_pitch = band.find("DETECTOR_ARRAY").find("DETPITCH")
+            if pitch is None: pitch = curr_pitch
+            if pitch.text != curr_pitch.text:
+                raise Exception('InputError', "File " + xml_name(filename)
+                                + " has inconsistent pitch info across bands.")
+
+        scale_xml_element(pitch, 1.0/scale)
+        # Scale the RPC model
+        if not options.skip_rpc_gen:
+            RPI = root.find("RPB").find("IMAGE")
+            scale_xml_element(RPI.find("SAMPSCALE" ), scale)
+            scale_xml_element(RPI.find("LINESCALE" ), scale)
+            scale_xml_element(RPI.find("SAMPOFFSET"), scale)
+            scale_xml_element(RPI.find("LINEOFFSET"), scale)
+
+        xml_file = options.output_prefix + suffix + ".xml"
+        print("Writing: " + xml_file)
+        tree.write(xml_file)
+
+        if not options.skip_tif_gen:
+
+            tif_mosaic_opts = "%d,%d," % (boundary.width(), boundary.height())
+            for i in range(len(args)):
+                print("  Placing %s" % args[i])
+                print("    Size %dx%d at column %d and line %d" % \
+                      (placements[i].width(),placements[i].height(),
+                       placements[i].minx, placements[i].miny))
+
+                tif_mosaic_opts += \
+                                ("%s,%0.16f,%0.16f,%0.16f,%0.16f,%0.16f,%0.16f," %
+                                 ( os.path.abspath(args[i]),
+                                   orig_sizes[i][0], orig_sizes[i][1],
+                                   placements[i].minx, placements[i].miny,
+                                   placements[i].width(), placements[i].height()
+                                ) )
+
+            tif_file = options.output_prefix + suffix + ".tif";
+            mosaic_cmd = "tif_mosaic"
+            mosaic_args = ['--threads', str(4),
+                           '--output-image', tif_file,
+                           '--band', str(options.band),
+                           '--reduce-percent', str(options.reduce_percent),
+                           '--image-data', tif_mosaic_opts]
+            if options.input_nodata_value is not None:
+                mosaic_args += ['--input-nodata-value', str(options.input_nodata_value)]
+            if options.output_nodata_value is not None:
+                mosaic_args += ['--output-nodata-value', str(options.output_nodata_value)]
+            if options.fix_seams:
+                mosaic_args += ['--fix-seams']
+
+            print("Writing: " + tif_file)
+            subprocess.call([mosaic_cmd] +  mosaic_args)
+
+            # Make a preview image
+            if options.preview:
+
+                # The preview image size will be around 5% of the input image size.
+                small_scale = int(round(5.0/scale))
+
+                stif_file = options.output_prefix + ".small.png"
+                print("Writing: " + stif_file)
+                cmd = "GDAL_CACHEMAX=256 %sgdal_translate -of PNG -ot Byte -scale -outsize %d%% %d%% %s %s" % (options.gdaldir,small_scale,small_scale,tif_file,stif_file)
+                run_cmd( cmd, options )
+
+    except Usage as err:
+        print >>sys.stderr, err.msg
+        return 2
+
+if __name__ == "__main__":
+    sys.exit(main())

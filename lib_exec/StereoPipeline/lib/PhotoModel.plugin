@@ -1,0 +1,36 @@
+Group = HapkeHen
+  Library = Hapke
+  Routine = HapkePlugin
+End_Group
+Group = HapkeLeg
+  Library = Hapke
+  Routine = HapkePlugin
+End_Group
+Group = LunarLambertMcEwen
+  Library = LunarLambertMcEwen
+  Routine = LunarLambertMcEwenPlugin
+End_Group
+Group = Minnaert
+  Library = Minnaert
+  Routine = MinnaertPlugin
+End_Group
+Group = LommelSeeliger
+  Library = LommelSeeliger
+  Routine = LommelSeeligerPlugin
+End_Group
+Group = LunarLambert
+  Library = LunarLambert
+  Routine = LunarLambertPlugin
+End_Group
+Group = Lambert
+  Library = Lambert
+  Routine = LambertPlugin
+End_Group
+Group = LunarLambertEmpirical
+  Library = LunarLambertEmpirical
+  Routine = LunarLambertEmpiricalPlugin
+End_Group
+Group = MinnaertEmpirical
+  Library = MinnaertEmpirical
+  Routine = MinnaertEmpiricalPlugin
+End_Group
