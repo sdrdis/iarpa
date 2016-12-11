@@ -270,8 +270,8 @@ f_infos = data['f_infos']
 bounds = data['bounds']
 ```
 
-`bounds` are the boundaries informations given by the KML file and the merging process. `f_infos` contains the data:
-it is a 3d matrix. The first row is the confidence map, the second row is the height height, and the third row is
+`bounds` are the boundaries informations given by the KML file and the merging process. `f_infos` contains the data
+and is a 3d matrix. The first row is the confidence map, the second row is the height map, and the third row is
 the color map.
 
 Possible improvements
