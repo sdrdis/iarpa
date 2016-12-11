@@ -47,6 +47,29 @@ This code has been tested on Ubuntu 14.04 LTS. It probably works on Linux and Un
 How to install
 --------------
 
+First, get this software by cloning on github:
+
+```
+sudo apt-get install git
+git clone https://github.com/sdrdis/iarpa_contest_submission.git
+```
+
+Or downloading the zip file and unzipping it:
+
+```
+sudo apt-get install unzip
+wget https://github.com/sdrdis/iarpa_contest_submission/archive/master.zip
+unzip master.zip
+```
+
+Then go inside the main folder and launch:
+
+```
+./install.sh
+```
+
+It will install OpenCV and GDAL notably, so it might take some time...
+
 How to use
 ----------
 
