@@ -2,7 +2,7 @@ sudo apt-get --assume-yes install python-numpy python-scipy python-matplotlib
 
 sudo apt-get --assume-yes install build-essential
 sudo apt-get --assume-yes install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-sudo apt-get --assume-yes install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
+sudo apt-get --assume-yes install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev python-pip
 
 sudo apt-get --assume-yes install git
 cd ~
@@ -48,3 +48,10 @@ sudo ldconfig
 sudo ln /dev/null /dev/raw1394
 
 sudo pip install scikit-learn
+sudo pip install cython
+sudo pip install scikit-image
+
+sudo apt-get --assume-yes install libopenexr-dev
+sudo pip install openexr
+sudo pip install pyproj
+sudo pip install fastkml

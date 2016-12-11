@@ -22,6 +22,10 @@ or
 
 * A NPZ (numpy) file containing a height map, color map and confidence metric
 
+How it does it:
+* First, it calculates a 3D map for each defined pair of images.
+* Then, it merge all the 3D map into a single one.
+
 Main steps can be called independently allowing maximum customization.
 
 License
@@ -104,6 +108,82 @@ Parameters can be customized in the `params.py` file. Each parameter has been co
 
 Example tutorial
 ----------------
+
+We will rely on the contest data to show how the utility can be used and how `params.py` should be modified.
+
+First, we will download only a small part of the images set as you would need more than 30 GB of storage. The following
+will only need about 4.5 GB of storage. From the main folder, launch:
+
+```
+mkdir data
+cd data
+wget http://multiview-stereo.s3.amazonaws.com/18DEC15WV031000015DEC18140455-P1BS-500515572010_01_P001_________AAE_0AAAAABPABJ0.NTF
+wget http://multiview-stereo.s3.amazonaws.com/18DEC15WV031000015DEC18140510-P1BS-500515572040_01_P001_________AAE_0AAAAABPABJ0.NTF
+wget http://multiview-stereo.s3.amazonaws.com/18DEC15WV031000015DEC18140522-P1BS-500515572020_01_P001_________AAE_0AAAAABPABJ0.NTF
+wget http://multiview-stereo.s3.amazonaws.com/18DEC15WV031000015DEC18140533-P1BS-500515572050_01_P001_________AAE_0AAAAABPABJ0.NTF
+wget http://multiview-stereo.s3.amazonaws.com/18DEC15WV031000015DEC18140544-P1BS-500515572060_01_P001_________AAE_0AAAAABPABJ0.NTF
+wget http://multiview-stereo.s3.amazonaws.com/18DEC15WV031000015DEC18140554-P1BS-500515572030_01_P001_________AAE_0AAAAABPABJ0.NTF
+```
+
+We also need a KML file. We will take the one of the explorer contest. From the main folder, launch:
+
+```
+mkdir kml
+cd kml
+wget http://www.topcoder.com/contest/problem/MultiViewStereoExplorer/Challenge1.kml
+```
+
+Then, go to the main folder. As we only chose a part of the contest images, we need to change the pair filenames.
+As a reminder, the software first compute a 3d map for each image pair. This pairwise 3d reconstruction won't work
+for all pairs, so the user have to define them. He can do it by changing the `pairs_filenames` variable in the
+`params.py` file. Here, replace:
+
+```
+pairs_filenames = [
+...
+]
+```
+By:
+
+```
+pairs_filenames = [
+			['18DEC15WV031000015DEC18140455-P1BS-500515572010_01_P001_________AAE_0AAAAABPABJ0.NTF',
+			 '18DEC15WV031000015DEC18140533-P1BS-500515572050_01_P001_________AAE_0AAAAABPABJ0.NTF'], #1-4
+			['18DEC15WV031000015DEC18140533-P1BS-500515572050_01_P001_________AAE_0AAAAABPABJ0.NTF',
+			 '18DEC15WV031000015DEC18140455-P1BS-500515572010_01_P001_________AAE_0AAAAABPABJ0.NTF'], #4-1
+			 
+			['18DEC15WV031000015DEC18140510-P1BS-500515572040_01_P001_________AAE_0AAAAABPABJ0.NTF',
+			 '18DEC15WV031000015DEC18140544-P1BS-500515572060_01_P001_________AAE_0AAAAABPABJ0.NTF'], #2-5
+			['18DEC15WV031000015DEC18140544-P1BS-500515572060_01_P001_________AAE_0AAAAABPABJ0.NTF',
+			 '18DEC15WV031000015DEC18140510-P1BS-500515572040_01_P001_________AAE_0AAAAABPABJ0.NTF'], #5-2
+			 
+			['18DEC15WV031000015DEC18140522-P1BS-500515572020_01_P001_________AAE_0AAAAABPABJ0.NTF',
+			 '18DEC15WV031000015DEC18140554-P1BS-500515572030_01_P001_________AAE_0AAAAABPABJ0.NTF'], #3-6
+			['18DEC15WV031000015DEC18140554-P1BS-500515572030_01_P001_________AAE_0AAAAABPABJ0.NTF',
+			 '18DEC15WV031000015DEC18140522-P1BS-500515572020_01_P001_________AAE_0AAAAABPABJ0.NTF'], #6-3 
+]
+```
+
+The image we chose are a sequence taken at approximately the same time with slightly different angles.
+We chose pairs with a sufficient baseline but not too much changes.
+
+Everything should be ready, you can launch the software:
+
+```
+mkdir out
+python chain.py kml/Challenge1.kml data/ out/test.npz
+```
+
+Once the software has finished running, you can vizualize the result like that:
+
+```
+python vizualize_result.py out/test.npz out/
+```
+
+It will create 3 files, with self-explanatory names:
+* `height_map.png`
+* `color_map.png`
+* `confidence.png`
 
 In-depth Documentation
 ----------------------
