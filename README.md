@@ -218,6 +218,7 @@ As written in the introduction, first we evaluate for each pair a 3D map, and th
 
 For evaluating the 3D for each pair, we relied in part on the NASA Ames Stereo Pipeline, and in part on the OpenCV
 library. The original stereo pipeline processes a pair the following way:
+
 1. Preprocessing: bundle adjustment, pair rectification...
 2. Disparity evaluation using a pyramidal matching scheme.
 3. Postprocessing: hole filling, subpixel refinement...
