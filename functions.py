@@ -30,6 +30,8 @@ import skimage.restoration
 
 import time
 
+import resource
+
 log_msgs = []
 def log_msg(msg):
     print msg

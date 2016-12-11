@@ -70,18 +70,6 @@ def generate_disparity_map(path, pair_id, pair_filenames, max_disp):
     
     margin = max_disp
     
-    is_rotated = get_is_rotated(left_np, right_np, left_invalid_np)
-    
-    if (is_rotated):
-        left_np = np.rot90(left_np)
-        right_np = np.rot90(right_np)
-        left_undefined_np = np.rot90(left_undefined_np)
-        right_undefined_np = np.rot90(right_undefined_np)
-        left_invalid_np = np.rot90(left_invalid_np)
-        right_invalid_np = np.rot90(right_invalid_np)
-        standardized_left_np = np.rot90(standardized_left_np)
-        standardized_right_np = np.rot90(standardized_right_np)
-    
     left_np = add_margin(left_np, margin)
     right_np = add_margin(right_np, margin)
     standardized_left_np = add_margin(standardized_left_np, margin)
@@ -166,14 +154,6 @@ def generate_disparity_map(path, pair_id, pair_filenames, max_disp):
     lrc_1_np = remove_margin(lrc_1_np, margin)
     lrc_2_np = remove_margin(lrc_2_np, margin)
     
-
-    if (is_rotated):
-        disparity = np.rot90(disparity, 3)
-        left_undefined_np = np.rot90(left_undefined_np, 3)
-        photoconsistency_np = np.rot90(photoconsistency_np, 3)
-        lrc_init_np = np.rot90(lrc_init_np, 3)
-        lrc_1_np = np.rot90(lrc_1_np, 3)
-        lrc_2_np = np.rot90(lrc_2_np, 3)
     
     left_defined_np = np.logical_not(left_undefined_np)
     
@@ -198,8 +178,6 @@ def generate_disparity_map(path, pair_id, pair_filenames, max_disp):
 
     outf = np.zeros((3, disparity.shape[0], disparity.shape[1]))
     main_channel = 0
-    if (is_rotated):
-        main_channel = 1
     
     outf[main_channel,:,:] = -disparity
     outf[main_channel,:,:] /= 16.0
@@ -276,38 +254,6 @@ def gross_match(left_np, right_np):
     left_matcher.setSpeckleRange(1)
     left_matcher.setSpeckleWindowSize(50)
     return left_matcher.compute(left_np, right_np)
-    
-def get_is_rotated(ori_left_np, ori_right_np, left_invalid_np):
-    left_np = ori_left_np
-    right_np = ori_right_np
-    
-    disp_np = gross_match(left_np, right_np)
-    
-    left_np = np.rot90(ori_left_np)
-    right_np = np.rot90(ori_right_np)
-    
-    rotated_disp_np = gross_match(left_np, right_np)
-    
-    selected_disp = disp_np[np.logical_not(left_invalid_np)]
-    selected_disp = selected_disp[selected_disp > -(max_disp / 2) * 16 + 15]
-    
-    selected_rotated_disp = rotated_disp_np[np.rot90(np.logical_not(left_invalid_np))]
-    selected_rotated_disp = selected_rotated_disp[selected_rotated_disp > -(max_disp / 2) * 16 + 15]
-    
-    range_disp = np.percentile(selected_disp, 80) - np.percentile(selected_disp, 20)
-    range_rotated_disp = np.percentile(selected_rotated_disp, 80) - np.percentile(selected_rotated_disp, 20)
-    
-    disp_ratio = range_disp / max(range_rotated_disp, 1)
-    nb_points_ratio = selected_disp.shape[0] * 1.0 / max(selected_rotated_disp.shape[0], 1)
-    nb_points_max = max(selected_disp.shape[0], selected_rotated_disp.shape[0])
-    
-    if (nb_points_max < 50000):
-        return False
-        
-    if (disp_ratio < 2.0/3.0 and nb_points_ratio < 2.0/3.0):
-        return True
-        
-    return False
     
 def get_disps(left_np, right_np, scale, uniqueness_ratio):
     left_matcher = cv2.StereoSGBM_create(minDisparity=-(max_disp / 2), numDisparities=max_disp, blockSize=scale)

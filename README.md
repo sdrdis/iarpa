@@ -24,7 +24,7 @@ or
 
 How it does it:
 * First, it calculates a 3D map for each defined pair of images.
-* Then, it merge all the 3D map into a single one.
+* Then, it merge all the 3D maps into a single one by consensus.
 
 Main steps can be called independently allowing maximum customization.
 
@@ -213,6 +213,23 @@ In-depth Documentation
 ----------------------
 
 [COMING SOON] PDF and Video presentation of the submission.
+
+As written in the introduction, first we evaluate for each pair a 3D map, and then we merge them using consensus.
+
+For evaluating the 3D for each pair, we relied in part on the NASA Ames Stereo Pipeline, and in part on the OpenCV
+library. The original stereo pipeline processes a pair the following way:
+1. Preprocessing: bundle adjustment, pair rectification...
+2. Disparity evaluation using a pyramidal matching scheme.
+3. Postprocessing: hole filling, subpixel refinement...
+4. Disparity map to 3D map transformation.
+
+In our approach, we replaced the second and third step. We first compute a disparity map using SGBM, and then we
+propagate the most confident values using the [WLS algorithm](https://sites.google.com/site/globalsmoothing/). This approach was heavily inspired by
+[this tutorial](http://docs.opencv.org/3.1.0/d3/d14/tutorial_ximgproc_disparity_filtering.html). Since disparities
+are propagated using an edge preserving scheme, it respects much more the boundaries of buildings compared to the
+Ames Stereo Pipeline. It is possible to change the parameters used by the WLS algorithm in the parameter file.
+
+The exact code can be read in the `functions_disparity_map.py` file. We do some things a bit diferently.
 
 
 Possible improvements
