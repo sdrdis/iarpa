@@ -17,7 +17,9 @@ What must be provided:
 
 What is generated:
 * A TXT File containing 3d point positions
+
 or
+
 * A NPZ (numpy) file containing a height map, color map and confidence metric
 
 Main steps can be called independently allowing maximum customization.
