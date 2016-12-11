@@ -200,7 +200,7 @@ It will create 3 image files, with self-explanatory names:
 
 ![Images generated](https://github.com/sdrdis/iarpa_contest_submission/raw/master/doc_images/height_maps_1.png)
 
-As you can see, there are a lot of undefined areas (depicted in gray). These areas are low confidence values that
+As you can see, there are a lot of undefined areas (depicted in gray in the height map, red in the color map). These areas are low confidence values that
 are by default removed. You can change this behavior by changing the `relative_consensus` parameter in the `params.py` file. You can also
 remove all post-processing (including the removal of low confidence values) by setting `height_map_post_process_enabled` to `false`.
 
