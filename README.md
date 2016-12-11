@@ -51,7 +51,7 @@ This code has been tested on Ubuntu 14.04 LTS. It probably works on Linux and Un
 How to install
 --------------
 
-First, get this software by cloning on github:
+First, get this software by cloning it on github:
 
 ```
 sudo apt-get install git
@@ -199,7 +199,15 @@ It will create 3 files, with self-explanatory names:
 TODO: Images
 
 As you can see, there are a lot of undefined areas (depicted in gray). These areas are low confidence values that
-are by default removed.
+are by default removed. You can change this behavior by changing the `relative_consensus` parameter in the `params.py` file. You can also
+remove all post-processing (including the removal of low confidence values) by setting `height_map_post_process_enabled` to `false`.
+
+Once this is done, you can execute only the second step of our algorithm, since changing this parameter didn't change
+the way pair-wise stereo reconstruction was done.
+
+```
+python chain_merge_pcs.py kml/Challenge1.kml out/test_2.npz
+```
 
 In-depth Documentation
 ----------------------
