@@ -451,10 +451,10 @@ def optimize_precision(f_infos, consensus, min_definition = 0.6):
     f_infos[f_infos[:,:,0] < consensus,:] = np.nan
     
 def post_process_f_infos(f_infos, consensus, min_definition = 0.6):
-    try:
-        optimize_precision(f_infos, consensus, min_definition)
-    except:
-        log_msg('PRECISION OPTIMIZATION FAILED, skipping...')
+    #try:
+    optimize_precision(f_infos, consensus, min_definition)
+    #except:
+    #    log_msg('PRECISION OPTIMIZATION FAILED, skipping...')
     try:
         denoise_heights(f_infos)
     except:
