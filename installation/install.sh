@@ -13,3 +13,4 @@ sudo apt-get --assume-yes install python-gdal
 sudo ln /dev/null /dev/raw1394
 sudo apt-get --assume-yes install libsm6
 mv mvs-stereo-code-samples/build/src/get-crop-area ../../lib_exec/get-crop-area
+cd ..
