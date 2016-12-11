@@ -212,5 +212,15 @@ python chain_merge_pcs.py kml/Challenge1.kml out/test_2.npz
 In-depth Documentation
 ----------------------
 
+[COMING SOON] PDF and Video presentation of the submission.
+
+
 Possible improvements
 ---------------------
+
+As discussed in the presentation, there could be a lot of improvement done to this sofware:
+* There are some parts which could be easily parallelized, such as the `chain_merge_pcs.py` script.
+* We could fill the undefined areas using WLS for instance;
+* We could use other stereo algorithms than SGBM. A slower but more accurate one would be great.
+* The `relative_consensus` threshold is not necessarly well balanced. For instance, a value of `0.7` might be good for
+ten images, but could remove too many values for twenty or more images.
