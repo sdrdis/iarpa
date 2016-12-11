@@ -229,7 +229,10 @@ propagate the most confident values using the [WLS algorithm](https://sites.goog
 are propagated using an edge preserving scheme, it respects much more the boundaries of buildings compared to the
 Ames Stereo Pipeline. It is possible to change the parameters used by the WLS algorithm in the parameter file.
 
-The exact code can be read in the `functions_disparity_map.py` file. We do some things a bit diferently.
+The exact code can be read in the `functions_disparity_map.py` file. There are some additional details. We crop a
+bigger areas compared to what is needed to the KML file to minimize problem caused by large black areas in the
+rectified pairs. We prevent borders with black areas to be matched. We repeat twice the post-filtering with WLS in
+order to remove outliers.
 
 
 Possible improvements
