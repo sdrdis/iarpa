@@ -209,8 +209,8 @@ the way pair-wise stereo reconstruction was done.
 python chain_merge_pcs.py kml/Challenge1.kml out/test_2.npz
 ```
 
-In-depth Documentation
-----------------------
+In-depth Description
+--------------------
 
 [COMING SOON] PDF and Video presentation of the submission.
 
@@ -234,6 +234,12 @@ The exact code can be read in the `functions_disparity_map.py` file. There are s
 bigger areas compared to what is needed to the KML file to minimize problem caused by large black areas in the
 rectified pairs. We prevent borders with black areas to be matched. We repeat twice the post-filtering with WLS in
 order to remove outliers.
+
+The merging process is quite simple. We take the 3D maps generated for each pair and transform them to height maps.
+We align these height maps and merge them. For each pixel (longitude/latitude) we have then multiple height
+evaluation. From this list, we take the largest set with a range less than a threshold (defined by the
+`acceptable_height_deviation` parameter). Final height is the average of this set and we compute an additional
+confidence value which is the number of elements inside this set.
 
 
 Possible improvements
